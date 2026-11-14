@@ -1,16 +1,20 @@
-# 宸 Club 会所服务交互原型 V3.1
+# 宸 Club 会所服务交互原型 V4 · 1114需求复核版
 
-覆盖业主端、员工端、运营后台及商户分账，共 37 个主要页面。
+依据《智地会所运营需求清单-1114.xlsx》95条需求逐项建立映射，覆盖56个主要页面：业主18、员工8、商家移动8、运营后台15、商家PC7。
 
 - [业主端](https://li13146730115-creator.github.io/chen-club-prototype/#/U01)
 - [员工端](https://li13146730115-creator.github.io/chen-club-prototype/#/S01)
+- [商家移动端](https://li13146730115-creator.github.io/chen-club-prototype/#/T01)
 - [运营后台](https://li13146730115-creator.github.io/chen-club-prototype/#/A01)
-- [UI 稿总览](https://li13146730115-creator.github.io/chen-club-prototype/UI稿总览.html)
+- [商家PC端](https://li13146730115-creator.github.io/chen-club-prototype/#/M04)
+- [三页面装修](https://li13146730115-creator.github.io/chen-club-prototype/#/A10)
+- [95条需求台账](https://li13146730115-creator.github.io/chen-club-prototype/#/A15)
+- [56页UI稿](UI稿总览.html)
 
-移动端设计基准 375 × 812 px；PC 端设计基准 1440 × 900 px。首页支持下拉切换项目。
+移动端375×812px；PC端1440×900px。PC沿用客户现有商城的导航、蓝色控件、表格及装修编辑器结构；首页按1114清单R002展示80%轮播图和预约摘要，会籍卡在下滑内容中。
 
-本仓库为静态交互原型，演示操作保存在当前浏览器的 localStorage 中。直接打开 index.html 或使用静态 HTTP 服务即可预览，无需安装依赖。
+详见[复核与验收记录](复核说明与验收记录.md)、[逐条复核与兼容方案](1114需求复核与兼容方案.md)和[UI设计规范](UI设计规范.md)。
 
-GitHub Pages 使用 main 分支根目录发布，更新后自动部署。
+直接打开index.html即可离线预览，也可通过任意静态HTTP服务访问。无须安装依赖；演示数据保存在当前浏览器localStorage，页面中的重置按钮可恢复样例。真实价目与演示交易分别标识；支付、认证、权限、门禁、消息、渠道分账等生产接口尚未接入。
 
-验证：`node --test tests/*.test.cjs`。
+验证命令：`node --test tests/*.test.cjs`。GitHub Pages使用main分支根目录自动部署。
