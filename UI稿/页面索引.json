@@ -1,0 +1,372 @@
+[
+  {
+    "id": "U01",
+    "title": "首页",
+    "desc": "发现会所服务与最近预约",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U01.jpg"
+  },
+  {
+    "id": "U02",
+    "title": "身份与会籍",
+    "desc": "业主认证、会籍状态与办理",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U02.jpg"
+  },
+  {
+    "id": "U03",
+    "title": "权益与资产",
+    "desc": "按项目查看会籍、次卡与赠券",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U03.jpg"
+  },
+  {
+    "id": "U04",
+    "title": "权益详情与记录",
+    "desc": "使用范围、期限与资产流水",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U04.jpg"
+  },
+  {
+    "id": "U05",
+    "title": "服务列表",
+    "desc": "场地、私教、餐饮与康养",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U05.jpg"
+  },
+  {
+    "id": "U06",
+    "title": "服务详情",
+    "desc": "身份权益、价目与预约规则",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U06.jpg"
+  },
+  {
+    "id": "U07",
+    "title": "日期与时段",
+    "desc": "选择演示库存和使用人",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U07.jpg"
+  },
+  {
+    "id": "U08",
+    "title": "预约确认与支付",
+    "desc": "明细核对及本地模拟支付",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U08.jpg"
+  },
+  {
+    "id": "U09",
+    "title": "到场凭证",
+    "desc": "一次性凭证与履约状态",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U09.jpg"
+  },
+  {
+    "id": "U10",
+    "title": "预约与订单",
+    "desc": "进度、改期、取消与售后",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U10.jpg"
+  },
+  {
+    "id": "U11",
+    "title": "扫码点单",
+    "desc": "场所识别与购物车",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U11.jpg"
+  },
+  {
+    "id": "U12",
+    "title": "我的与消息",
+    "desc": "个人服务与事项提醒",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U12.jpg"
+  },
+  {
+    "id": "U13",
+    "title": "家庭成员",
+    "desc": "成员信息、陪同与共享边界",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U13.jpg"
+  },
+  {
+    "id": "U14",
+    "title": "客服与评价",
+    "desc": "咨询、投诉与服务评价",
+    "role": "U",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "U14.jpg"
+  },
+  {
+    "id": "S01",
+    "title": "员工工作台",
+    "desc": "今日预约与现场服务",
+    "role": "S",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "S01.jpg"
+  },
+  {
+    "id": "S02",
+    "title": "会员查询与档案",
+    "desc": "最少必要信息与可用资产",
+    "role": "S",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "S02.jpg"
+  },
+  {
+    "id": "S03",
+    "title": "代客预约与现场加项",
+    "desc": "服务、空间及占用校验",
+    "role": "S",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "S03.jpg"
+  },
+  {
+    "id": "S04",
+    "title": "代客收款与线下登记",
+    "desc": "模拟收款与线下凭据",
+    "role": "S",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "S04.jpg"
+  },
+  {
+    "id": "S05",
+    "title": "核销与到场登记",
+    "desc": "凭证校验、扣次及重复拦截",
+    "role": "S",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "S05.jpg"
+  },
+  {
+    "id": "S06",
+    "title": "卡券绑定与发放",
+    "desc": "订单关联、原因与发放记录",
+    "role": "S",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "S06.jpg"
+  },
+  {
+    "id": "S07",
+    "title": "工单处理",
+    "desc": "受理、跟进与闭环",
+    "role": "S",
+    "width": 375,
+    "height": 812,
+    "version": "V3",
+    "file": "S07.jpg"
+  },
+  {
+    "id": "A01",
+    "title": "经营总览",
+    "desc": "项目服务、订单与履约摘要",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A01.jpg"
+  },
+  {
+    "id": "A02",
+    "title": "项目与空间资源",
+    "desc": "三个会所资料与资源台账",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A02.jpg"
+  },
+  {
+    "id": "A03",
+    "title": "服务与商品",
+    "desc": "服务目录、上下架与分账关联",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A03.jpg"
+  },
+  {
+    "id": "A04",
+    "title": "身份权益与价目",
+    "desc": "客户四类身份矩阵及价格原文",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A04.jpg"
+  },
+  {
+    "id": "A05",
+    "title": "会籍、卡券及家庭规则",
+    "desc": "卡种、草稿和有效期调整",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A05.jpg"
+  },
+  {
+    "id": "A06",
+    "title": "排期与预约规则",
+    "desc": "资源占用、预约及取消参数",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A06.jpg"
+  },
+  {
+    "id": "A07",
+    "title": "会员与资产流水",
+    "desc": "档案、线下登记与操作记录",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A07.jpg"
+  },
+  {
+    "id": "A08",
+    "title": "订单履约与退款",
+    "desc": "支付、履约及原交易退款",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A08.jpg"
+  },
+  {
+    "id": "A09",
+    "title": "客服与异常",
+    "desc": "咨询、投诉及核销异常",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A09.jpg"
+  },
+  {
+    "id": "A10",
+    "title": "内容、活动与页面装修",
+    "desc": "Banner、组件排序及预览",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A10.jpg"
+  },
+  {
+    "id": "A11",
+    "title": "财务与对账",
+    "desc": "资金状态及合同结算口径",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A11.jpg"
+  },
+  {
+    "id": "A12",
+    "title": "权限、审计与集成",
+    "desc": "授权范围、操作日志与接入状态",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A12.jpg"
+  },
+  {
+    "id": "A13",
+    "title": "待确认与资料追溯",
+    "desc": "33项资料、异常值与来源",
+    "role": "A",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "A13.jpg"
+  },
+  {
+    "id": "M01",
+    "title": "供方维护",
+    "desc": "商户端本店供方与子商户信息",
+    "role": "M",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "M01.jpg"
+  },
+  {
+    "id": "M02",
+    "title": "分账分类",
+    "desc": "独立分类与多个供方比例",
+    "role": "M",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "M02.jpg"
+  },
+  {
+    "id": "M03",
+    "title": "分账订单与回退",
+    "desc": "原订单快照、金额与退款记录",
+    "role": "M",
+    "width": 1440,
+    "height": 900,
+    "version": "V3",
+    "file": "M03.jpg"
+  }
+]
