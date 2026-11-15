@@ -64,7 +64,7 @@
   },
   {
     "id": "U10",
-    "title": "预约与订单",
+    "title": "我的预约",
     "role": "U",
     "width": 375,
     "height": 812
@@ -78,7 +78,7 @@
   },
   {
     "id": "U12",
-    "title": "我的与消息",
+    "title": "我的",
     "role": "U",
     "width": 375,
     "height": 812
@@ -390,5 +390,19 @@
     "role": "M",
     "width": 1440,
     "height": 900
+  },
+  {
+    "id": "U19",
+    "title": "消息列表",
+    "role": "U",
+    "width": 375,
+    "height": 812
+  },
+  {
+    "id": "U20",
+    "title": "我的卡包",
+    "role": "U",
+    "width": 375,
+    "height": 812
   }
 ]

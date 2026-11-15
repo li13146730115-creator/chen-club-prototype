@@ -49,3 +49,4 @@ test('北京SPA显示原价，紫京会籍权益不虚构次数和赠券',()=>{
  assert.ok(A.benefits('bj').some(b=>b.title==='棋牌室赠时'&&b.value==='12'));
  assert.ok(!A.benefits('zx').some(b=>/咖啡|特调/.test(b.title)));
 });
+test('泳池与其它运动场地详情不混入私教价目，课程仍可查全价目',()=>{for(const s of A.services.filter(s=>s.category.includes('运动')&&!s.kind.includes('私教'))){assert.ok(A.priceRows(s).every(r=>!r[3].includes('课')),s.id+' 场地不应展示私教');}assert.equal(A.priceRows(A.services.find(s=>s.id==='BJX02')).length,2);});

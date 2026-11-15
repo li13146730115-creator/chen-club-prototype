@@ -4,7 +4,7 @@
  A.icon=(name,cls='')=>`<i class="el-icon-${name} ${cls}" aria-hidden="true"></i>`;
  A.scene=project=>`assets/${{bj:'club-garden',zx:'club-courtyard',zj:'club-pool'}[project]}.jpg`;
  A.serviceIcon=s=>/私教/.test(s.kind)?'medal':/运动/.test(s.category)?'basketball':/茶/.test(s.name)?'coffee-cup':/宴/.test(s.name)?'knife-fork':/会议/.test(s.name)?'office-building':/SPA|女王/.test(s.name)?'moon':'collection';
- A.priceRows=s=>s.project==='zj'?[]:A.R['权益与价格明细'].rows.filter(r=>r[1]===A.projects[s.project]&&r[2].replace(/（.*|\(.*|空间/g,'')===s.name.replace(/（.*|\(.*|空间/g,''));
+ A.priceRows=s=>s.project==='zj'?[]:A.R['权益与价格明细'].rows.filter(r=>r[1]===A.projects[s.project]&&r[2].replace(/（.*|\(.*|空间/g,'')===s.name.replace(/（.*|\(.*|空间/g,'')).filter(r=>s.category.includes('运动')?(s.kind.includes('私教')?/课/.test(r[3]):!/课/.test(r[3])):true);
  A.rightText=(s,id)=>{
   const raw=s.rights[{ma:0,mc:1,na:2,nc:3}[id]]||'资料未列明';
   if(/^—/.test(raw))return '资料未列明 · 请咨询会所';

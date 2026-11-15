@@ -1,0 +1,5 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {parseOrderQR,visitorCounts}=require('../scan-core.js');
+test('点单码识别项目、场所及桌号，拒绝未配置项目和场所',()=>{assert.deepEqual(parseOrderQR('CHENCLUB:ORDER:bj:tea:T01'),{project:'bj',scene:'tea',table:'T01'});for(const code of ['CHENCLUB:ORDER:bad:tea:T01','CHENCLUB:ORDER:bj:pool:T01','MEMBER-LIN','https://evil.example/?project=bj&scene=tea','javascript:alert(1)','CHENCLUB:ORDER:bj:tea:<script>'])assert.throws(()=>parseOrderQR(code));});
+test('同站点标准二维码 URL 仅接受点单路由与配置参数',()=>{assert.deepEqual(parseOrderQR('https://li13146730115-creator.github.io/chen-club-prototype/#/U11?mode=menu&project=bj&scene=lounge&table=A02'),{project:'bj',scene:'lounge',table:'A02'});assert.throws(()=>parseOrderQR('https://li13146730115-creator.github.io/chen-club-prototype/#/U03?project=bj&scene=tea&table=T01'));});
+test('陪同人数独立计算，儿童必须有人陪同，人数不能为负或小数',()=>{assert.deepEqual(visitorCounts('2','1','ma'),{people:2,companions:1,totalVisitors:3});for(const args of [['1','0','mc'],['1','-1','ma'],['1','1.5','ma'],['0','1','ma']])assert.throws(()=>visitorCounts(...args));});

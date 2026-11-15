@@ -1,0 +1,7 @@
+/* 点单码解析和到场人数校验；扫码内容不作为任意 URL 跳转。 */
+(function(root,factory){const api=factory();if(typeof module==='object')module.exports=api;else root.ClubScanCore=api})(typeof globalThis!=='undefined'?globalThis:this,function(){
+'use strict';
+function parseOrderQR(text){let project,scene,table;const raw=String(text||'').trim();if(raw.startsWith('CHENCLUB:ORDER:')){const parts=raw.split(':');if(parts.length!==5)throw Error('点单码格式不正确');[, ,project,scene,table]=parts;}else{let u;try{u=new URL(raw)}catch(e){throw Error('请扫描会所桌面的点单二维码')}if(u.protocol!=='https:'||u.hostname!=='li13146730115-creator.github.io'||u.pathname!=='/chen-club-prototype/'||!u.hash.startsWith('#/U11?'))throw Error('该二维码不是已配置的会所点单码');const p=new URLSearchParams(u.hash.split('?')[1]);if(p.get('mode')!=='menu')throw Error('该二维码不是点单码');project=p.get('project');scene=p.get('scene');table=p.get('table');}if(!['bj','zx','zj'].includes(project)||!['tea','lounge'].includes(scene)||!/^[A-Za-z0-9_-]{1,16}$/.test(table||''))throw Error('点单码的会所、场所或桌号尚未配置');return {project,scene,table};}
+function visitorCounts(people,companions,identity){people=Number(people);companions=Number(companions||0);if(!Number.isSafeInteger(people)||people<1||people>10)throw Error('使用人数需为1—10的整数');if(!Number.isSafeInteger(companions)||companions<0||companions>10)throw Error('陪同人数需为0—10的整数');if(identity.endsWith('c')&&companions<1)throw Error('儿童需至少一位成年人陪同');return {people,companions,totalVisitors:people+companions};}
+return {parseOrderQR,visitorCounts};
+});
