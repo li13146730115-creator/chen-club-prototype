@@ -7,10 +7,10 @@
   var pname=function(id){return A.projects[id]||id;};
   var iso=function(d){return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');};
   var bookingDays=function(n){var base=new Date();base.setHours(12,0,0,0);return Array.from({length:n||7},function(_,i){var d=new Date(base);d.setDate(base.getDate()+i);return [iso(d),i===0?'今天':d.toLocaleDateString('zh-CN',{weekday:'short'})];});};
-  var slotTimes=function(){return ['09:00','11:00','14:00','16:00'];};
+  var slotTimes=function(){return ['09:00','11:00','14:00','16:00','18:00'];};
   var endTime=function(time,duration){var p=time.split(':'),m=Number(p[0])*60+Number(p[1])+Number(duration||60);return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');};
   var imageFor=function(s){return 'assets/home-'+(/泳|游泳/.test(s.name)?'pool':/茶|棋牌/.test(s.name)?'tea':/私教|课程|课/.test(s.kind)?'coach':/SPA|女王/.test(s.name)?'spa':/艺廊|阅读|花植/.test(s.name)?'gallery':'dining')+'.jpg';};
-  var offerFor=function(s,variant){var o=A.offer(s,A.S.identity,variant||'');if(o&&o.amount===null&&/私教/.test(s.kind)){var row=(A.priceRows?A.priceRows(s):[]).find(function(x){return x[5]!==null});if(row)o=Object.assign({},o,{amount:Number(row[5])*100,text:'¥'+row[5],sub:row[7]||'课程预约',duration:row[8]||60});}return o||{};};
+  var offerFor=function(s,variant){return A.offer(s,A.S.identity,variant||'')||{};};
   var serviceRows=function(){return A.services.filter(function(s){return s.project===project()&&!A.S.hiddenServices.includes(s.id);});};
   var assetOptions=function(s){return A.S.assets.filter(function(a){return a.project===project()&&a.status!=='冻结'&&a.status!=='停用'&&(a.remaining===null||a.remaining>0)&&(!a.services||!a.services.length||a.services.includes(s.id));}).map(function(a){return [a.id,a.name+' · 剩余'+(a.remaining===null?'会籍有效':a.remaining+'次')];});};
   function slotItems(s,formEl,date,resource,variant,personnel,selected){
@@ -30,14 +30,15 @@
     var id=A.params.get('id'),s=A.services.find(function(x){return x.id===id&&x.project===project();})||(!id?A.services.find(function(x){return x.project===project();}):null);
     if(!s)return '<div class="mp-head"><h2>预约时段</h2></div><div class="mp-pad">'+A.empty('请重新选择当前项目服务')+'</div>';
     var variant=A.params.get('variant')||'standard',q=offerFor(s,variant);
-    if(q.amount===null||q.arrival||A.S.guest)return oldU07();
+    if(q.amount===null||q.arrival||A.S.guest)return A.views.U06();
     var days=bookingDays(7),previous=A.draft&&A.draft.service===s.id?A.draft:null,date=previous&&previous.date||days[0][0],resource=previous&&previous.resource||s.id+'-1',selected=previous&&previous.time||'',people=previous&&previous.people||(/私宴/.test(s.name)?8:1),companions=previous&&previous.companions||(A.S.identity.endsWith('c')?1:0),banquet=/私宴/.test(s.name);
-    var variants=banquet?select('variant','宴席套餐',[['standard','标准套餐 · 3,888元'],['high','升级套餐 · 5,888元']],variant):/棋牌/.test(s.name)?select('variant','使用套餐',[['standard','58元／小时'],['long','158元／4小时']],variant):/会议/.test(s.name)?select('variant','会议套餐',[['standard','800元／4小时'],['day','1,500元／8小时']],variant):'';
+    var variants=s.project==='bj'?(banquet?select('variant','宴席套餐',[['standard','标准套餐 · 3,888元'],['high','升级套餐 · 5,888元']],variant):/棋牌/.test(s.name)?select('variant','使用套餐',[['standard','58元／小时'],['long','158元／4小时']],variant):/会议/.test(s.name)?select('variant','会议套餐',[['standard','800元／4小时'],['day','1,500元／8小时']],variant):''):'';
+    var levels=Array.from((s.rights[{ma:0,mc:1,na:2,nc:3}[A.S.identity]]||'').matchAll(/(初级|中级|高级|职业|基础课|特色课)[：:]?\s*(\d+)/g));if(levels.length>1)variants=select('variant','课程档位',levels.map(function(x){return [x[1],x[1]+' · '+x[2]+'元'];}),levels.some(function(x){return x[1]===variant;})?variant:levels[0][1]);
     var html='<div class="mp-head audit-book-head"><a class="owner-back" href="'+A.href('U06',{id:s.id})+'">'+A.icon('arrow-left')+'</a><h2>选择预约日期与时段</h2></div><div class="mp-pad audit-book-page"><div class="owner-book-service"><img src="'+imageFor(s)+'" alt="'+E(s.name)+'"><div><h3>'+E(s.name)+'</h3><p>'+E(pname(s.project))+' · '+E(q.text||'按身份权益核验')+'</p><small>'+E(q.sub||'预约服务')+'</small></div></div>'+form('book-draft','<input type="hidden" name="service" value="'+E(s.id)+'"><input type="hidden" name="date" value="'+E(date)+'"><h3 class="owner-field-title audit-step-title">1. 选择日期</h3><div class="owner-date-strip audit-date-strip">'+days.map(function(d){return '<button type="button" class="audit-date-card '+(d[0]===date?'on':'')+'" data-action="audit-owner-date" data-date="'+d[0]+'" aria-pressed="'+(d[0]===date)+'"><small>'+E(d[1])+'</small><b>'+d[0].slice(8)+'</b></button>';}).join('')+'</div>'+select('resource','场地／资源',[[s.id+'-1',s.name+' · 场地1'],[s.id+'-2',s.name+' · 场地2']],resource)+variants+'<h3 class="owner-field-title audit-step-title">2. 选择该日期下的时段 <small data-audit-day>'+date+'</small></h3><div data-audit-slot-container>'+slotMarkup(s,null,date,resource,variant,previous&&previous.personnel||'',selected,'audit-owner-time')+'</div><p class="owner-scope-note">日期和时段分开展示；切换日期、场地或套餐后会重新计算可预约余量并清除旧时段。</p><h3 class="owner-field-title audit-step-title">3. 到场人员</h3>'+input('user','使用人',previous&&previous.user||A.S.profile.nickname,'text','required')+input('people','使用人数（不含陪同）',people,'number','min="1" max="10" step="1" required')+input('companions','陪同人数',companions,'number','min="0" max="10" step="1" required')+(A.S.identity.endsWith('c')?'<label class="check mb"><input type="checkbox" name="accompanied" value="yes" required>已确认有成年人陪同</label>':'')+'<p class="owner-scope-note">陪同人员单独统计，确认页、订单、凭证和核销会同步显示总人数。</p>'+select('asset','使用已绑定卡券',[['','不使用卡券']].concat(assetOptions(s)),previous&&previous.asset||'') ,'下一步 · 核对预约')+'</div></div>';
     return html;
   }
   function proxyView(){
-    var d=V.proxy||{},step=A.params.get('step')||'1',route=location.hash.split('?')[0]==='#/T03'?'T03':'S03',rows=serviceRows().slice(0,12);
+    var d=V.proxy||{},step=A.params.get('step')||'1',route=location.hash.split('?')[0]==='#/T03'?'T03':'S03',rows=serviceRows();
     if(step==='2'&&d.service){
       var s=A.service(d.service),q=offerFor(s,''),days=bookingDays(7),date=d.date||days[0][0],selected=d.time||'',resource=d.resource||s.id+'-1';
       var dateCards=days.map(function(x){return '<button type="button" class="audit-date-card '+(x[0]===date?'on':'')+'" data-action="audit-proxy-date" data-date="'+x[0]+'" aria-pressed="'+(x[0]===date)+'"><small>'+E(x[1])+'</small><b>'+x[0].slice(8)+'</b></button>';}).join('');
@@ -68,8 +69,9 @@
     if(!s)throw Error('请选择有效服务');
     var date=direct?iso(now):(f.date||bookingDays(7)[0][0]),time=direct?String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0'):(f.time||'');
     if(!direct&&!/^\d{2}:\d{2}$/.test(time))throw Error('请先选择日期下的时段');
-    var resource=direct?'retail-'+s.id+'-'+Date.now():(f.resource||s.id+'-1'),amount=q.amount===null?0:q.amount;
-    var o=C.book(A.S,{project:project(),title:s.name+(direct?' · 员工代客点单':' · 员工代客预约'),service:s.id,resource:resource,date:date,time:time,duration:direct?1:Number(q.duration||60),amount:amount,identity:A.S.identity,user:V.proxy&&V.proxy.member||'林女士',people:Number(f.people||1),operator:route==='#/T03'?'商家前台':'员工前台',source:direct?'员工代客点单':'员工代客预约'});
+    if(q.amount===null)throw Error('当前身份的成交价或权益额度尚未确认，请先在后台维护，不可按零元下单');
+    var resource=direct?'retail-'+s.id+'-'+Date.now():(f.resource||s.id+'-1'),amount=q.amount;
+    var o=C.book(A.S,{project:project(),title:s.name+(direct?' · 员工代客点单':' · 员工代客预约'),service:s.id,resource:resource,date:date,time:time,duration:direct?1:Number(q.duration||60),amount:amount,identity:A.S.identity,user:V.proxy&&V.proxy.member||'林女士',people:Number(f.people||1),companions:A.S.identity.endsWith('c')?1:0,operator:route==='#/T03'?'商家前台':'员工前台',source:direct?'员工代客点单':'员工代客预约'});
     if(o.amount)C.pay(A.S,o.id);V.proxy={};A.save();A.go(route==='#/T03'?'T08':'S08',{id:o.id});A.toast(direct?'代客点单已生成':'代客预约已生成');
   };
   function reschedule(id){

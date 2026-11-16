@@ -12,7 +12,7 @@ const pageDefs=[
 ['M01','供方维护','商户端本店供方与子商户信息'],['M02','分账分类','独立分类与多个供方比例'],['M03','分账订单与回退','原订单快照、金额与退款记录']];
 const pages=pageDefs.map(([id,title,desc])=>({id,title,desc,role:id[0]}));
 const E=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const money=n=>'¥'+(Number(n||0)/100).toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2});
+const money=n=>n===null||n===undefined||n===''?'待确认':'¥'+(Number(n)/100).toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2});
 const tag=(text,cls='')=>`<span class="tag ${cls}">${E(text)}</span>`;
 const href=(id,args={})=>'#/'+id+(Object.keys(args).length?'?'+new URLSearchParams(args):'');
 const link=(text,id,args={},cls='btn light')=>`<a class="${cls}" href="${href(id,args)}">${E(text)}</a>`;
@@ -74,7 +74,7 @@ function render(){
 function desktopShell(page,content){
  const groups=[
   {title:'工作台',icon:'s-home',ids:['A01']},
-  {title:'项目服务',icon:'goods',ids:['A02','A03','A06']},
+  {title:'项目服务',icon:'goods',ids:['A02','A03','A06','A23']},
   {title:'会员权益',icon:'user',ids:['A04','A05','A07','A20','A21']},
   {title:'订单客服',icon:'s-order',ids:['A08','A09']},
   {title:'内容装修',icon:'picture-outline',ids:['A10','A16','A22']},

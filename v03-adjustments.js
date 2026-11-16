@@ -24,9 +24,9 @@
   var img=function(s){return 'assets/home-'+(/泳|游泳/.test(s.name)?'pool':/茶|棋牌/.test(s.name)?'tea':/私教|课程|课/.test(s.kind)?'coach':/SPA|女王/.test(s.name)?'spa':/艺廊|阅读|花植/.test(s.name)?'gallery':'dining')+'.jpg'};
   var head=function(title,back,tools){return '<div class="mp-head v03-head">'+(back?link('返回',back,{},'link'):'')+'<h2>'+E(title)+'</h2><div class="v03-head-tools">'+(tools||'')+'</div></div>'};
   var days=function(n){var now=new Date();now.setHours(12,0,0,0);return Array.from({length:n||7},function(_,i){var d=new Date(now);d.setDate(now.getDate()+i);return [d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'),i===0?'今天':d.toLocaleDateString('zh-CN',{weekday:'short'})];});};
-  var times=function(){return ['09:00','11:00','14:00','16:00'];};
+  var times=function(){return ['09:00','11:00','14:00','16:00','18:00'];};
   var endTime=function(time,duration){var p=time.split(':'),m=Number(p[0])*60+Number(p[1])+Number(duration||60);return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');};
-  var offer=function(s,variant){var o=A.offer(s,A.S.identity,variant||'');if(o&&o.amount===null&&/私教/.test(s.kind)){var row=(A.priceRows?A.priceRows(s):[]).find(function(x){return x[5]!==null});if(row)o=Object.assign({},o,{amount:Number(row[5])*100,text:'¥'+row[5],sub:row[7]||'课程预约',duration:row[8]||60});}return o||{};};
+  var offer=function(s,variant){return A.offer(s,A.S.identity,variant||'')||{};};
   var serviceRows=function(){return A.services.filter(function(s){return s.project===project()&&!A.S.hiddenServices.includes(s.id)});};
   var memberList=function(){return (V.members||[]).filter(function(m){return m.project===project()});};
   var escAttr=function(x){return E(x).replace(/`/g,'&#96;')};
@@ -55,17 +55,17 @@
   function ownerDetail(){
     var s=A.service(A.params.get('id'));if(!s)return head('服务详情','U05')+pad(empty('当前项目没有该服务'));
     var variant=A.params.get('variant')||'standard',o=offer(s,variant),q=A.quote(s),rows=A.priceRows?A.priceRows(s):[];
-    var packages=/私宴/.test(s.name)?[
+    var packages=s.project==='bj'&&/私宴/.test(s.name)?[
       ['standard','标准套餐','3,888元／8—10人','午宴／晚宴通用；菜单由会所维护，需提前预约。'],
       ['high','升级套餐','5,888元／8—10人','午宴／晚宴通用；升级内容与可选菜品由会所维护。']
-    ]:/会议/.test(s.name)?[
+    ]:s.project==='bj'&&/会议/.test(s.name)?[
       ['standard','上午场','800元／4小时','容纳8—10人，含免费茶水、基础会务及VIP迎宾。'],
       ['day','全天场','1,500元／8小时','容纳8—10人，含免费茶水、基础会务及VIP迎宾。']
     ]:[];
     var packageHtml=packages.length?'<section class="v03-package-panel"><div class="section-head"><h3>可选套餐</h3><span>'+packages.length+'项</span></div>'+packages.map(function(p){return '<button type="button" class="v03-package-card" data-action="v03-package-detail" data-id="'+escAttr(s.id)+'" data-variant="'+p[0]+'"><span><b>'+E(p[1])+'</b><strong>'+E(p[2])+'</strong><small>'+E(p[3])+'</small></span><em>查看详情</em>'+A.icon('arrow-right')+'</button>';}).join('')+'</section>':'';
     var menuHtml=/茶室/.test(s.name)?'<section class="v03-rule-card"><div class="section-head"><h3>茶水单与场地</h3></div><p class="small muted">场地预约后可进入在线点单；茶品价格、赠送坚果和茶点按客户资料分开核验。</p>'+link('查看茶水单','U11',{mode:'menu',scene:'tea',table:'T01'},'btn light full space')+'</section>':'';
     var loungeHtml=/行政酒廊/.test(s.name)?'<section class="v03-rule-card"><div class="section-head"><h3>行政酒廊在线点单</h3></div><p class="small muted">扫描桌码后查看菜单、数量和订单，餐饮类支付成功后直接查看订单。</p>'+link('进入在线点单','U11',{mode:'menu',scene:'lounge',table:'A01'},'btn light full space')+'</section>':'';
-    var priceHtml=rows.length?'<section class="v03-price-panel"><div class="section-head"><h3>客户价目与使用规则</h3><span>'+rows.length+'项</span></div>'+rows.map(function(r){return '<div class="v03-price-row"><div><b>'+E(r[3])+'</b><small>'+E(r[4]||'')+'</small></div><strong>'+(r[5]!==null?'¥'+Number(r[5]).toLocaleString('zh-CN'):(r[9]?'9.5折':'请咨询'))+'<small>'+E(r[7]||'')+'</small></strong></div>';}).join('')+'</section>':'';
+    var priceHtml=rows.length?'<section class="v03-price-panel"><div class="section-head"><h3>客户价目与使用规则</h3><span>'+rows.length+'项</span></div>'+rows.map(function(r){return '<div class="v03-price-row"><div><b>'+E(r[3])+'</b><small>'+E(r[4]||'')+'</small></div><strong>'+(r[5]!==null?'¥'+Number(r[5]).toLocaleString('zh-CN'):(r[6]!==null?'¥'+Number(r[6]).toLocaleString('zh-CN')+'起':r[9]?'9.5折':'请咨询'))+'<small>'+E(r[7]||'')+'</small></strong></div>';}).join('')+'</section>':'';
     var cta=s.project==='zj'&&/^ZJ-[01]$/.test(s.id)?notice('无需预约，到场由工作人员核验'):(!A.S.guest&&o.amount!==null?link('立即预约','U07',{id:s.id,variant:variant},'btn gold-btn full'):link('联系会所确认','U14',{mode:'contact'},'btn light full'));
     return head('服务详情','U05',btn(A.S.favorites.includes(s.id)?'已收藏':'收藏','favorite',{id:s.id},'btn light sm'))+'<div class="v03-detail-cover"><img src="'+img(s)+'" alt="'+E(s.name)+'"><div><small>'+E(s.category)+'</small><h2>'+E(s.name)+'</h2><p>'+E(s.kind.replace('场地免费用','场地使用'))+' · '+E(pname(s.project))+'</p></div></div>'+pad('<div class="v03-detail-summary"><b>'+E(q.title||'按会所规则核验')+'</b><span>'+E(q.sub||'服务价格、权益和预约规则以会所资料为准')+'</span></div>'+packageHtml+menuHtml+loungeHtml+priceHtml+'<section class="v03-rule-card"><div class="section-head"><h3>使用规则</h3></div><p class="small muted">'+E(s.note||'预约日期、日期下时段、容量、取消与儿童准入以项目规则为准。')+'</p><p class="small muted space">当前身份：'+E(A.S.guest?'游客浏览':A.identities[A.S.identity])+' · 未确认的金额和次数不按免费处理。</p></section><div class="phone-action v03-bottom-cta">'+cta+'</div>');
   }
@@ -108,7 +108,7 @@
     if(type==='retail')list=list.filter(function(o){return o.children?.length||o.service==='retail'||o.orderScene});
     if(type==='booking')list=list.filter(function(o){return !o.children&&!o.cardOrder});
     if(type==='cards')list=list.filter(function(o){return o.cardOrder});
-    return head('我的订单','U12')+pad('<div class="chips mb">'+[['all','全部'],['retail','在线点单'],['booking','预约服务'],['cards','卡券套餐']].map(function(x){return link(x[1],'U16',{type:x[0]},'chip '+(type===x[0]?'on':''));}).join('')+'</div>'+(list.length?list.map(function(o){return '<article class="v03-order-card"><div class="row between"><small>'+E(o.id)+'</small>'+tag(o.status)+'</div><h4>'+E(o.title)+'</h4><p>'+E(o.date+' '+o.time)+' · '+E(o.user||'林女士')+'</p><div class="row between"><b>'+((o.amount||0)?money(o.amount):'权益／到场登记')+'</b>'+btn('订单详情','order-detail',{id:o.id},'btn light sm')+'</div></article>';}).join(''):empty(type==='retail'?'暂无在线点单订单':'暂无对应订单'))+link('继续点单','U11',{},'btn light full space'));
+    return head('我的订单','U12')+pad('<div class="chips mb">'+[['all','全部'],['retail','在线点单'],['booking','预约服务'],['cards','卡券套餐']].map(function(x){return link(x[1],'U16',{type:x[0]},'chip '+(type===x[0]?'on':''));}).join('')+'</div>'+(list.length?list.map(function(o){return '<article class="v03-order-card"><div class="row between"><small>'+E(o.id)+'</small>'+tag(o.status)+'</div><h4>'+E(o.title)+'</h4><p>'+E(o.date+' '+o.time)+' · '+E(o.user||'林女士')+'</p><div class="row between"><b>'+(o.amount===null?'待确认':o.amount===0?'权益／到场登记':money(o.amount))+'</b>'+btn('订单详情','order-detail',{id:o.id},'btn light sm')+'</div></article>';}).join(''):empty(type==='retail'?'暂无在线点单订单':'暂无对应订单'))+link('继续点单','U11',{},'btn light full space'));
   }
   function ownerWallet(){
     var assets=A.S.guest?[]:A.assets().filter(function(a){return a.project===project()&&a.type!=='会籍'});

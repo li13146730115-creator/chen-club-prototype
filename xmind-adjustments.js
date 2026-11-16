@@ -6,7 +6,7 @@
   var serviceRows=function(){return A.services.filter(function(s){return s.project===p()&&!A.S.hiddenServices.includes(s.id);});};
   var iso=function(d){return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');};
   var days=function(n){var base=new Date();base.setHours(12,0,0,0);return Array.from({length:n||7},function(_,i){var d=new Date(base);d.setDate(base.getDate()+i);return [iso(d),d.toLocaleDateString('zh-CN',{weekday:'short'})];});};
-  var times=function(){return ['09:00','11:00','14:00','16:00'];};
+  var times=function(){return ['09:00','11:00','14:00','16:00','18:00'];};
   var endTime=function(t){var x=t.split(':'),m=Number(x[0])*60+Number(x[1])+60;return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');};
   var safe=function(x){return x==null?'':E(x);};
   var priceText=function(x){var p=x&&x.prices||{};return ['ma','mc','na','nc'].map(function(k){return p[k]||'待配置';}).join('／');};
