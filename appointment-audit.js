@@ -24,7 +24,7 @@
   }
   function slotMarkup(s,formEl,date,resource,variant,personnel,selected,action){
     var items=slotItems(s,formEl,date,resource,variant,personnel,selected);
-    return '<div class="owner-time-grid audit-slot-grid" data-audit-slots>'+items.map(function(x){return '<label class="owner-time-option audit-time-option '+(x.occupied?'occupied':'')+' '+(x.selected?'is-selected':'')+'"><input type="radio" name="time" value="'+x.time+'" '+(x.selected?'checked ':'')+(x.occupied?'disabled ':'required ')+'><span><b>'+x.time+'—'+endTime(x.time,x.duration)+'</b><small>'+(x.occupied?'已约满':'可预约 · '+date)+'</small></span></label>';}).join('')+'</div>';
+    return '<div class="owner-time-grid audit-slot-grid" data-audit-slots>'+items.map(function(x){return '<label class="owner-time-option audit-time-option '+(x.occupied?'occupied':'')+' '+(x.selected?'is-selected':'')+'"><input type="radio" name="time" value="'+x.time+'" '+(x.selected?'checked ':'')+(x.occupied?'disabled ':'required ')+'><span><b>'+(/私宴/.test(s.name)?(x.time==='11:00'?'午宴 ':x.time==='18:00'?'晚宴 ':''):'')+x.time+'—'+endTime(x.time,x.duration)+'</b><small>'+(x.occupied?'已约满':'可预约 · '+date)+'</small></span></label>';}).join('')+'</div>';
   }
   function ownerBooking(){
     var id=A.params.get('id'),s=A.services.find(function(x){return x.id===id&&x.project===project();})||(!id?A.services.find(function(x){return x.project===project();}):null);
