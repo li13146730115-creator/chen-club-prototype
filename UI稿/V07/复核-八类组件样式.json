@@ -1,0 +1,34 @@
+[
+  {
+    "type": "banner",
+    "different": true
+  },
+  {
+    "type": "membership",
+    "different": true
+  },
+  {
+    "type": "appointment",
+    "different": true
+  },
+  {
+    "type": "today",
+    "different": true
+  },
+  {
+    "type": "content",
+    "different": true
+  },
+  {
+    "type": "water",
+    "different": true
+  },
+  {
+    "type": "people",
+    "different": true
+  },
+  {
+    "type": "recommend",
+    "different": true
+  }
+]
