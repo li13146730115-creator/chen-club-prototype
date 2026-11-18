@@ -84,7 +84,7 @@ function desktopShell(page,content){
   {title:'系统',icon:'setting',ids:['A12','A17','A18','A19']},
   {title:'商家运营',icon:'connection',ids:['M04','M05','M06','M07','M08','M09','M10','M01','M02','M03']}
  ];
- const group=groups.find(g=>g.ids.includes(({A27:'A25',A28:'A26',A29:'A05',A30:'A07',A21:'A07'})[page.id]||page.id))||groups[0];
+ const group=groups.find(g=>g.ids.includes(({A27:'A25',A28:'A25',A29:'A05',A30:'A07',A21:'A07',A34:'A33',A31:'A25',M14:'M13',M17:'M16',M18:'M16'})[page.id]||page.id))||groups[0];
  return `<div class="mall-shell">
  <nav class="mall-rail" aria-label="后台模块"><a class="mall-brand" href="#/A25">宸</a>${groups.map(g=>`<a href="${href(g.ids[0])}" class="${g===group?'on':''}">${Club.icon(g.icon)}<span>${g.title}</span></a>`).join('')}<div class="mall-rail-bottom">${btn('页面目录','directory',{},'mall-directory')}</div></nav>
  <aside class="mall-submenu"><div class="mall-subtitle">${group.title}</div><nav aria-label="当前模块页面">${group.ids.filter(id=>{const p=pages.find(x=>x.id===id);return p&&!p.hidden}).map(id=>{const p=pages.find(x=>x.id===id);return `<a href="${href(id)}" class="${id===page.id?'on':''}">${Club.icon('s-grid')}<span>${E(p.title)}</span></a>`}).join('')}</nav><div class="mall-side-note">宸 CLUB 会所服务<br>${page.role==='M'?'商户运营中心':'平台运营中心'}<div class="space">${btn('重置演示数据','reset',{},'btn light sm')}</div></div></aside>
