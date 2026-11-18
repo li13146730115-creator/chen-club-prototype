@@ -28,3 +28,36 @@
 .v07-pick-grid>label[hidden]{display:none!important}
 
 .v07-drawer-body .v07-pc-form{max-width:none;border:0;padding:0}
+
+/* 业主预约与代客预约采用同一组步骤、场地、日期和时段视觉。 */
+.mobile-screen:has(.v08-owner-booking){background:#f6f8f4}
+.v08-owner-stepper{margin:0!important;min-height:62px;gap:25px;padding:20px 8px;box-sizing:border-box}
+.v08-owner-stepper>a{display:flex;align-items:center;gap:5px;font-size:11px;color:#ab9e88;text-decoration:none}
+.v08-owner-booking{padding:0 20px 30px!important;color:#2b4037;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.v08-owner-booking form{margin:0}
+.v08-owner-booking .v08-options{margin:20px 0 28px}
+.v08-owner-booking .v08-options legend,.v08-owner-booking .owner-field-title{font-family:inherit;font-size:13px;font-weight:600;line-height:1.5;letter-spacing:0;color:#2b4037}
+.v08-owner-booking .v08-options legend{margin-bottom:12px}
+.v08-owner-booking .v08-option-list{gap:9px}
+.v08-owner-booking .v08-option-list label{flex:0 1 auto}
+.v08-owner-booking .v08-option-list.scroll label{flex:0 0 135px}
+.v08-owner-booking .v08-option-list span{min-height:42px;padding:11px 14px;border-color:#ddcfb4;border-radius:5px;background:#fffdf7;color:#8d7e66;font-size:11px;line-height:1.6}
+.v08-owner-booking .v08-option-list input:checked+span{border-color:#9c7845;background:#ebe1ca;color:#8b632f}
+.v08-owner-booking .owner-field-title{margin:24px 0 12px}
+.v08-owner-booking .owner-field-title small{float:right;font-family:inherit;font-size:9px;font-weight:400;line-height:20px;color:#ad9670}
+.v08-owner-booking .owner-date-strip{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:0;margin-bottom:0}
+.v08-owner-booking .owner-date-strip::-webkit-scrollbar{display:none}
+.v08-owner-booking .audit-date-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;flex:0 0 64px;min-width:64px!important;height:94px!important;padding:12px 4px;border:1px solid #ddcfb4;border-radius:6px!important;background:#fffdf7;color:#8d7e66}
+.v08-owner-booking .audit-date-card b{font-family:inherit;font-size:14px!important;font-weight:600;line-height:1.2}
+.v08-owner-booking .audit-date-card span{font-size:10px;line-height:1.2}
+.v08-owner-booking .audit-date-card small{font-size:9px;line-height:1.2;color:#ad9670}
+.v08-owner-booking .audit-date-card.on{background:#254838!important;border-color:#254838!important;color:white}
+.v08-owner-booking [data-v08-times]>.owner-field-title{margin-top:24px}
+.v08-owner-booking .owner-time-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0}
+.v08-owner-booking .owner-time-option span{display:flex;flex-direction:column;justify-content:center;gap:13px;min-height:76px;padding:14px 6px;border:1px solid #ddcfb4;border-radius:6px;background:#fffdf7;box-sizing:border-box}
+.v08-owner-booking .owner-time-option b{font-family:inherit;font-size:13px;font-weight:400;line-height:1.3;color:#656656}
+.v08-owner-booking .owner-time-option small{font-family:inherit;font-size:10px;line-height:1.3;color:#b09261}
+.v08-owner-booking .owner-time-option.is-selected span,.v08-owner-booking .owner-time-option input:checked+span{background:#ebe1ca;border-color:#9c7845;box-shadow:inset 0 0 0 1px #9c7845}
+.v08-owner-booking .owner-time-option input:focus-visible+span{outline:2px solid #9c7845;outline-offset:2px}
+.v08-owner-booking .owner-time-option.occupied span{background:#eeede7}
+.v08-owner-booking .field>span{font-family:inherit;font-size:13px}
