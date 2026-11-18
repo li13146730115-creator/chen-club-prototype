@@ -31,4 +31,6 @@
 ## Task 4 — 验证与发布
 - [x] node --test tests/*.test.cjs；修复全部失败并按会议新要求更新被替代的断言。
 - [x] CUA在375×812走通权益→指定规格→卡券→订单→核销；新建会籍/绑定及发货退款由回归验证，1440×900核对代客、营销、价格维护；截图保存UI稿/V420。
-- [ ] 更新逐项核验表与README、离线目录，同步GitHub并确认部署版本与资源正常；真实小程序未实机观察部分按源码依据如实标注。
+- [x] 更新逐项核验表与README、离线目录，同步GitHub并确认部署版本与资源正常；真实小程序未实机观察部分按源码依据如实标注。
+
+Completion evidence: 170/170 tests pass; code release 8f612e4 pushed. Live U01/U03/A33 loaded v10 resources 4.20.0.1 without console errors; offline mirror synced. Screenshots of live deployment saved outside the publication package in outputs/20261118_1628会议与闭环核验.
