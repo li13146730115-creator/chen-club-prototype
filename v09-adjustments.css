@@ -10,3 +10,15 @@
 .v19-buy.full{width:100%;box-sizing:border-box}.device:has(.mall-core) #phone-overlay .modal{max-width:100%!important}.v19-checkout-bar{position:sticky;bottom:-22px;background:white;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:12px 16px 21px;border-top:1px solid #eee;z-index:7}.v19-checkout-bar>span{font-size:12px;white-space:nowrap}.v19-checkout-bar strong{font-size:18px;color:#3cc83f}.v19-checkout-bar>.btn{background:#3cc83f;border:0;border-radius:24px;width:auto;min-width:110px;padding:12px 20px;font-size:13px}
 .v19-product-admin-grid table{min-width:0!important;width:100%;table-layout:fixed}.v19-product-admin-grid th,.v19-product-admin-grid td{padding:10px 7px!important;white-space:normal!important}.v19-product-admin-grid th:nth-child(1){width:20%}.v19-product-admin-grid th:nth-child(2){width:16%}.v19-product-admin-grid th:nth-child(3){width:12%}.v19-product-admin-grid th:nth-child(4){width:40%}.v19-product-admin-grid th:nth-child(5){width:12%}.v19-product-admin-grid input[type=file]{font-size:10px}.v19-product-admin-grid .field{min-width:0}.v19-product-hero.v05-detail-image{display:block;width:100%;border:0;padding:0;border-radius:0;margin:0;background:#fff}
 .v19-gallery-prev,.v19-gallery-next{position:absolute;top:46%;width:30px;height:30px;border-radius:50%;border:0;background:#0003;color:#fff;font-size:22px;display:grid;place-items:center;padding:0}.v19-gallery-prev{left:12px}.v19-gallery-next{right:12px}.v07-pc-product select{font-size:12px;width:100%;margin:8px 0}
+
+.v19-product-detail .mp-head{background:#fff;color:#333}.v19-product-detail .owner-back{color:#555}
+
+.v19-cart-page{background:linear-gradient(#3cc83f 0 116px,#f5f5f5 175px);background-attachment:local}.v19-cart-page .v19-cart-heading{color:#fff;padding-bottom:17px}.v19-cart-page .v19-cart-heading .link{color:#fff}.v19-cart-store{display:flex;align-items:center;gap:10px;font-size:14px!important}
+
+.v19-checkout{background:linear-gradient(#3cc83f 0 85px,#f5f5f5 145px)}.v19-shipping-card{border-bottom:2px dashed #a9c9e8}.v19-shipping-card .link{color:#3cc83f}
+
+.v19-cart-page,.v19-checkout,.v19-product-detail{display:flex;flex-direction:column}.v19-cart-page>.v19-cart-footer,.v19-product-detail>.v19-product-footer{margin-top:auto}.v19-checkout>form{flex:1;display:flex;flex-direction:column}.v19-checkout-bar{margin-top:auto}.v19-product-hero{flex-shrink:0}
+
+.v19-order-list .mp-head{background:#fff;color:#333}.v19-order-list .owner-back{color:#555}.v19-mall-order header b{font-size:12px;font-weight:500}.v19-order-list .v19-order-states{background:#fff}
+
+.mall-core .mp-head h2{font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif!important;font-weight:600}.v19-cart-footer,.v19-checkout-bar,.v19-product-footer{bottom:0}
