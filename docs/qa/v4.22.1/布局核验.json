@@ -1,0 +1,89 @@
+{
+  "baseline": "6befead",
+  "viewport": {
+    "width": 375,
+    "height": 812
+  },
+  "layout": [
+    {
+      "class": "home-hero v07-banner v11-carousel home-banner-style-1 v11-home-carousel",
+      "height": 487.1953125,
+      "text": "A MOMENT, WELL LIVED在宸园，留一段好时光从运动到茶叙，发现日常的更多可能",
+      "width": 343,
+      "x": 16,
+      "y": 60
+    },
+    {
+      "class": "v05-member-card owner v04-membership owner v09-membership-wallet",
+      "height": 106,
+      "text": "宸享卡有效至 2027-11-15会员码",
+      "width": 375,
+      "x": 0,
+      "y": 558.1953125
+    },
+    {
+      "class": "v09-wallet-pocket",
+      "height": 18,
+      "text": "",
+      "width": 375,
+      "x": 0,
+      "y": 646.1953125
+    },
+    {
+      "class": "v07-recent-row v08-recent-row",
+      "height": 76.1953125,
+      "text": "艺廊展示区11月19日14:00",
+      "width": 343,
+      "x": 16,
+      "y": 710.1953125
+    },
+    {
+      "class": "home-today-grid v08-today-grid ",
+      "height": 183,
+      "text": "恒温泳池场地免费立即预约恒温泳池 · 私教课¥500立即预约",
+      "width": 343,
+      "x": 16,
+      "y": 830.390625
+    },
+    {
+      "class": "v07-story",
+      "height": 190,
+      "text": "CLUB LIFE茶室茶香会友，静享宸园时光。发现更多 ›",
+      "width": 343,
+      "x": 16,
+      "y": 1057.390625
+    },
+    {
+      "class": "v07-story",
+      "height": 294.9375,
+      "text": "CLUB LIFE健身房欢迎来到宸 Club，探索运动、社交与康养服务。发现更多 ›",
+      "width": 343,
+      "x": 16,
+      "y": 1305.390625
+    },
+    {
+      "class": "v05-coach-home",
+      "height": 282.0234375,
+      "text": "PERSONAL TRAINING李教练力量基础 · 体态训练 · 运动习惯了解课程详情 PERSO",
+      "width": 343,
+      "x": 16,
+      "y": 2226.859375
+    }
+  ],
+  "tests": {
+    "passed": 248,
+    "failed": 0
+  },
+  "projects": [
+    "北京宸园",
+    "紫京宸园",
+    "中建项目会所"
+  ],
+  "interactions": [
+    "会员码",
+    "轮播切换",
+    "项目下拉切换",
+    "后台样式切换",
+    "装修草稿预览"
+  ]
+}

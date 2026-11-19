@@ -7,6 +7,7 @@ let page='home',panel='content';const selected={home:'',services:''},slideIndexe
 const clone=x=>JSON.parse(JSON.stringify(x)),shop=()=>A.S.project,key=p=>shop()+'-'+p,typeOf=c=>c.type==='wellness'?'content':c.type==='dining'?'water':c.type;
 const editorPage=()=>['A32','M12'].includes(A.route)?'services':page;
 const clampStyle=n=>Math.min(1,Math.max(0,Number(n)||0));
+const homeStyle=c=>c.type==='banner'&&!c.v11Style?Math.min(2,Math.max(0,Number(c.style)||0)):clampStyle(c.style);
 const linkValue=v=>{const s=String(v||'').trim();if(s&&!/^(#\/U\d+(?:\?[^\s]*)?|https:\/\/[^\s]+)$/.test(s))throw Error('图片链接须为会员端页面或https地址');return s;};
 function imageValue(v){const s=String(v||'').trim();if(!s||!(/^(assets\/[\w./-]+|https:\/\/[^\s]+|data:image\/(?:png|jpeg|webp|gif);base64,[a-zA-Z0-9+/=]+)$/.test(s)))throw Error('请填写有效图片地址或上传图片');return s;}
 function validateUpload(file){if(!file||!/^image\/(png|jpeg|webp|gif)$/.test(file.type))throw Error('请选择PNG、JPG、WebP或GIF图片');if(file.size>2*1024*1024)throw Error('请选择2MB以内的图片');return true;}
@@ -14,15 +15,15 @@ function slides(c){if(Array.isArray(c.slides)&&c.slides.length)return c.slides.s
 function initialService(){const b=A.v09.pageContent().serviceBanner||{},c=D.create('banner');return {...c,title:'服务页轮播图',style:0,slides:[{image:b.image||A.scene(shop()),title:b.title||'发现会所服务',subtitle:b.subtitle||'',link:b.item?A.href(b.target||'U06',{id:b.item}):A.href('U05')}]};}
 function draft(p=editorPage()){
  D.selectHome();const state=D.state();
- if(p==='home'){const d=D.draft(),original=d.components;d.components=baseNormalize(d).components.map(c=>Object.assign(original.find(x=>x.id===c.id)||{},c));for(const c of d.components){c.style=clampStyle(c.style);if(c.type==='banner')c.slides=slides(c);}if(!d.components.some(c=>c.id===selected.home))selected.home=d.components[0]?.id||'';return d;}
+ if(p==='home'){const d=D.draft(),original=d.components;d.components=baseNormalize(d).components.map(c=>Object.assign(original.find(x=>x.id===c.id)||{},c));for(const c of d.components){c.style=homeStyle(c);if(c.type==='banner')c.slides=slides(c);}if(!d.components.some(c=>c.id===selected.home))selected.home=d.components[0]?.id||'';return d;}
  const d=state.drafts[key('services')]??={title:'服务页',components:[initialService()],updated:A.C.now()};
  d.components=d.components.filter(c=>c.type==='banner').slice(0,1);if(!d.components.length)d.components=[initialService()];const c=d.components[0];c.slides=Array.isArray(c.slides)&&c.slides.length?c.slides.slice(0,5):[slides(c)[0]];c.style=clampStyle(c.style);selected.services=c.id;return d;
 }
 function current(){const p=editorPage();return draft(p).components.find(c=>c.id===selected[p]);}
 function banner(c,p='home'){
- const list=slides(c),id=p+':'+c.id,index=Math.max(0,Math.min(list.length-1,Number(slideIndexes[id]??(p==='home'?A.filters.bannerIndex:0))||0)),s=list[index],style=clampStyle(c.style);
+ const list=slides(c),id=p+':'+c.id,index=Math.max(0,Math.min(list.length-1,Number(slideIndexes[id]??(p==='home'?A.filters.bannerIndex:0))||0)),s=list[index],style=p==='home'?homeStyle(c):clampStyle(c.style);
  const image='<img class="hero-image" src="'+E(s.image)+'" alt="'+E(s.title||'会所场景')+'">',copy='<div class="hero-shade"></div><div class="hero-copy"><p class="hero-kicker">'+(p==='services'?'DISCOVER THE CLUB':'A MOMENT, WELL LIVED')+'</p><h1>'+E(s.title||'')+'</h1><p>'+E(s.subtitle||'')+'</p>'+(s.link?'<span class="v11-banner-more">探索详情 ›</span>':'')+'</div>';
- return '<div class="home-hero v07-banner v11-carousel home-banner-style-'+style+' '+(p==='services'?'v11-service-carousel':'v11-home-carousel')+'" data-carousel="'+E(c.id)+'">'+(s.link?'<a class="v11-banner-link" href="'+E(s.link)+'">'+image+copy+'</a>':image+copy)+'<div class="hero-pagination">'+list.map((_,i)=>btn('','v11-banner-slide',{id:c.id,page:p,index:i},i===index?'active':'').replace('<button ','<button aria-label="切换到第'+(i+1)+'张轮播图" aria-pressed="'+(i===index)+'" ')).join('')+'</div><span class="v11-slide-number">'+(index+1)+' / '+list.length+'</span></div>';
+ return '<div class="home-hero v07-banner v11-carousel home-banner-style-'+style+' '+(p==='services'?'v11-service-carousel':'v11-home-carousel'+(c.v11Style?' v11-custom-banner':''))+'" data-carousel="'+E(c.id)+'">'+(s.link?'<a class="v11-banner-link" href="'+E(s.link)+'">'+image+copy+'</a>':image+copy)+'<div class="hero-pagination">'+list.map((_,i)=>btn('','v11-banner-slide',{id:c.id,page:p,index:i},i===index?'active':'').replace('<button ','<button aria-label="切换到第'+(i+1)+'张轮播图" aria-pressed="'+(i===index)+'" ')).join('')+'</div>'+(p==='services'?'<span class="v11-slide-number">'+(index+1)+' / '+list.length+'</span>':'')+'</div>';
 }
 function membership(c){
  const html=A.v05.membership();if(Number(c.style)===1)return html;
@@ -33,12 +34,14 @@ function story(c){const kind=c.type==='wellness'?'wellness':'content',s=A.servic
 function component(c,editor){
  if(A.v07Decoration.renderingBase)return null;if(!c.visible&&!editor)return '';
  if(c.type==='banner')return '<section class="decor-component component-banner">'+banner(c)+'</section>';
+ // 旧装修快照中的样式编号不能自动切换成新组件；仅在装修台主动选样式后启用新布局。
+ if(!c.v11Style||c.type==='membership'&&Number(c.style)!==0)return baseComponent(c,editor);
  let body;if(c.type==='membership')body=membership(c);else if(c.type==='people')body=people(c);else if(['content','wellness'].includes(c.type))body=story(c);else return baseComponent(c.type==='recommend'?{...c,ids:[]}:c,editor);
  return '<section class="decor-component home-component component-'+c.type+' v07-component variant-'+clampStyle(c.style)+'">'+(c.type==='membership'?'':A.v05.sectionHead(c))+body+'</section>';
 }
-A.v07Decoration.component=component;A.v07Decoration.banner=c=>banner(c);A.v07Decoration.normalize=cfg=>{const d=baseNormalize(cfg);d.components=d.components.map(c=>({...c,style:clampStyle(c.style)}));return d;};
+A.v07Decoration.component=component;A.v07Decoration.banner=c=>banner(c);A.v07Decoration.normalize=cfg=>{const d=baseNormalize(cfg);d.components=d.components.map(c=>({...c,style:homeStyle(c)}));return d;};
 function upload(field,label='上传图片'){return '<label class="field v11-upload"><span>'+E(label)+'（2MB以内）</span><input type="file" name="v11-banner-upload" data-field="'+field+'" accept="image/png,image/jpeg,image/webp,image/gif"></label>';}
-function stylePicker(c){const names=types[typeOf(c)]?.[2]||['样式一','样式二'];return '<div class="v11-style-heading"><b>组件样式</b><span>点击后同步画布</span></div><div class="v11-style-picker">'+names.map((name,i)=>'<button type="button" data-action="v11-decor-style" data-value="'+i+'" class="'+(Number(c.style)===i?'on':'')+'" aria-pressed="'+(Number(c.style)===i)+'"><span class="v11-style-thumb type-'+typeOf(c)+' layout-'+i+'"><i class="v11-thumb-picture"></i><span><i></i><i></i></span>'+(c.type==='people'&&i===1?'<i class="v11-thumb-picture"></i><span><i></i><i></i></span>':'')+'</span><b>样式'+(i+1)+' · '+E(name)+'</b></button>').join('')+'</div>';}
+function stylePicker(c){const chosen=!c.v11Style&&c.type==='membership'?1:Number(c.style),names=types[typeOf(c)]?.[2]||['样式一','样式二'];return '<div class="v11-style-heading"><b>组件样式</b><span>点击后同步画布</span></div><div class="v11-style-picker">'+names.map((name,i)=>'<button type="button" data-action="v11-decor-style" data-value="'+i+'" class="'+(chosen===i?'on':'')+'" aria-pressed="'+(chosen===i)+'"><span class="v11-style-thumb type-'+typeOf(c)+' layout-'+i+'"><i class="v11-thumb-picture"></i><span><i></i><i></i></span>'+(c.type==='people'&&i===1?'<i class="v11-thumb-picture"></i><span><i></i><i></i></span>':'')+'</span><b>样式'+(i+1)+' · '+E(name)+'</b></button>').join('')+'</div>';}
 function bannerFields(c){const list=slides(c);return select('slideCount','轮播数量（1—5张）',[1,2,3,4,5].map(n=>[String(n),n+'张']),String(list.length)).replace('<select ','<select data-v11-banner-count ')+list.map((s,i)=>'<fieldset class="v11-slide-config"><legend>第'+(i+1)+'张轮播图</legend><button class="v11-slide-preview" type="button" data-action="v11-image-preview" data-index="'+i+'" data-src="'+E(s.image)+'" aria-label="预览第'+(i+1)+'张图片"><img src="'+E(s.image)+'" alt="第'+(i+1)+'张轮播图预览"><span>查看大图</span></button>'+upload('slideImage-'+i,'上传第'+(i+1)+'张图片')+input('slideImage-'+i,'图片地址',s.image,'text','required')+input('slideTitle-'+i,'主标题',s.title||'')+input('slideSubtitle-'+i,'副标题',s.subtitle||'')+input('slideLink-'+i,'点击链接',s.link||'','text','placeholder="#/U06?id=服务编号 或 https://"')+'</fieldset>').join('');}
 function contentFields(c){
  if(c.type==='banner')return bannerFields(c);
@@ -73,7 +76,7 @@ A.forms['v07-decor-content']=A.forms['v11-decor-content'];
 A.actions['v11-decor-page']=d=>{capture();page=d.page==='services'?'services':'home';panel='content';if(['A32','M12'].includes(A.route)&&page==='home')A.go('A10');else A.render();};
 A.actions['v07-decor-select']=d=>{capture();selected[editorPage()]=d.id;panel='content';A.render();};
 A.actions['v07-decor-panel']=d=>{capture();panel=d.value==='style'?'style':'content';A.render();};
-A.actions['v11-decor-style']=d=>{capture();const c=current();if(c){c.style=clampStyle(d.value);c.v07Style=true;c.v08Style=true;A.save();A.render();}};
+A.actions['v11-decor-style']=d=>{capture();const c=current();if(c){c.style=clampStyle(d.value);c.v07Style=true;c.v08Style=true;c.v11Style=true;A.save();A.render();}};
 A.actions['v07-style']=A.actions['v11-decor-style'];
 A.actions['v11-banner-count']=d=>{const count=Number(d.value);if(!Number.isInteger(count)||count<1||count>5)throw Error('轮播数量须为1—5张');capture();const c=current();if(c?.type!=='banner')return;const list=slides(c);c.slides=Array.from({length:count},(_,i)=>list[i]||{image:A.scene(shop()),title:'',subtitle:'',link:''});A.save();A.render();};
 A.actions['v11-banner-slide']=d=>{if(['A10','A32','M12'].includes(A.route))capture();const p=d.page||'home';slideIndexes[p+':'+d.id]=Math.max(0,Number(d.index)||0);if(p==='home')A.filters.bannerIndex=Math.max(0,Number(d.index)||0);A.render();};
