@@ -72,25 +72,30 @@
 .component-appointment.variant-1 .v08-recent-row{grid-template-columns:22px minmax(0,1fr) auto}
 .component-appointment.variant-1 .v08-recent-row>.v08-recent-when{grid-column:3;width:auto;margin:0;justify-content:center}
 
-/* 首页会籍：卡片上沿露出，卡套覆盖卡面下部。仅展示卡名与有效期。 */
-.v05-member-card.v09-membership-wallet{display:block;position:relative;isolation:isolate;height:104px!important;min-height:0!important;margin:0 16px;padding:0!important;border:0!important;border-radius:12px!important;background:transparent!important;overflow:hidden;box-shadow:0 6px 16px #18382b16;text-decoration:none;color:#eadbb8}
-.v05-member-card.v09-membership-wallet:before{content:'';position:absolute;inset:5px 22px auto 12px;height:110px;border:1px solid #c3ae7d70;border-radius:10px;background:#c1ab78;box-shadow:none;transform:rotate(-3deg);z-index:0}
+/* 首页会籍：Banner 下方独立排列，薄云层横贯画布并掩映卡片下沿。 */
+.home-content>.component-membership,.studio-phone.home-layout .component-membership{margin-top:0!important;padding-top:0!important}
+.v05-member-card.v09-membership-wallet{display:block;position:relative;isolation:isolate;height:106px!important;min-height:0!important;margin:0 16px;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;overflow:hidden;box-shadow:none;text-decoration:none;color:#eadbb8}
+.v05-member-card.v09-membership-wallet:before{content:'';position:absolute;inset:5px 38px auto 28px;height:110px;border:1px solid #c3ae7d70;border-radius:10px;background:#c1ab78;box-shadow:none;transform:rotate(-3deg);z-index:0}
 .v05-member-card.v09-membership-wallet:after{display:none}
-.v09-wallet-card{position:absolute;z-index:1;top:7px;left:7px;right:7px;height:135px;border:1px solid #bb9e6355;border-radius:10px;padding:13px 17px;background:radial-gradient(ellipse at 95% 10%,#52705655,transparent 62%),linear-gradient(115deg,#22493a,#34523c);box-shadow:0 -2px 7px #15382b12;color:#eadbb8}
-.v09-wallet-card>b{position:relative;display:block;font:500 22px/1.35 'Songti SC',serif;letter-spacing:2px;max-width:100%;overflow-wrap:anywhere}
+.v09-wallet-card{position:absolute;z-index:1;top:7px;left:23px;right:23px;height:115px;border:1px solid #bb9e6355;border-radius:10px;padding:13px 75px 13px 17px;background:radial-gradient(ellipse at 95% 10%,#52705655,transparent 62%),linear-gradient(115deg,#22493a,#34523c);box-shadow:0 -2px 7px #15382b12;color:#eadbb8;text-decoration:none}
+.v09-wallet-card>b{position:relative;display:block;font:500 22px/1.35 'Songti SC',serif;letter-spacing:2px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .v09-wallet-card>time{display:block;position:relative;font:10px/1.5 Arial,sans-serif;color:#cfbc93;margin-top:4px}
-.v09-wallet-pocket{position:absolute;z-index:2;left:0;right:0;top:78px;bottom:0;border:1px solid #ac94653d;border-radius:10px 10px 12px 12px;background:linear-gradient(115deg,#1b3a30,#254437 70%,#354e3a);box-shadow:0 -3px 8px #142f2a26;pointer-events:none}
-.v09-wallet-pocket:before{content:'';position:absolute;left:9px;right:9px;top:7px;border-top:1px dashed #ac94654a}
+.v09-wallet-code{position:absolute;z-index:2;right:38px;top:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-width:44px;min-height:48px;padding:2px;border:0;background:transparent;color:#e2cfa4;font:9px/1.4 var(--sans);cursor:pointer}
+.v09-wallet-code:focus-visible,.v09-wallet-card:focus-visible{outline:2px solid #c6a76c;outline-offset:-3px}
+.v09-wallet-pocket{position:absolute;z-index:3;left:0;right:0;top:88px;bottom:0;border:0;border-radius:0;background:none;box-shadow:none;color:#254639;pointer-events:none}
+.v09-wallet-pocket>svg{display:block;width:100%;height:100%;overflow:visible}
+.v09-wallet-pocket:before{display:none}
 .v09-membership-wallet.family .v09-wallet-card{background:linear-gradient(115deg,#f1e4c6,#cfbb8c);color:#6d512d}
 .v09-membership-wallet.family .v09-wallet-card>time{color:#856d45}
+.v09-membership-wallet.family .v09-wallet-code{color:#856536}
 .v09-membership-wallet.visitor .v09-wallet-card{background:linear-gradient(115deg,#e2e8df,#bdcab8);color:#3d5645}
 .v09-membership-wallet.visitor .v09-wallet-card>time{color:#5d7561}
-.component-membership.variant-1 .v09-wallet-card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-content:start;align-items:center;gap:8px;padding-top:20px}
-.component-membership.variant-1 .v09-wallet-card>time{font-size:9px;margin:0}
-.component-membership.variant-1 .v05-member-card.v09-membership-wallet{height:88px!important}
-.component-membership.variant-1 .v09-wallet-pocket{top:64px;border-radius:12px 12px 12px 12px}
+.v09-membership-wallet.visitor .v09-wallet-code{color:#526b53}
+.component-membership.variant-1 .v09-wallet-card{padding-top:13px}
+.component-membership.variant-1 .v09-wallet-card>b{font-size:20px}
+.component-membership.variant-1 .v09-wallet-card>time{font-size:9px}
+.home-content>.component-membership .v09-membership-wallet,.v07-studio .studio-phone .component-membership .v09-membership-wallet{margin:0 -16px!important;width:calc(100% + 32px)!important}
 .v04-member-preview .v09-membership-wallet{margin:0}
-.v07-studio .studio-phone .component-membership .v09-membership-wallet{margin:0!important;width:100%}
 
 /* 个人中心延用原墨绿会员卡面，信息及快捷入口紧凑排列。 */
 .v09-profile-toolbar{height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
