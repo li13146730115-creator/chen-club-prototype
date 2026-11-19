@@ -3,7 +3,7 @@ const setup=()=>load(fs.existsSync(path.join(__dirname,'../v11-proxy.js'))?['v11
 test('V0.9：代客入口仅在订单管理，员工分类同时包含服务及商品',()=>{
  const {A,go}=setup();
  assert.equal(A.navigationGroups.some(g=>g.title==='项目服务'&&g.ids.includes('A25')),false);
- assert.ok(A.navigationGroups.find(g=>g.title==='订单管理').ids.includes('A25'));
+ assert.ok(!A.navigationGroups.find(g=>g.title==='订单管理').ids.includes('A25'));assert.match(go('A08'),/创建代客订单/);
  for(const r of ['S03','A27','M17']){const h=go(r);assert.match(h,/data-v11-mixed-catalog/);assert.match(h,/恒温泳池/);assert.match(h,/美式咖啡/);assert.doesNotMatch(h,/class="v20-proxy-mode"/);}
 });
 test('V0.9：单预约不可与商品混选，多类别商品可加入同一清单',()=>{
