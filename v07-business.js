@@ -41,7 +41,7 @@ function quote(d){
  for(const c of moneyCoupons){const indexes=lines.flatMap((l,i)=>A.v10.matches(c,l)&&l.gross>lineDiscounts[i]?[i]:[]),eligible=indexes.reduce((n,i)=>n+lines[i].gross-lineDiscounts[i],0);if(eligible<Math.round(Number(c.minimum||0)*100)||!eligible)throw Error('未达到所选卡券使用门槛');let value=c.couponType==='代金券'?Math.min(eligible,Math.round(Number(c.value)*100)):Math.round(eligible*(1-Number(c.value)/10));if(!Number.isSafeInteger(value)||value<=0||value>eligible)throw Error('卡券面值或折数无效');let left=value;indexes.forEach((i,n)=>{const part=n===indexes.length-1?left:Math.floor(value*(lines[i].gross-lineDiscounts[i])/eligible);lineDiscounts[i]+=part;left-=part;});lineUses[indexes[0]].push({id:c.id,quantity:1});used.push({id:c.id,quantity:1});}
  const gross=lines.reduce((n,l)=>n+l.gross,0),discount=lineDiscounts.reduce((n,v)=>n+v,0);lines.forEach((l,i)=>Object.assign(l,{discount:lineDiscounts[i],couponUses:lineUses[i]}));return {lines,gross,discount,total:Math.max(0,gross-discount),used};
 }
-function submit(d){const q=quote(d),m=d.memberId&&members().find(m=>m.id===d.memberId);if(d.memberId&&!m)throw Error('会员不属于当前店铺');if(d.kind==='booking'){
+function submit(d){const q=M.quote(d),m=d.memberId&&members().find(m=>m.id===d.memberId);if(d.memberId&&!m)throw Error('会员不属于当前店铺');if(d.kind==='booking'){
  const check={...S,orders:[...S.orders]};for(const l of q.lines){const req={project:shop(),service:l.item,resource:l.resource,date:l.date,time:l.time,duration:l.duration};if(C.occupied(check,req))throw Error('所选场地时段已被占用，请重新选择');check.orders.push({...req,status:'待支付',id:C.uid('CHECK')});}
  }
  // 抵扣中的卡券按付款单保留，防止并行待支付单重复使用。

@@ -1,0 +1,14 @@
+{
+  "version": "4.22.0",
+  "requirements": 24,
+  "tests": 244,
+  "passed": 244,
+  "failed": 0,
+  "registeredPages": 113,
+  "projects": 3,
+  "identities": 4,
+  "renderChecks": 1356,
+  "renderFailures": 0,
+  "mobileViewport": "375x812",
+  "pcViewport": "1440x900"
+}
