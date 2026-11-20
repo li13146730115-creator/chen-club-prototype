@@ -1,0 +1,5 @@
+/* 图片保持正方形，在权益卡片内垂直居中；次数仍位于右上。 */
+.owner-device .v19-benefit>img{align-self:center}
+.owner-device .v19-benefit:has(.v11-benefit-count) .v19-benefit-main{min-height:96px;padding-bottom:32px;align-content:start}
+.owner-device .v19-benefit:has(.v11-benefit-count) .v19-benefit-main>.link{padding-right:72px;min-height:24px}
+@media(max-width:360px){.owner-device .v19-benefit:has(.v11-benefit-count) .v19-benefit-main{min-height:80px}}

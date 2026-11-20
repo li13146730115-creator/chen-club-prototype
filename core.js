@@ -31,12 +31,14 @@ function split(amount,shares){
  return parts.map(({remainder,index,...x})=>x);
 }
 const minutes=t=>Number(t.split(':')[0])*60+Number(t.split(':')[1]);
-function occupied(s,req,exclude){return s.orders.find(o=>o.id!==exclude&&o.project===req.project&&(o.resource===req.resource||(req.personnel&&o.personnel===req.personnel))&&o.date===req.date&&!['已取消','已退款','已完成'].includes(o.status)&&minutes(req.time)<minutes(o.time)+o.duration&&minutes(o.time)<minutes(req.time)+req.duration);}
+let occupiedResolver;
+function setOccupiedResolver(resolver){occupiedResolver=typeof resolver==='function'?resolver:undefined;}
+function occupied(s,req,exclude){if(occupiedResolver){const result=occupiedResolver(s,req,exclude);if(result!==undefined)return result;}return s.orders.find(o=>o.id!==exclude&&o.project===req.project&&(o.resource===req.resource||(req.personnel&&o.personnel===req.personnel))&&o.date===req.date&&!['已取消','已退款','已完成'].includes(o.status)&&minutes(req.time)<minutes(o.time)+o.duration&&minutes(o.time)<minutes(req.time)+req.duration);}
 function book(s,req){
  if(!req.project||!req.service||!req.resource||!req.date||!/^\d{2}:\d{2}$/.test(req.time)||!req.title)throw Error('请完整选择服务、日期、资源与时段');
  if(!Number.isSafeInteger(req.amount)||req.amount<0)throw Error('价格未确认，暂不能直接下单');
  if(!Number.isFinite(req.duration)||req.duration<=0)throw Error('服务时长尚未配置');
- if(occupied(s,req))throw Error('该资源时段已被占用，请换一个时段');
+ const busy=occupied(s,req);if(busy)throw Error(busy.message||'该资源时段已被占用，请换一个时段');
  const shares=req.shares||[{id:'demo-provider',name:'服务供方（演示）',ratio:100}];
  const feeBasisPoints=Number(req.feeBasisPoints??s.configs['fee-'+req.project]?.basisPoints??0);if(!Number.isInteger(feeBasisPoints)||feeBasisPoints<0||feeBasisPoints>10000)throw Error('平台手续费率无效');const platformFee=Math.round(req.amount*feeBasisPoints/10000);
  const o={...clone(req),id:uid('CY'),code:'CY'+(++s.seq)+Date.now().toString().slice(-5),user:req.user||'林女士',people:req.people||1,status:req.amount===0?'待履约':'待支付',paid:req.amount===0,refunded:0,refundParts:{},parts:req.amount?split(req.amount,shares):[],created:now(),channel:req.asset?'权益资产':'模拟在线支付',source:'演示业务记录'};
@@ -53,7 +55,7 @@ function verify(s,code,project,merchant){
  o.status='已完成';o.verifiedAt=now();log(s,'现场核销',o.id+' · '+(o.asset?'扣1次':'不扣次'));return o;
 }
 function cancel(s,id){const o=find(s,id);if(o.status!=='待支付'&&!(o.status==='待履约'&&o.amount===0))throw Error('已付费订单请提交退款申请，取消规则需项目确认');o.status='已取消';log(s,'取消预约',o.id);return o;}
-function reschedule(s,id,date,time){const o=find(s,id);if(!['待履约','待支付'].includes(o.status))throw Error('当前订单状态不可改期');const req={...o,date,time};if(occupied(s,req,id))throw Error('新时段资源已占用');o.date=date;o.time=time;log(s,'演示改期',id+' → '+date+' '+time);return o;}
+function reschedule(s,id,date,time){const o=find(s,id);if(!['待履约','待支付'].includes(o.status))throw Error('当前订单状态不可改期');const req={...o,date,time},busy=occupied(s,req,id);if(busy)throw Error(busy.message||'新时段资源已占用');o.date=date;o.time=time;log(s,'演示改期',id+' → '+date+' '+time);return o;}
 function refund(s,id,amount){
  const o=find(s,id);if(o.splitStatus==='已分账')throw Error('已分账订单不可在线退款，请联系线下处理');if(o.refundPending?.status==='处理中')throw Error('已有退款在途，请等待结果');if(!o.paid||!Number.isSafeInteger(amount)||amount<=0||amount>o.amount-o.refunded)throw Error('退款金额超过剩余可退额度或订单未支付');
  const remaining=o.amount-o.refunded;const parts=o.parts.map((p,index)=>{const balance=p.amount-(o.refundParts[p.id]||0),raw=amount*balance/remaining;return {...p,amount:Math.floor(raw),remainder:raw-Math.floor(raw),index};});let tail=amount-parts.reduce((n,p)=>n+p.amount,0);const rank=[...parts].sort((a,b)=>b.remainder-a.remainder||a.index-b.index);for(let i=0;i<tail;i++)rank[i].amount++;parts.forEach(p=>{delete p.remainder;delete p.index;o.refundParts[p.id]=(o.refundParts[p.id]||0)+p.amount});
@@ -67,5 +69,5 @@ function requestRefund(s,id,amount,reason,lineId=''){
 }
 function resolveRefund(s,id,result){const o=find(s,id),p=o.refundPending;if(!p)throw Error('没有待处理的退款');if(result==='处理中'){p.status='处理中';log(s,'退款处理中',id+' · 占用额度'+p.amount);return p;}if(result==='失败'){(o.refundFailures||(o.refundFailures=[])).push({...p,result,time:now()});o.refundPending=false;log(s,'退款明确失败，释放额度',id);return p;}if(result!=='成功')throw Error('请选择明确结果');o.refundPending=false;try{const r=refund(s,id,p.amount);r.reason=p.reason;r.lineId=p.lineId;if(p.lineId){const l=o.children.find(l=>l.id===p.lineId);l.refunded=(l.refunded||0)+p.amount;}return r;}catch(e){o.refundPending=p;throw e;}}
 function grant(s,req){if(!req.merchant)throw Error('必须绑定适用商家');if(!Number.isInteger(Number(req.quantity))||Number(req.quantity)<1)throw Error('发放数量必须为正整数');if(s.assets.some(a=>a.sourceOrder===req.order&&a.project===req.project&&a.name===req.name))throw Error('同一订单与卡种不可重复发放');const a={id:uid('ASSET'),project:req.project,name:req.name,remaining:Number(req.quantity),total:Number(req.quantity),expiry:req.expiry,type:req.type||'人工绑定次卡',merchant:req.merchant,services:req.services||[],status:'可用',sourceOrder:req.order,source:'凭据 '+req.order,note:req.reason};s.assets.push(a);s.assetRecords.unshift({project:req.project,asset:a.name,action:'人工发放 +'+a.total+'次',order:req.order,time:now()});log(s,'绑定商家并发放权益',a.id+' · '+req.reason);return a;}
-return {seed,book,pay,verify,cancel,reschedule,split,refund,requestRefund,resolveRefund,grant,validateShares,occupied,log,uid,now,clone};
+return {seed,book,pay,verify,cancel,reschedule,split,refund,requestRefund,resolveRefund,grant,validateShares,occupied,setOccupiedResolver,log,uid,now,clone};
 });

@@ -44,7 +44,8 @@ test('Word V0.10 S15及A31预约共享选券数量、返回路由与真实支付
 test('Word V0.10 免费服务和免费商品都有价格，未知价格显示查看详情，展示不改变真实报价',()=>{
  const {A,go}=setup(),M=A.v07,s=M.service('BJX01'),before=JSON.stringify(A.offer(s));
  assert.match(A.quote(s).title,/¥0\.00\/次/);assert.match(screen(go('U01')),/home-today-info[\s\S]*?¥0\.00\/次/);assert.match(screen(go('U01')),/home-video-row[\s\S]*?¥0\.00\/次/);assert.match(screen(go('U05')),/¥0\.00\/次/);assert.match(screen(go('U06?id='+s.id)),/v19-price[^>]*>¥0\.00\/次/);
- for(const r of ['U03','U20'])assert.match(screen(go(r)),/v20-member-price[^>]*>¥0\.00\/次/);
+ // V0.11 supersedes V0.10 wallet price display; transactional quotes retain prices.
+ for(const r of ['U03','U20'])assert.doesNotMatch(screen(go(r)),/v13-benefit-price|v20-member-price[^>]*>¥0\.00\/次/);
  assert.equal(JSON.stringify(A.offer(s)),before);
  const p=A.v09.raw('V07-bj-cola'),m=A.v08.me();A.v10.setPrice({project:'bj',item:p.id,skuId:'default',planId:m.planIds[0],price:0});assert.match(screen(go('U33?id='+p.id)),/v19-price[^>]*>¥0\.00/);assert.equal(M.quote({kind:'retail',memberId:m.id,lines:[{item:p.id,qty:1}],coupons:[]}).total,0);
  A.S.project='zx';const unknown=M.service('ZJX07');assert.equal(A.offer(unknown).amount,null);assert.equal(A.quote(unknown).title,'查看详情');assert.match(screen(go('U06?id='+unknown.id)),/v19-price[^>]*>查看详情/);assert.equal(A.offer(unknown).amount,null);

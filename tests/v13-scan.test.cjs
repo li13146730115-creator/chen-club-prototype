@@ -24,7 +24,7 @@ test('V0.10 菜单价参与报价下单，已配置会员价优先，旧车禁�
  R.saveMenu({...m,items:m.items.map(x=>({...x,enabled:x.item!==p.id}))});assert.throws(()=>M.quote(d),/售卖|下架/);
 });
 test('V0.10 扫码预约单独下单占用资源，实体和预约混合提交被拒绝',()=>{
- const {A}=setup(),M=A.v07,R=A.v13Scan;A.S.project='bj';const t=R.tables().find(t=>t.scene==='booking'),s=R.visible(t).find(x=>A.offer(M.service(x.id),'na').amount!==null);R.activate(t);const date=M.iso(new Date(Date.now()+86400000*5)),d={kind:'booking',identity:'na',lines:[{item:s.id,resource:s.id+'-2',date,time:'11:00',qty:1,people:1}],coupons:[],scanContext:R.context(t)};
+ const {A}=setup(),M=A.v07,R=A.v13Scan;A.S.project='bj';const t=R.tables().find(t=>t.scene==='booking'),s=R.visible(t).find(x=>A.offer(M.service(x.id),'na').amount!==null);Object.assign(A.S.v02.v03.merchantServices[s.id],{bookingMode:'shared',capacity:1});R.activate(t);const date=M.iso(new Date(Date.now()+86400000*5)),d={kind:'booking',identity:'na',lines:[{item:s.id,resource:s.id+'-2',date,time:'11:00',qty:1,people:1}],coupons:[],scanContext:R.context(t)};
  const g=M.submit(d),o=A.S.orders.find(o=>o.id===g.orderIds[0]);assert.equal(o.order_type,'booking');assert.equal(o.table_id,t.table);assert.ok(!o.children);assert.throws(()=>M.submit(d),/占用|约满|库存/);
  assert.throws(()=>M.quote({...d,kind:'retail'}),/预约|实体|混合/);
 });
