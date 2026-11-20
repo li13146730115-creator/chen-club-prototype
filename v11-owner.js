@@ -54,5 +54,5 @@ for(const id of ['U06','U33']){const view=A.views[id];A.register({[id]:()=>{let 
 const serviceView=A.views.U05;A.register({U05:()=>serviceView().replace(/(<div class="mp-pad v07-pad">)/,'$1<div class="v11-shop-follow">'+btn((A.S.v11FollowedShops||[]).includes(shop())?'已关注会所':'关注会所','v11-follow-shop',{project:shop()},'link')+'</div>')});
 for(const [id,view] of Object.entries({...A.views}))if(id.startsWith('U'))A.register({[id]:()=>{navigation();let h=view();if(id!=='U01')h=counts(compact(h));return h;}});
 const mobileNavigation=A.mobileNavigation;A.mobileNavigation=(route,tabs,active)=>route==='U35'?{tabs,active:'U01'}:route==='U36'?{tabs,active:'U12'}:mobileNavigation(route,tabs,active);
-A.v11Owner={get orderOrigin(){return copy(orderOrigin)}};
+A.v11Owner={navigation,get orderOrigin(){return copy(orderOrigin)}};
 })();

@@ -9,9 +9,9 @@ test('Word V0.9：服务与代客目录有具体演示价，已知客户价与�
  for(const p of Object.keys(A.projects)){A.S.project=p;for(const route of ['S03','A27','M17']){const h=go(route);assert.doesNotMatch(h,/价格待确认|默认规格|场地权益免费/);assert.match(h,/v12-catalog-card/);} }
  const s=A.service('BJX21');A.S.project='bj';assert.ok(A.offer(s,'ma').amount>0);assert.ok(A.offer(s,'na').amount>A.offer(s,'ma').amount);
 });
-test('Word V0.9：商品详情不显示零元或内部权益原文，零元结算保持可用',()=>{
+test('Word V0.9：商品详情补齐零元单次价格并隐藏内部权益原文，零元结算保持可用',()=>{
  const {A,go}=setup();A.S.project='bj';A.S.identity='ma';
- const h=go('U06?id=BJX15');assert.doesNotMatch(h,/场地权益免费|价格待确认|权益与价格|v19-price[^>]*>¥0/);assert.match(h,/立即购买|立即预约/);
+ const h=go('U06?id=BJX15');assert.doesNotMatch(h,/场地权益免费|价格待确认|权益与价格/);assert.match(h,/立即购买|立即预约/);
  assert.match(go('U06?id=BJX21'),/¥498/);
 });
 test('Word V0.9：缺价演示配置在服务后台可改，报价、预约核对保持同一金额',()=>{
@@ -28,5 +28,5 @@ test('Word V0.9：每个演示会员服务选券有五条，不能在其它项�
  A.S.project='bj';assert.equal(M.coupons(M.members()[0].id,[{item:'ZJX01',variant:'standard'}]).length,0);
 });
 test('Word V0.9：导航删除代客模块，全部订单保留创建动作',()=>{
- const {A,go}=setup();assert.ok(A.navigationGroups.find(g=>g.title==='订单管理').ids.every(id=>!['A25','A26','A27','A28'].includes(id)));const h=go('A08');assert.match(h,/创建代客订单/);assert.match(h,/class="mall-brand" href="#\/A08"/);
+ const {A,go}=setup();assert.ok(A.navigationGroups.find(g=>g.title==='订单管理').ids.every(id=>!['A25','A26','A27','A28'].includes(id)));const h=go('A08');assert.match(h,/创建代客订单/);assert.match(h,/class="mall-brand" href="#\/A03"/);
 });

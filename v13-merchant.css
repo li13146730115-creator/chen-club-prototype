@@ -1,0 +1,11 @@
+/* 仅扩展商家商品／服务表单中的会员价区域。 */
+.v13-product-type{margin:0 0 20px;padding:10px 14px;background:#f4f7f4;color:#65746a;border-radius:6px;font-size:13px}
+.v13-product-type b{margin-left:8px;color:#284a3b;font-weight:500}
+.v13-member-price-editor{margin:26px 0 24px;padding-top:22px;border-top:1px solid #e6e8e5}
+.v13-member-price-editor h3{margin:0 0 10px}
+.v13-member-price-editor p{margin:0 0 16px;font-size:13px;line-height:1.7}
+.v13-member-price-editor table{min-width:620px}
+.v13-member-price-editor th,.v13-member-price-editor td{vertical-align:middle}
+.v13-member-price-editor input{width:100%;min-width:140px;max-width:210px;padding:10px 12px;border:1px solid #dfe4df;border-radius:6px;background:#fff;font:inherit}
+.v13-member-price-editor input:focus{outline:2px solid #c7d8cf;outline-offset:1px;border-color:#426957}
+@media(max-width:900px){.v13-member-price-editor{margin-top:20px;padding-top:18px}.v13-member-price-editor .table-wrap{overflow-x:auto}}

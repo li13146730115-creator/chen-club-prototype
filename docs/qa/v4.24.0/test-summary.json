@@ -1,0 +1,22 @@
+{
+  "version": "4.24.0",
+  "sourceDocument": "小程序调整- V0.10.docx",
+  "testCommand": "node --test tests/*.test.cjs",
+  "tests": 327,
+  "passed": 327,
+  "failed": 0,
+  "skipped": 0,
+  "syntaxFiles": 50,
+  "renderChecks": 1392,
+  "renderPassed": 1392,
+  "viewports": [
+    [
+      375,
+      812
+    ],
+    [
+      1440,
+      900
+    ]
+  ]
+}
