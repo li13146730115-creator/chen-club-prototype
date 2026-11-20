@@ -1,0 +1,792 @@
+{
+  "version": "4.24.2",
+  "checks": [
+    {
+      "page": "U03",
+      "state": "待使用",
+      "width": 375,
+      "cards": [
+        {
+          "buttonOverText": false,
+          "count": "2次 / 2次",
+          "countOverName": false,
+          "countRight": 13,
+          "countTop": 13,
+          "height": 129.84375,
+          "image": [
+            96,
+            96
+          ],
+          "name": "健身私教礼遇",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 13,
+          "countTop": 13,
+          "height": 129.84375,
+          "image": [
+            96,
+            96
+          ],
+          "name": "场馆体验兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 13,
+          "countTop": 13,
+          "height": 129.84375,
+          "image": [
+            96,
+            96
+          ],
+          "name": "运动预约兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 13,
+          "countTop": 13,
+          "height": 129.84375,
+          "image": [
+            96,
+            96
+          ],
+          "name": "康养体验兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 13,
+          "countTop": 13,
+          "height": 129.84375,
+          "image": [
+            96,
+            96
+          ],
+          "name": "会所服务兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 13,
+          "countTop": 13,
+          "height": 129.84375,
+          "image": [
+            96,
+            96
+          ],
+          "name": "会员专属兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 139.140625,
+          "image": [
+            96,
+            96
+          ],
+          "name": "恒温泳池",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 139.140625,
+          "image": [
+            96,
+            96
+          ],
+          "name": "健身房",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 139.140625,
+          "image": [
+            96,
+            96
+          ],
+          "name": "瑜伽室",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 139.140625,
+          "image": [
+            96,
+            96
+          ],
+          "name": "击剑室",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 139.140625,
+          "image": [
+            96,
+            96
+          ],
+          "name": "击剑室 · 私教课",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 139.140625,
+          "image": [
+            96,
+            96
+          ],
+          "name": "室内高尔夫",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 139.140625,
+          "image": [
+            96,
+            96
+          ],
+          "name": "壁球室",
+          "overflow": [],
+          "square": true
+        }
+      ]
+    },
+    {
+      "page": "U03",
+      "state": "已核销",
+      "width": 375,
+      "cards": [
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 154,
+          "image": [
+            96,
+            96
+          ],
+          "name": "恒温泳池权益",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 154,
+          "image": [
+            96,
+            96
+          ],
+          "name": "健身私教礼遇",
+          "overflow": [],
+          "square": true
+        }
+      ]
+    },
+    {
+      "page": "U03",
+      "state": "已失效",
+      "width": 375,
+      "cards": [
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 160.796875,
+          "image": [
+            96,
+            96
+          ],
+          "name": "恒温泳池权益",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 160.796875,
+          "image": [
+            96,
+            96
+          ],
+          "name": "健身私教礼遇",
+          "overflow": [],
+          "square": true
+        }
+      ]
+    },
+    {
+      "page": "U20",
+      "state": "商务社交待使用",
+      "width": 375,
+      "cards": [
+        {
+          "buttonOverText": false,
+          "count": "10杯 / 10杯",
+          "countOverName": false,
+          "countRight": 13,
+          "countTop": 13,
+          "height": 129.84375,
+          "image": [
+            96,
+            96
+          ],
+          "name": "咖啡礼遇",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "2泡 / 2泡",
+          "countOverName": false,
+          "countRight": 13,
+          "countTop": 13,
+          "height": 129.84375,
+          "image": [
+            96,
+            96
+          ],
+          "name": "茶叙礼遇",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "4小时 / 4小时",
+          "countOverName": false,
+          "countRight": 13,
+          "countTop": 13,
+          "height": 129.84375,
+          "image": [
+            96,
+            96
+          ],
+          "name": "会议室赠时",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 139.140625,
+          "image": [
+            96,
+            96
+          ],
+          "name": "多功能会议室",
+          "overflow": [],
+          "square": true
+        }
+      ]
+    },
+    {
+      "page": "U20",
+      "state": "商务社交待使用",
+      "width": 320,
+      "cards": [
+        {
+          "buttonOverText": false,
+          "count": "10杯 / 10杯",
+          "countOverName": false,
+          "countRight": 11,
+          "countTop": 11,
+          "height": 125.84375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "咖啡礼遇",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "2泡 / 2泡",
+          "countOverName": false,
+          "countRight": 11,
+          "countTop": 11,
+          "height": 125.84375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "茶叙礼遇",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "4小时 / 4小时",
+          "countOverName": false,
+          "countRight": 11,
+          "countTop": 11,
+          "height": 125.84375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "会议室赠时",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 133.734375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "多功能会议室",
+          "overflow": [],
+          "square": true
+        }
+      ]
+    },
+    {
+      "page": "U20",
+      "state": "运动健康待使用",
+      "width": 320,
+      "cards": [
+        {
+          "buttonOverText": false,
+          "count": "2次 / 2次",
+          "countOverName": false,
+          "countRight": 11,
+          "countTop": 11,
+          "height": 125.84375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "健身私教礼遇",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 11,
+          "countTop": 11,
+          "height": 146.84375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "场馆体验兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 11,
+          "countTop": 11,
+          "height": 146.84375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "运动预约兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 11,
+          "countTop": 11,
+          "height": 146.84375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "康养体验兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 11,
+          "countTop": 11,
+          "height": 146.84375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "会所服务兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 11,
+          "countTop": 11,
+          "height": 146.84375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "会员专属兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 133.734375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "恒温泳池",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 133.734375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "健身房",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 133.734375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "瑜伽室",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 133.734375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "击剑室",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 133.734375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "击剑室 · 私教课",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 133.734375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "室内高尔夫",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 133.734375,
+          "image": [
+            80,
+            80
+          ],
+          "name": "壁球室",
+          "overflow": [],
+          "square": true
+        }
+      ]
+    },
+    {
+      "page": "U20",
+      "state": "运动健康PC预览",
+      "width": 1440,
+      "cards": [
+        {
+          "buttonOverText": false,
+          "count": "2次 / 2次",
+          "countOverName": false,
+          "countRight": 9.8525390625,
+          "countTop": 9.8525390625,
+          "height": 98.40704345703124,
+          "image": [
+            72.75726318359375,
+            72.75726318359375
+          ],
+          "name": "健身私教礼遇",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 9.8525390625,
+          "countTop": 9.8525390625,
+          "height": 98.40704345703124,
+          "image": [
+            72.75726318359375,
+            72.75726318359375
+          ],
+          "name": "场馆体验兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 9.8525390625,
+          "countTop": 9.8525390625,
+          "height": 98.406982421875,
+          "image": [
+            72.75726318359375,
+            72.75726318359375
+          ],
+          "name": "运动预约兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 9.8525390625,
+          "countTop": 9.85260009765625,
+          "height": 98.40704345703124,
+          "image": [
+            72.75726318359375,
+            72.75726318359375
+          ],
+          "name": "康养体验兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 9.8525390625,
+          "countTop": 9.8525390625,
+          "height": 98.40704345703124,
+          "image": [
+            72.75726318359375,
+            72.75726318359375
+          ],
+          "name": "会所服务兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "count": "5张 / 5张",
+          "countOverName": false,
+          "countRight": 9.8525390625,
+          "countTop": 9.8525390625,
+          "height": 98.40704345703124,
+          "image": [
+            72.75726318359375,
+            72.75726318359375
+          ],
+          "name": "会员专属兑换券",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 105.452880859375,
+          "image": [
+            72.75726318359375,
+            72.7572021484375
+          ],
+          "name": "恒温泳池",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 105.4530029296875,
+          "image": [
+            72.75726318359375,
+            72.75732421875
+          ],
+          "name": "健身房",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 105.4530029296875,
+          "image": [
+            72.75726318359375,
+            72.7572021484375
+          ],
+          "name": "瑜伽室",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 105.453125,
+          "image": [
+            72.75726318359375,
+            72.75732421875
+          ],
+          "name": "击剑室",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 105.4530029296875,
+          "image": [
+            72.75726318359375,
+            72.75732421875
+          ],
+          "name": "击剑室 · 私教课",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 105.4530029296875,
+          "image": [
+            72.75726318359375,
+            72.7572021484375
+          ],
+          "name": "室内高尔夫",
+          "overflow": [],
+          "square": true
+        },
+        {
+          "buttonOverText": false,
+          "countOverName": false,
+          "countRight": null,
+          "countTop": null,
+          "height": 105.453125,
+          "image": [
+            72.75726318359375,
+            72.75732421875
+          ],
+          "name": "壁球室",
+          "overflow": [],
+          "square": true
+        }
+      ]
+    }
+  ]
+}
