@@ -1,0 +1,1697 @@
+{
+  "version": "4.24.1",
+  "benefitCards": [
+    {
+      "page": "U03",
+      "state": "待使用",
+      "width": 375,
+      "cards": [
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "健身私教礼遇",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "场馆体验兑换券",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "运动预约兑换券",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "康养体验兑换券",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "会所服务兑换券",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "会员专属兑换券",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "恒温泳池",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "健身房",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "瑜伽室",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "击剑室",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "击剑室 · 私教课",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "室内高尔夫",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "壁球室",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        }
+      ]
+    },
+    {
+      "page": "U03",
+      "state": "已核销",
+      "width": 375,
+      "cards": [
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "恒温泳池权益",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "健身私教礼遇",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        }
+      ]
+    },
+    {
+      "page": "U03",
+      "state": "已失效",
+      "width": 375,
+      "cards": [
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "恒温泳池权益",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "健身私教礼遇",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        }
+      ]
+    },
+    {
+      "page": "U20",
+      "state": "商务社交待使用",
+      "width": 375,
+      "cards": [
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "咖啡礼遇",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "茶叙礼遇",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "会议室赠时",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "多功能会议室",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        }
+      ]
+    },
+    {
+      "page": "U20",
+      "state": "休闲康养待使用",
+      "width": 375,
+      "cards": [
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "咖啡抵扣券",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "特调饮品兑换券",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "恒温泳池私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "健身房私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "瑜伽室私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "击剑室私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "室内高尔夫私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "茶室",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 339,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 13,
+            "left": 13,
+            "top": 13
+          },
+          "imageWidth": 112,
+          "name": "棋牌室（2间）",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        }
+      ]
+    },
+    {
+      "page": "U20",
+      "state": "休闲康养窄屏",
+      "width": 320,
+      "cards": [
+        {
+          "cardWidth": 284,
+          "columns": "86px 166px",
+          "imageInsets": {
+            "bottom": 11,
+            "left": 11,
+            "top": 11
+          },
+          "imageWidth": 86,
+          "name": "咖啡抵扣券",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 284,
+          "columns": "86px 166px",
+          "imageInsets": {
+            "bottom": 11,
+            "left": 11,
+            "top": 11
+          },
+          "imageWidth": 86,
+          "name": "特调饮品兑换券",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 284,
+          "columns": "86px 166px",
+          "imageInsets": {
+            "bottom": 11,
+            "left": 11,
+            "top": 11
+          },
+          "imageWidth": 86,
+          "name": "恒温泳池私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 284,
+          "columns": "86px 166px",
+          "imageInsets": {
+            "bottom": 11,
+            "left": 11,
+            "top": 11
+          },
+          "imageWidth": 86,
+          "name": "健身房私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 284,
+          "columns": "86px 166px",
+          "imageInsets": {
+            "bottom": 11,
+            "left": 11,
+            "top": 11
+          },
+          "imageWidth": 86,
+          "name": "瑜伽室私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 284,
+          "columns": "86px 166px",
+          "imageInsets": {
+            "bottom": 11,
+            "left": 11,
+            "top": 11
+          },
+          "imageWidth": 86,
+          "name": "击剑室私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 284,
+          "columns": "86px 166px",
+          "imageInsets": {
+            "bottom": 11,
+            "left": 11,
+            "top": 11
+          },
+          "imageWidth": 86,
+          "name": "室内高尔夫私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 284,
+          "columns": "86px 166px",
+          "imageInsets": {
+            "bottom": 11,
+            "left": 11,
+            "top": 11
+          },
+          "imageWidth": 86,
+          "name": "茶室",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 284,
+          "columns": "86px 166px",
+          "imageInsets": {
+            "bottom": 11,
+            "left": 11,
+            "top": 11
+          },
+          "imageWidth": 86,
+          "name": "棋牌室（2间）",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        }
+      ]
+    },
+    {
+      "page": "U03",
+      "state": "休闲康养PC预览",
+      "width": 1440,
+      "cards": [
+        {
+          "cardWidth": 256.924072265625,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 9.8525390625,
+            "left": 9.8525390625,
+            "top": 9.8525390625
+          },
+          "imageWidth": 84.88348388671875,
+          "name": "咖啡抵扣券",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 256.924072265625,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 9.8525390625,
+            "left": 9.8525390625,
+            "top": 9.8525390625
+          },
+          "imageWidth": 84.88348388671875,
+          "name": "特调饮品兑换券",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 256.924072265625,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 9.8525390625,
+            "left": 9.8525390625,
+            "top": 9.8525390625
+          },
+          "imageWidth": 84.88348388671875,
+          "name": "恒温泳池私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 256.924072265625,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 9.8525390625,
+            "left": 9.8525390625,
+            "top": 9.85260009765625
+          },
+          "imageWidth": 84.88348388671875,
+          "name": "健身房私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 256.924072265625,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 9.8525390625,
+            "left": 9.8525390625,
+            "top": 9.8525390625
+          },
+          "imageWidth": 84.88348388671875,
+          "name": "瑜伽室私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 256.924072265625,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 9.8525390625,
+            "left": 9.8525390625,
+            "top": 9.8525390625
+          },
+          "imageWidth": 84.88348388671875,
+          "name": "击剑室私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 256.924072265625,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 9.8525390625,
+            "left": 9.8525390625,
+            "top": 9.8525390625
+          },
+          "imageWidth": 84.88348388671875,
+          "name": "室内高尔夫私教课卡",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 256.924072265625,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 9.8525390625,
+            "left": 9.8525390625,
+            "top": 9.8525390625
+          },
+          "imageWidth": 84.88348388671875,
+          "name": "茶室",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        },
+        {
+          "cardWidth": 256.924072265625,
+          "columns": "112px 189px",
+          "imageInsets": {
+            "bottom": 9.8525390625,
+            "left": 9.8525390625,
+            "top": 9.8525390625
+          },
+          "imageWidth": 84.88348388671875,
+          "name": "棋牌室（2间）",
+          "overflow": [],
+          "panelsOverlap": false,
+          "textOverflow": [],
+          "textRightOfImage": true
+        }
+      ]
+    }
+  ],
+  "relatedImageCards": [
+    {
+      "page": "U24",
+      "cards": [
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "健身房 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "健身房 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "健身房 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "健身房 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "健身房 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "健身房 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "瑜伽室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "瑜伽室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "瑜伽室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "瑜伽室 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "瑜伽室 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "瑜伽室 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "击剑室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "击剑室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "击剑室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "击剑室 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "击剑室 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "击剑室 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "室内高尔夫 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "室内高尔夫 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "室内高尔夫 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "室内高尔夫 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "室内高尔夫 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "室内高尔夫 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "壁球室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "壁球室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "壁球室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "壁球室 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "壁球室 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "壁球室 · 私教课程",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "艺廊展示区 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "艺廊展示区 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "艺廊展示区 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "行政酒廊 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "行政酒廊 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "行政酒廊 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "自习室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "自习室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "自习室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "中西私宴厅 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "中西私宴厅 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "中西私宴厅 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "多功能会议室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "多功能会议室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "多功能会议室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "酣客（开放式） · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "酣客（开放式） · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "酣客（开放式） · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "茶室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "茶室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "茶室 · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "棋牌室（2间） · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "棋牌室（2间） · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "棋牌室（2间） · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "SPA空间（2间） · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "SPA空间（2间） · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "SPA空间（2间） · 场景服务",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "咖啡抵扣券 · 卡券",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "特调饮品兑换券 · 卡券",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "会议室赠时 · 卡券",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "茶棋赠时 · 卡券",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "茶品赠饮 · 卡券",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 私教课程 · 退款申请",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 私教课程 · 退款在途",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 私教课程 · 退款完成",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 私教课程 · 退款失败",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 私教课程 · 已分账",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "可口可乐 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "美式咖啡 240ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "马爹利 XO 30ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "赤霞珠红葡萄酒 150ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "安吉白茶 一泡",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "美式咖啡 240ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "马爹利 XO 30ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "拿铁咖啡 240ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "赤霞珠红葡萄酒 150ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "美式咖啡 240ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "铁观音 一泡",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "拿铁咖啡 240ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "马爹利 XO 30ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "赤霞珠红葡萄酒 150ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "安吉白茶 一泡",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "美式咖啡 240ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "拿铁咖啡 240ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴斯克芝士蛋糕 一份",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "安吉白茶 一泡",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "赤霞珠红葡萄酒 150ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "美式咖啡 240ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "铁观音 一泡",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "拿铁咖啡 240ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "安吉白茶 一泡",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "每日坚果拼盘 一份",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "铁观音 一泡",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "美式咖啡 240ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "拿铁咖啡 240ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴斯克芝士蛋糕 一份",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "安吉白茶 一泡",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "铁观音 一泡",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "可口可乐 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴斯克芝士蛋糕 一份",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "恒温泳池",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v19-checkout-line",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "page": "U36",
+      "cards": [
+        {
+          "class": "v11-follow-card",
+          "imageLoaded": true,
+          "name": "恒温泳池",
+          "overflow": []
+        },
+        {
+          "class": "v11-follow-card",
+          "imageLoaded": true,
+          "name": "恒温泳池 · 私教课",
+          "overflow": []
+        },
+        {
+          "class": "v11-follow-card",
+          "imageLoaded": true,
+          "name": "健身房",
+          "overflow": []
+        },
+        {
+          "class": "v11-follow-card",
+          "imageLoaded": true,
+          "name": "可口可乐 330ml",
+          "overflow": []
+        },
+        {
+          "class": "v11-follow-card",
+          "imageLoaded": true,
+          "name": "巴黎水 330ml",
+          "overflow": []
+        }
+      ]
+    },
+    {
+      "page": "U05",
+      "cards": []
+    },
+    {
+      "page": "U10",
+      "cards": []
+    }
+  ],
+  "recommendation": {
+    "page": "U18",
+    "cards": [
+      {
+        "card": {
+          "bottom": 238.796875,
+          "height": 122,
+          "left": 16,
+          "right": 359,
+          "top": 116.796875,
+          "width": 343,
+          "x": 16,
+          "y": 116.796875
+        },
+        "class": "v05-service-card",
+        "image": {
+          "bottom": 227.796875,
+          "height": 100,
+          "left": 27,
+          "right": 121,
+          "top": 127.796875,
+          "width": 94,
+          "x": 27,
+          "y": 127.796875
+        },
+        "name": "健身房",
+        "overflow": []
+      },
+      {
+        "card": {
+          "bottom": 372.796875,
+          "height": 122,
+          "left": 16,
+          "right": 359,
+          "top": 250.796875,
+          "width": 343,
+          "x": 16,
+          "y": 250.796875
+        },
+        "class": "v05-service-card",
+        "image": {
+          "bottom": 361.796875,
+          "height": 100,
+          "left": 27,
+          "right": 121,
+          "top": 261.796875,
+          "width": 94,
+          "x": 27,
+          "y": 261.796875
+        },
+        "name": "健身房",
+        "overflow": []
+      },
+      {
+        "card": {
+          "bottom": 506.796875,
+          "height": 122,
+          "left": 16,
+          "right": 359,
+          "top": 384.796875,
+          "width": 343,
+          "x": 16,
+          "y": 384.796875
+        },
+        "class": "v05-service-card",
+        "image": {
+          "bottom": 495.796875,
+          "height": 100,
+          "left": 27,
+          "right": 121,
+          "top": 395.796875,
+          "width": 94,
+          "x": 27,
+          "y": 395.796875
+        },
+        "name": "茶室",
+        "overflow": []
+      },
+      {
+        "card": {
+          "bottom": 640.796875,
+          "height": 122,
+          "left": 16,
+          "right": 359,
+          "top": 518.796875,
+          "width": 343,
+          "x": 16,
+          "y": 518.796875
+        },
+        "class": "v05-service-card",
+        "image": {
+          "bottom": 629.796875,
+          "height": 100,
+          "left": 27,
+          "right": 121,
+          "top": 529.796875,
+          "width": 94,
+          "x": 27,
+          "y": 529.796875
+        },
+        "name": "SPA空间（2间）",
+        "overflow": []
+      }
+    ]
+  }
+}
