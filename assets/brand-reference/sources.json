@@ -1,0 +1,108 @@
+[
+  {
+    "file": "gym.jpg",
+    "source": "宸园139发布会吴总ppt0717.pptx",
+    "slide": 6,
+    "crop_original_pixels": [
+      2410,
+      30,
+      4140,
+      1490
+    ],
+    "output_size": [
+      1200,
+      1013
+    ]
+  },
+  {
+    "file": "yoga.jpg",
+    "source": "宸园139发布会吴总ppt0717.pptx",
+    "slide": 6,
+    "crop_original_pixels": [
+      4180,
+      20,
+      5870,
+      1470
+    ],
+    "output_size": [
+      1200,
+      1030
+    ]
+  },
+  {
+    "file": "lounge.jpg",
+    "source": "宸园139发布会吴总ppt0717.pptx",
+    "slide": 8,
+    "crop_original_pixels": [
+      2410,
+      40,
+      4710,
+      1430
+    ],
+    "output_size": [
+      1200,
+      725
+    ]
+  },
+  {
+    "file": "dining.jpg",
+    "source": "宸园139发布会吴总ppt0717.pptx",
+    "slide": 9,
+    "crop_original_pixels": [
+      2410,
+      20,
+      5280,
+      1440
+    ],
+    "output_size": [
+      1200,
+      594
+    ]
+  },
+  {
+    "file": "meeting.jpg",
+    "source": "宸园139发布会吴总ppt0717.pptx",
+    "slide": 8,
+    "crop_original_pixels": [
+      7160,
+      20,
+      9390,
+      1460
+    ],
+    "output_size": [
+      1200,
+      775
+    ]
+  },
+  {
+    "file": "material.jpg",
+    "source": "宸园139发布会吴总ppt0717.pptx",
+    "slide": 15,
+    "crop_original_pixels": [
+      8700,
+      1100,
+      9800,
+      1910
+    ],
+    "output_size": [
+      600,
+      442
+    ]
+  },
+  {
+    "file": "pool.jpg",
+    "source": "宸园139发布会吴总ppt0717.pptx",
+    "slide": 6,
+    "crop_original_pixels": [
+      8800,
+      900,
+      9400,
+      1914
+    ],
+    "output_size": [
+      600,
+      1014
+    ],
+    "usage": "备用空间参考，默认泳池封面沿用原图"
+  }
+]

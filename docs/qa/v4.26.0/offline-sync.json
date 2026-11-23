@@ -1,0 +1,517 @@
+{
+  "version": "4.26.0",
+  "destination": "/Users/bjxlong/Documents/项目资料/【ZD】会员运营/outputs/20261115_宸club交互原型V4.5-V02",
+  "files": 102,
+  "checks": [
+    {
+      "file": "index.html",
+      "sha256": "b3c760c02beff58186e22eb6256658577384d85f4b1466ef311b1efab3243514",
+      "matching": true
+    },
+    {
+      "file": "README.md",
+      "sha256": "59a9168e63b8e9af79447db285159ad44e9a170d5fb51beb8adb2102b731e38e",
+      "matching": true
+    },
+    {
+      "file": "style.css",
+      "sha256": "205a7eb8fd01d471079795ce28f3992c86ccce232d5a9b12f7a35d8c2f577dd5",
+      "matching": true
+    },
+    {
+      "file": "assets/icons.css",
+      "sha256": "7adca4f44ca8b0ce2c7e8f33572c7895bd3e3ad48a53c0c4570f76533e37bb41",
+      "matching": true
+    },
+    {
+      "file": "polish.css",
+      "sha256": "a8416131a22721379691eed6bd78690e7e4e02b0d74dadf38ef88277735c7270",
+      "matching": true
+    },
+    {
+      "file": "mall.css",
+      "sha256": "8adad47c037c262b6132d7b4385f6141fa80d2b23f0969a38eb7b69c7b13f92d",
+      "matching": true
+    },
+    {
+      "file": "review.css",
+      "sha256": "8e13aff30d54bb85ae4437750b7b94e47b4b4f969d05e7616ef3fbcd42614860",
+      "matching": true
+    },
+    {
+      "file": "ppt-reference.css",
+      "sha256": "d11e75ce793fb1445a6d9f745875ed45f174263c8406500fbaa1b70f894cc20c",
+      "matching": true
+    },
+    {
+      "file": "home-refresh.css",
+      "sha256": "71eaf22ddbf1d1fe8dcd86d069ef0831c27941bbe1a5d0af55cd12c136adc969",
+      "matching": true
+    },
+    {
+      "file": "owner-adjustments.css",
+      "sha256": "3d26e4eee2eb276191b0d8601a70d3d2eb759ca533edd26ad0600c603a7efe9c",
+      "matching": true
+    },
+    {
+      "file": "v02-adjustments.css",
+      "sha256": "3aa831f147f14f46a6abb9a9b3f694c993817e8821bd7dbb31265eeacac9e219",
+      "matching": true
+    },
+    {
+      "file": "v03-adjustments.css",
+      "sha256": "ab80777257477263c67fa89d9d6533dd512404a35738b0be2b8a977af82b9a9e",
+      "matching": true
+    },
+    {
+      "file": "xmind-adjustments.css",
+      "sha256": "986398823b0d852894c342ca905b0646b70eb4f0622d571b25cb5109aaf000f4",
+      "matching": true
+    },
+    {
+      "file": "appointment-audit.css",
+      "sha256": "784ab1a1eb7c4a6498c2d84c78ce1b2d5a16dcd48f22558e1c57213112cd2237",
+      "matching": true
+    },
+    {
+      "file": "v04-adjustments.css",
+      "sha256": "87c9e91357c211ad017b887d1fe90377675bb8e0a37523b448aed1482e8fc5c9",
+      "matching": true
+    },
+    {
+      "file": "v05-adjustments.css",
+      "sha256": "6750087e23659e8d7c26a3cfe8cfa9955650733eb5789c33c3bd4557ba867c7f",
+      "matching": true
+    },
+    {
+      "file": "v07-adjustments.css",
+      "sha256": "a87bd71d199faf8b59e384a01ff83b4e5d103550ac73fff855216a1c3a2915da",
+      "matching": true
+    },
+    {
+      "file": "v08-adjustments.css",
+      "sha256": "d4ea20b0f7c0c231c1d1766d12044cb25f143fa898625b17777424a426cd6acb",
+      "matching": true
+    },
+    {
+      "file": "v09-adjustments.css",
+      "sha256": "47f5f3c42cef13ddd5105feae11e255572799c73a6fcc28f9f78186c7430827e",
+      "matching": true
+    },
+    {
+      "file": "v10-adjustments.css",
+      "sha256": "30b2a8712c1eb66577a9934b3dd937078c618419381a750c490d2f49459930a7",
+      "matching": true
+    },
+    {
+      "file": "v11-membership.css",
+      "sha256": "485f649490b2890f1e204f892d4a06198b990c3523a18a37d0856d178727bcd3",
+      "matching": true
+    },
+    {
+      "file": "v11-owner.css",
+      "sha256": "31d3b46ed8d71dea5623b22aa4e919d927bcfa3803330167dd0e0ed99fd6e565",
+      "matching": true
+    },
+    {
+      "file": "v11-decoration.css",
+      "sha256": "762a67b3706627e98594f4845221f82d4158714dcd998ef7a5cefe582d670b48",
+      "matching": true
+    },
+    {
+      "file": "v11-proxy.css",
+      "sha256": "f6415a24a31f4cb04cccce886a92574a3e37b4fa3f6c2a8d838c0d6fe3f57221",
+      "matching": true
+    },
+    {
+      "file": "v11-feedback.css",
+      "sha256": "bde8b9eb7057c4b4aeabb5183843cc94ef15dea96f0028a6a4dd2a29fd3ae116",
+      "matching": true
+    },
+    {
+      "file": "v12-membership.css",
+      "sha256": "20e2c95c87fee39fe850f3854857f5a16d0cc32c19b0bb37a3f66806dc5d22c1",
+      "matching": true
+    },
+    {
+      "file": "v12-owner.css",
+      "sha256": "371e27d0f5e5b292cdf99c0bf3261392797e1f30a19d8908624ba2c8a5f166f0",
+      "matching": true
+    },
+    {
+      "file": "v12-catalog.css",
+      "sha256": "c0f2d66e67649f3f9b1cdca553862c31bc5eaecce2d763645ad3e9f2e3ca1ecf",
+      "matching": true
+    },
+    {
+      "file": "v13-merchant.css",
+      "sha256": "9fcd21ea6e6b0b64bd0976309aaf773e45a0a14a8ae0d72a3cfeff6b8c3a0d66",
+      "matching": true
+    },
+    {
+      "file": "v13-scan.css",
+      "sha256": "a6cd72e66a85af94edd832c57b2fc480593010379f93a1cac7a1f7e60deffca9",
+      "matching": true
+    },
+    {
+      "file": "v13-owner.css",
+      "sha256": "8eea41210f1f08a42d9a189879cea329cadeb0c4fbbe0792c5fb212c61b4ea1c",
+      "matching": true
+    },
+    {
+      "file": "v14-scan.css",
+      "sha256": "6b9f0f05feeff9cb9294130d23293f57839fd59c3a7ac3349872c9f178c798cf",
+      "matching": true
+    },
+    {
+      "file": "v14-capacity.css",
+      "sha256": "2629e4988d775c6018a02b2c7595661b010557792cb2c70d0337d119fb2fc49d",
+      "matching": true
+    },
+    {
+      "file": "v14-experience.css",
+      "sha256": "cd2986747e35ddaae7b8ec66c9dcc6bbb67b09267d39847c0149a6d6f8072958",
+      "matching": true
+    },
+    {
+      "file": "v14-owner.css",
+      "sha256": "8f2371f1ed5a4ebbd0ac51a87bf4166c81ed180ddb6e13a3349e63d5b0d7a538",
+      "matching": true
+    },
+    {
+      "file": "v14-theme.css",
+      "sha256": "9f87eb7d4454233ef1854da0e0481526b693e87ca3cb3b5318edd1f87bae5253",
+      "matching": true
+    },
+    {
+      "file": "v15-brand.css",
+      "sha256": "a946d30b46717c6aac43aebb8f2e2bba7eea97f88b331881d29d896c9b1267b8",
+      "matching": true
+    },
+    {
+      "file": "data.js",
+      "sha256": "c36329300e0d6fc654feb038de9571ab4ef538f948d3677474a292ae0bad84ca",
+      "matching": true
+    },
+    {
+      "file": "core.js",
+      "sha256": "0a88aa0bd955f0f9e5942a2c9034402000b8b1b650a18d26977b86a60b985fbc",
+      "matching": true
+    },
+    {
+      "file": "app.js",
+      "sha256": "a2878790b3a1e44ab7158e48d8a844a5e36d3b4207237d5e7c9d5fe12723a2bc",
+      "matching": true
+    },
+    {
+      "file": "customer-demo.js",
+      "sha256": "6cb793b34e92fbabff7c13d6c0465546ab0874f9f6af3dd676400fc3b91a7d23",
+      "matching": true
+    },
+    {
+      "file": "catalog.js",
+      "sha256": "c66e162532d47c20b945114863efce4d85cf1178861702ccb33c91f1615b7d20",
+      "matching": true
+    },
+    {
+      "file": "mobile.js",
+      "sha256": "3acb78bdce59fead85aaf972112ed5166ff7bd72483fdbdd6f00276418c53618",
+      "matching": true
+    },
+    {
+      "file": "admin.js",
+      "sha256": "7f6263192cf465004efb17152597723ffd561802f9084187d4f8fdc6e359801e",
+      "matching": true
+    },
+    {
+      "file": "assets/qrcode.min.js",
+      "sha256": "c541ef06327885a8415bca8df6071e14189b4855336def4f36db54bde8484f36",
+      "matching": true
+    },
+    {
+      "file": "review-data.js",
+      "sha256": "3fc0f499000036f7ba70c8f22afc4913327fd6a514ef74f5ea6b52a64c5d4e2c",
+      "matching": true
+    },
+    {
+      "file": "review.js",
+      "sha256": "c4b8ce51cc7b0d6126b8f8c82e1d6ad9c5ae33f7cc9be92dc1e59075cc9053fa",
+      "matching": true
+    },
+    {
+      "file": "decoration.js",
+      "sha256": "33fb4727ac34c03d34d9ed0f02888f53eb8c4e9d5c2184d7abf88bc46beed07c",
+      "matching": true
+    },
+    {
+      "file": "ppt-reference.js",
+      "sha256": "1ab99ae59417f034440d94a3ae29d21c9e1024a3126f8de23916544010cffae8",
+      "matching": true
+    },
+    {
+      "file": "assets/jsQR.js",
+      "sha256": "bc40c8a15196236b2314db0856f72ca0b49980cd5413b8c852a7349f5fee0859",
+      "matching": true
+    },
+    {
+      "file": "scan-core.js",
+      "sha256": "daf247382fc776a1e537e3f89a65979db58a989826fb5d404928f6e9ab0d072d",
+      "matching": true
+    },
+    {
+      "file": "owner-adjustments.js",
+      "sha256": "bc9834344f8a9341342e1ee56c2014a84a5f9072ba7285104e73a806be7aa6d0",
+      "matching": true
+    },
+    {
+      "file": "scan.js",
+      "sha256": "e76c0058abdfa8ed856ff3bd5f40e894ac2cccc06bed0d6ce06d3b7f4cc713dd",
+      "matching": true
+    },
+    {
+      "file": "v02-adjustments.js",
+      "sha256": "a6ecb22956f01c9064c39eb46b7bc8f612af7083369bded3599c8745ef7d0070",
+      "matching": true
+    },
+    {
+      "file": "v03-adjustments.js",
+      "sha256": "b8aaf2b3583b9a5e875d13151900c19432e055ea84feeed571839eea418fc3e9",
+      "matching": true
+    },
+    {
+      "file": "xmind-adjustments.js",
+      "sha256": "6be3e7fa91d4041c8970a2a55fddaa4fcbc7884cda3c00dd5483d881429e10a9",
+      "matching": true
+    },
+    {
+      "file": "appointment-audit.js",
+      "sha256": "cb3c992835c3e4c72d18209fe5dca052f17b1357ba5bf757db2d7f36aff4c3a1",
+      "matching": true
+    },
+    {
+      "file": "customer-scenes.js",
+      "sha256": "2bc2eb87c4dcdc43173a2cc5350ca14628fb5660e90576fa93edd83bc8fca0ea",
+      "matching": true
+    },
+    {
+      "file": "v04-adjustments.js",
+      "sha256": "04eefc4630d0d13cf6295f9cb11c288cccb2e4e65622c6936cb9da4c64dca40a",
+      "matching": true
+    },
+    {
+      "file": "v05-adjustments.js",
+      "sha256": "0702f06053301d2097a2bb0f2d5080be40f116cd4d97e98751248a4a60c2b020",
+      "matching": true
+    },
+    {
+      "file": "v07-business.js",
+      "sha256": "35328c82d89b6fbefae47ed016f86779a3aed233ba634b75327b3041e1fd622c",
+      "matching": true
+    },
+    {
+      "file": "v07-owner.js",
+      "sha256": "ab6713c7d8aeb52c9459882c0d14af4f622a1e3585ed8ca8565ecd2ba3a9a468",
+      "matching": true
+    },
+    {
+      "file": "v07-admin.js",
+      "sha256": "b075a47d78a725aba6a7e16667db6215b28bdcc3d339a4a62c5410539811c204",
+      "matching": true
+    },
+    {
+      "file": "v07-decoration.js",
+      "sha256": "a41f3d015687bcebee62e7d6ee09aaf2ffb1d88e8880903b85c1430f75d8eea8",
+      "matching": true
+    },
+    {
+      "file": "v08-booking.js",
+      "sha256": "80f3980fc6085e16111ba2dd6e2152d4b9ca559c29449ab709ae9f55fc59ea1e",
+      "matching": true
+    },
+    {
+      "file": "v08-owner.js",
+      "sha256": "f34b644dee4806d1785e93eb15d78a50a8a80cdc4281ebfa64eba07768e4d78f",
+      "matching": true
+    },
+    {
+      "file": "v08-admin.js",
+      "sha256": "25d00faffbaf29943b8850d232928a6f8bd9e018c0394045625e480acb3f57e5",
+      "matching": true
+    },
+    {
+      "file": "v08-decoration.js",
+      "sha256": "9b35a17e0ef292442c4ffcd6ca359be18c1a02f5a9b6af2dc7907111b5c1ff66",
+      "matching": true
+    },
+    {
+      "file": "v09-commerce-model.js",
+      "sha256": "704925de4634726caab3a968b2be92baf46f41005267b1f58babbd10cc1e8539",
+      "matching": true
+    },
+    {
+      "file": "v09-owner.js",
+      "sha256": "456db4dff838c6a52aacea757fea7b5b7b2bc5d6df6ccfbc185cf58e9f7ed125",
+      "matching": true
+    },
+    {
+      "file": "v09-commerce.js",
+      "sha256": "8ece265804466999371871d9cee95591348fbcf64833ab4468af0bd7aa4558c1",
+      "matching": true
+    },
+    {
+      "file": "v09-admin.js",
+      "sha256": "f3818d588349b2a93dcd0cd1e972210307705b4057fa3110d615672c66d94b4f",
+      "matching": true
+    },
+    {
+      "file": "v10-business.js",
+      "sha256": "c301d89977aeaa28289b81d4fd1d3083abbd1b9b4cdd00403c6744f0f5efe7b8",
+      "matching": true
+    },
+    {
+      "file": "v10-membership-admin.js",
+      "sha256": "c5b9d815919771fd982e5dcf900a5ae3418e5cf72368056315ae34cc555d0e46",
+      "matching": true
+    },
+    {
+      "file": "v10-owner-wallet.js",
+      "sha256": "2b635badfa96749a1fe082c6affaae53c651619ef12a20a900e437ca14ff2666",
+      "matching": true
+    },
+    {
+      "file": "v10-proxy.js",
+      "sha256": "693e5beb1f0ad3353fee0686e562b6c85a38fa0024a4d01c72eaf6b4652e7ea2",
+      "matching": true
+    },
+    {
+      "file": "v10-commerce-closure.js",
+      "sha256": "c33c527efefe0cb0516b7a44ec3c399abc2334d93444feada99f54b900f334cf",
+      "matching": true
+    },
+    {
+      "file": "v11-membership.js",
+      "sha256": "e0fe0e3d824fd66c3416f392823e901d557f56e91a6f10e05f138a15d7a9a065",
+      "matching": true
+    },
+    {
+      "file": "v11-owner.js",
+      "sha256": "c5e4ce1dab91a4971ecf6c6fb91b3a2ace9700a7b9664163fd94aabb8ee8e097",
+      "matching": true
+    },
+    {
+      "file": "v11-decoration.js",
+      "sha256": "02b85eabc6b9782f3502eac492caf751f35be5a2b196a67834f6fa2a8da9b703",
+      "matching": true
+    },
+    {
+      "file": "v11-proxy.js",
+      "sha256": "9803c94fc5fcec39820ccb60d91a743ff154fe8f747c5dcf0b6ba3e0c598750b",
+      "matching": true
+    },
+    {
+      "file": "v11-feedback.js",
+      "sha256": "86d98d3c2d893b644a3d1643a12970ec41b9a612de1c6767505a5eef9a1c1782",
+      "matching": true
+    },
+    {
+      "file": "v12-membership.js",
+      "sha256": "6f38a825fad29fb1089694e48273257c259627436133df657c2793ae10c657f8",
+      "matching": true
+    },
+    {
+      "file": "v12-owner.js",
+      "sha256": "e3ff8c5e21491d3e229134c91d9aba10db406290a7c3115fb47b648912d85e98",
+      "matching": true
+    },
+    {
+      "file": "v12-catalog.js",
+      "sha256": "855e963fc7bc6d3eb05ac1c41cd0ccd1dd3853580fc71192483e516b9a487e51",
+      "matching": true
+    },
+    {
+      "file": "v13-merchant.js",
+      "sha256": "68f203af5d1b52dfd374702a11556cef8af0dc5609501d3f9f48894d35712ae8",
+      "matching": true
+    },
+    {
+      "file": "v13-owner.js",
+      "sha256": "ba3778f7e857a22e161436eece54f8c0b48c361ab43fe2bc2d2eb6b4b47a4be9",
+      "matching": true
+    },
+    {
+      "file": "v13-scan-model.js",
+      "sha256": "cd7046b4662de9dd2611b269840487423cb43e7b4907566efb5315d69ee80359",
+      "matching": true
+    },
+    {
+      "file": "v13-scan.js",
+      "sha256": "8016019b0b33595174a3060aaae4a484d5f66d55b5e8c6721370047b816df279",
+      "matching": true
+    },
+    {
+      "file": "v14-owner.js",
+      "sha256": "2dad1b813d2c0f9cb5edfffd4ed3454fb2c19a521819bdad2d470293288cc914",
+      "matching": true
+    },
+    {
+      "file": "v14-scan.js",
+      "sha256": "6d328ec7c111d652cf875f30c26d79e9ad82d0c783dc3d3b39673ecda5cff28a",
+      "matching": true
+    },
+    {
+      "file": "v14-capacity.js",
+      "sha256": "676cab5449ab4a8e83e4eae6a654cacc59f258206940b72aa1487eddbaaffff5",
+      "matching": true
+    },
+    {
+      "file": "v14-experience.js",
+      "sha256": "fbd5ddd2b2a17db58fcec59c95fc8147610f5c7b7d7f7ef41af32531b68045d3",
+      "matching": true
+    },
+    {
+      "file": "v15-brand.js",
+      "sha256": "52513223424fee570d5271f09fda82e4ea2765e973d31a9d07b003fea103f546",
+      "matching": true
+    },
+    {
+      "file": "assets/brand-reference/material.jpg",
+      "sha256": "32064db43dd9f0fef3cb0997ec0309d98360ef6eaa03b3a17b0efc9a73b53143",
+      "matching": true
+    },
+    {
+      "file": "assets/brand-reference/sources.json",
+      "sha256": "5a295839f6235c4e26ad3110b4b0f24642bdcffdd912c4862fa8854897c9e4ad",
+      "matching": true
+    },
+    {
+      "file": "assets/brand-reference/meeting.jpg",
+      "sha256": "1a22ff79a3930bdefb400eb8430d0082847add7c2cb323d98c3c096d1dd40ea1",
+      "matching": true
+    },
+    {
+      "file": "assets/brand-reference/lounge.jpg",
+      "sha256": "3e57a2a7bf915e7aba6dd86e9050038448aa8b50eff14aa7f76ad8df1decdf32",
+      "matching": true
+    },
+    {
+      "file": "assets/brand-reference/pool.jpg",
+      "sha256": "a89e8b937ca81088f3ae5075d1c2b16b6369202f4b7d2bdf37edddc7784fa79e",
+      "matching": true
+    },
+    {
+      "file": "assets/brand-reference/gym.jpg",
+      "sha256": "12737d1ba73faea4429b18725cb76d4fa242956e775278343c3c966c768f480f",
+      "matching": true
+    },
+    {
+      "file": "assets/brand-reference/dining.jpg",
+      "sha256": "348f46171919a94f6ea451db4d1d3d44dd331f4c61f2204fe40b086f9a51828b",
+      "matching": true
+    },
+    {
+      "file": "assets/brand-reference/yoga.jpg",
+      "sha256": "97263c4734593fc3786bb5ccb1b50a6343272ed599517ea6579c06f81ccf9447",
+      "matching": true
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+/* 以客户参考图的暖棕材质、米白字色建立各端统一品牌色。仅覆盖视觉。 */
+:root,body[data-desktop="true"]{
+  --primary:#856850;--ink:#856850;--deep:#654e3d;
+  --gold:#856850;--gold-dark:#654e3d;--cream:#f6efe4;
+  --paper:#fffdf9;--line:#dfd3c4;--muted:#8b7b6b;
+  --text:#3c3028;--soft:#f1e9df;
+}
+body{accent-color:#856850}
+.owner-device,.studio-phone,.studio-draft-preview{
+  --mall-green:#856850;--ink:#856850;--deep:#654e3d;
+  --gold:#856850;--gold-dark:#654e3d;--text:#3c3028;
+  --cream:#f6efe4;--line:#dfd3c4;--soft:#f1e9df;--muted:#8b7b6b;
+}
+.mall-core{--mall-green:#856850}
+.btn:not(.light):not(.soft):not(.danger):not(.ghost),.btn.gold-btn,
+.v19-buy,.v19-checkout-bar>.btn{background:#856850;color:#fffdf9}
+.btn.light{color:#856850;border-color:#dfd3c4}
+.btn.soft{color:#654e3d;background:#f1e9df}
+.btn:not(.light):not(.soft):not(.danger):not(.ghost):hover{background:#735741}
+.nav-link.on,.role-switch .on{color:#856850;background:#f1e9df}
+.mp-tabs a.on,.owner-device .mp-tabs a.on{color:#856850}
+.owner-device .mp-tabs:has(a[href="#/U03"]) a[href="#/U11"] i{background:#856850}
+.v19-wallet-cats button.on,.v11-follow-tabs .on,
+.v11-catalog-categories button.on,.v11-catalog-service button.on{background:#856850;color:#fffdf9}
+.mall-rail>a.on,.mall-rail>a:hover{background:#856850}
+.studio-bar{background:#856850}
+.studio-block.selected .studio-block-label{background:#856850}
+.studio-tab.on,.studio-style-options>div.on,.v11-style-picker>button.on{
+  color:#856850;border-color:#856850;background:#f1e9df;
+}
+.v11-style-picker>button.on{box-shadow:0 0 0 1px #856850}
+.mall-role-switch a.on,.mall-submenu nav>a.on,.mall-tabs>a.on,
+body[data-desktop="true"] .chip.on,.v13-admin-tabs .on{
+  color:#856850;border-bottom-color:#856850;
+}
+.owner-profile-card,.owner-profile-card.v09-profile,
+.v11-compact-membership,.v07-rights-stats.v19-rights-stats,
+.v09-wallet-card{
+  color:#f6efe4;
+  background-color:#856850;
+  background-image:linear-gradient(105deg,#654e3dd9,#85685080),url('assets/brand-reference/material.jpg');
+  background-size:cover;
+  background-position:center;
+  border-color:#b49a7b80;
+  box-shadow:0 6px 20px #654e3d20;
+}
+.v09-wallet-card:before,.v11-compact-membership:before{opacity:.55}
+.v09-wallet-card>time,.v09-wallet-code,
+.owner-profile-card .v07-member-code,
+.owner-profile-card .v07-profile-meta,.owner-profile-card .v07-profile-person p,
+.v11-compact-membership p,.v11-compact-membership small,
+.v07-rights-stats.v19-rights-stats small{color:#eee0ce}
+.owner-device .v09-membership-wallet .v09-wallet-pocket{color:#f6efe4}
+.v09-membership-wallet.family .v09-wallet-card{
+  color:#654e3d;background-image:linear-gradient(105deg,#eee0c5ed,#d5b997d9),url('assets/brand-reference/material.jpg');
+}
+.v09-membership-wallet.family .v09-wallet-card>time,
+.v09-membership-wallet.family .v09-wallet-code{color:#765c45}
+.v09-membership-wallet.visitor .v09-wallet-card{
+  color:#654e3d;background-image:linear-gradient(105deg,#eee6dced,#d1bdabd9),url('assets/brand-reference/material.jpg');
+}
+.v09-membership-wallet.visitor .v09-wallet-card>time,
+.v09-membership-wallet.visitor .v09-wallet-code{color:#765c45}
+.v08-owner-booking .audit-date-card.on{
+  background:#856850!important;border-color:#856850!important;color:#fffdf9;
+}
+.v08-owner-booking .owner-time-option input:checked+span,
+.v19-reservation .owner-time-option input:checked+span{
+  background:#efe4d6!important;border-color:#856850!important;box-shadow:inset 0 0 0 1px #856850!important;
+}
+.v08-flat-option input:checked+span{background:#efe4d6;border-color:#856850;color:#654e3d}
+.v19-checkout-bar strong{color:#856850}

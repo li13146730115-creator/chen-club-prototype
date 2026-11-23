@@ -45,7 +45,7 @@ def rules(text):
     return '\n'.join(output)
 chunks=['/* V0.11 宸 Club 棕色主题。由 scripts/build-v14-theme.py 生成，仅覆盖品牌色；不改变布局或照片。 */']
 for filename in files:
-    if filename in ('v14-theme.css','assets/icons.css'):continue
+    if filename in ('v14-theme.css','v15-brand.css','assets/icons.css'):continue
     css=rules((base/filename).read_text())
     if css:chunks.extend(['/* '+filename+' */',css])
 chunks.append(':root,body[data-desktop="true"]{--primary:#79583d;--ink:#79583d;--deep:#493528;--gold:#a08050;--gold-dark:#785735;--soft:#f1eae1;--text:#3e352e;--muted:#958779}')
