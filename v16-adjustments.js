@@ -28,13 +28,13 @@ function poolCardCapacity(s){
  const cfg=A.v14Capacity.config(s);if(!cfg.showBookingCount)return '';
  const d=B.ownerDraft?.service===s.id?B.ownerDraft:A.v08.bookingState(s),date=d.date||A.v08.days(s)[0],time=d.times?.[0]||A.v08.times(s)[0],resource=d.resource||s.id+'-1',duration=A.offer(s,A.S.identity,d.variant||'standard').duration||60;
  const count=A.v14Capacity.summary({project:shop(),service:s.id,resource,date,time,duration,people:1});
- return '<small class="v16-pool-card-count"><span>已预约 '+count.booked+' / '+count.capacity+'人</span><span>可预约 '+count.available+'人</span></small>';
+ return '<small class="v16-pool-card-count"><span>已预约 '+count.booked+' / '+count.capacity+'人</span></small>';
 }
 function addPoolCardCounts(html,c){
  const rows=A.v05.today(c),byId=new Map(rows.map(s=>[s.id,s]));
  return html.replace(/<a class="home-today-card" href="#\/U06\?id=([^"]+)">([\s\S]*?)<\/a>/g,(all,id,body)=>{
   const s=byId.get(id)||M.service(id),count=s&&poolService(s)?poolCardCapacity(s):'';
-  return count?'<a class="home-today-card" href="#/U06?id='+id+'">'+body.replace('</div>',count+'</div>')+'</a>':all;
+  return count?'<a class="home-today-card" href="#/U06?id='+id+'">'+body.replace('<span class="home-today-action">',count+'<span class="home-today-action">')+'</a>':all;
  });
 }
 const baseV05Component=A.v05.component;

@@ -122,7 +122,33 @@ function start(){
  document.addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b)return;const action=actions[b.dataset.action];if(!action)return;try{action({...b.dataset},b,e)}catch(err){toast(err.message)}});
  document.addEventListener('submit',e=>{const f=e.target.closest('[data-form]');if(!f)return;e.preventDefault();const fn=forms[f.dataset.form];if(!fn)return;try{fn(Object.fromEntries(new FormData(f)),f)}catch(err){const box=f.querySelector('.error');if(box){box.textContent=err.message;box.classList.add('show')}else toast(err.message)}});
  document.addEventListener('keydown',e=>{if(e.key==='Escape')close();if(e.key==='Tab'){const modalEl=document.querySelector('.modal');if(!modalEl)return;const list=[...modalEl.querySelectorAll('a,button,input,select,textarea')].filter(x=>!x.disabled);const a=list[0],b=list.at(-1);if(e.shiftKey&&document.activeElement===a){e.preventDefault();b?.focus()}else if(!e.shiftKey&&document.activeElement===b){e.preventDefault();a?.focus()}}});
- window.addEventListener('resize',syncViewport);window.addEventListener('hashchange',()=>{close();render()});window.addEventListener('storage',e=>{if(e.key===KEY&&e.newValue){S=JSON.parse(e.newValue);render()}});if(!location.hash)history.replaceState(null,'','#/U01');render();
+ window.addEventListener('resize',syncViewport);window.addEventListener('hashchange',()=>{close();render()});
+ window.addEventListener('storage',e=>{
+  if(e.key!==KEY||!e.newValue)return;
+  try{
+   const next=JSON.parse(e.newValue);
+   if(!next||next.version!==1||!Array.isArray(next.orders)||!next.profile||JSON.stringify(next)===JSON.stringify(S))return;
+   if(!next.v02?.v03||!next.v07){location.reload();return;}
+   syncState(S,next);render();
+  }catch(err){/* 忽略无效的外部演示缓存。 */}
+ });
+ if(!location.hash)history.replaceState(null,'','#/U01');render();
+}
+// 保留各模块持有的对象和集合引用；带 id 的集合项按 id 对齐，兼容新增、删除及排序。
+function syncState(current,next){
+ if(Array.isArray(next)){
+  const out=Array.isArray(current)?current:[];
+  const byId=new Map(out.filter(x=>x&&typeof x==='object'&&x.id).map(x=>[x.id,x]));
+  const items=next.map((x,i)=>syncState(x&&typeof x==='object'&&x.id?byId.get(x.id):out[i],x));
+  out.splice(0,out.length,...items);return out;
+ }
+ if(next&&typeof next==='object'){
+  const out=current&&typeof current==='object'&&!Array.isArray(current)?current:{};
+  for(const key of Object.keys(out))if(!Object.hasOwn(next,key))delete out[key];
+  for(const key of Object.keys(next))if(!['__proto__','constructor','prototype'].includes(key))out[key]=syncState(out[key],next[key]);
+  return out;
+ }
+ return next;
 }
 return {get views(){return renderers},C,R,E,money,tag,href,link,btn,input,select,notice,empty,kv,form,table,projects,identities,pages,services,service,offer,currentOrders,assets,save,go,toast,modal,close,register,actions,forms,start,render,showOrder,get S(){return S},get route(){return route},get params(){return params},get draft(){return draft},set draft(v){draft=v},get filters(){return filters}};
 })();

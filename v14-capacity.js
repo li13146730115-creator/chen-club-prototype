@@ -25,14 +25,14 @@ function resolve(state,req,exclude){
  if(!count.open)return {message:'预约人数超过剩余容量，当前仅可预约'+count.available+'人',capacity:count.capacity,booked:count.booked};
  return null;
 }
-function slotLabel(req,exclude,open){const count=summary(req,S,exclude);if(!count.showBookingCount)return open===false?'已约满':'可预约';return '<span class="v14-slot-booked">已预约 '+count.booked+' / '+count.capacity+'人</span><span class="v14-slot-available">可预约 '+count.available+'人</span>'+(!count.open?'<span class="v14-slot-full">'+(count.conflict?'人员时段冲突':count.available?'本次人数超出余量':'已约满')+'</span>':'');}
+function slotLabel(req,exclude,open){const count=summary(req,S,exclude);if(!count.showBookingCount)return open===false?'已约满':'可预约';return '<span class="v14-slot-booked">已预约 '+count.booked+' / '+count.capacity+'人</span>'+(!count.open?'<span class="v14-slot-full">'+(count.conflict?'人员时段冲突':count.available?'本次人数超出余量':'已约满')+'</span>':'');}
 
 // 泳池场地的20人为演示容量；泳池私教仍按独占资源预约。
 for(const s of A.services.filter(venuePool)){const cfg=S.v02.v03.merchantServices[s.id]??={};cfg.bookingMode??='shared';cfg.capacity??=20;cfg.showBookingCount??=true;S.configs['res-'+s.id]={...S.configs['res-'+s.id],capacity:cfg.capacity};}
 C.setOccupiedResolver(resolve);
 A.v14Capacity={config,summary,slotLabel};
 
-function capacityFields(s){const cfg=s?config(s):{bookingMode:'exclusive',capacity:99,showBookingCount:false};return '<section class="v14-capacity-config"><h3>预约人数与容量</h3>'+select('showBookingCount','预约页显示预约人数',[['yes','开启 · 展示已预约与可预约人数'],['no','关闭 · 隐藏人数']],cfg.showBookingCount?'yes':'no')+select('bookingMode','场地预约方式',[['exclusive','独占预约 · 同一时段仅接待一笔预约'],['shared','共享预约 · 按到场人数占用名额']],cfg.bookingMode)+input('capacity','饱和人数／场地容量',cfg.capacity,'number','min="1" max="999" step="1" required')+'<p class="muted">共享场地按重叠时段到场人数限制预约；关闭人数显示后仍执行容量校验。</p></section>';}
+function capacityFields(s){const cfg=s?config(s):{bookingMode:'exclusive',capacity:99,showBookingCount:false};return '<section class="v14-capacity-config"><h3>预约人数与容量</h3>'+select('showBookingCount','预约页显示预约人数',[['yes','开启 · 展示已预约人数／场地容量'],['no','关闭 · 隐藏人数']],cfg.showBookingCount?'yes':'no')+select('bookingMode','场地预约方式',[['exclusive','独占预约 · 同一时段仅接待一笔预约'],['shared','共享预约 · 按到场人数占用名额']],cfg.bookingMode)+input('capacity','饱和人数／场地容量',cfg.capacity,'number','min="1" max="999" step="1" required')+'<p class="muted">共享场地按重叠时段到场人数限制预约；关闭人数显示后仍执行容量校验。</p></section>';}
 const editor=A.views.M09;A.register({M09:()=>editor().replace(/<form data-form="(?:v03|xmind)-service-save"[\s\S]*?<\/form>/g,form=>form.replace(/(<button\b[^>]*type="submit"[^>]*>)/,capacityFields(M.service(A.params.get('id')))+'$1'))});
 function capacityValues(f,previous){const next={...previous};if(Object.hasOwn(f,'bookingMode')){if(!['shared','exclusive'].includes(f.bookingMode))throw Error('请选择有效的场地预约方式');next.bookingMode=f.bookingMode;}if(Object.hasOwn(f,'capacity')){const n=Number(f.capacity);if(!Number.isSafeInteger(n)||n<1||n>999)throw Error('饱和人数／场地容量须为1—999的整数');next.capacity=n;}if(Object.hasOwn(f,'showBookingCount')){if(![true,false,'yes','no','true','false','1','0',1,0].includes(f.showBookingCount))throw Error('请选择是否显示预约人数');next.showBookingCount=[true,'yes','true','1',1].includes(f.showBookingCount);}return next;}
 const serviceSave=A.forms['v03-service-save'];

@@ -1,0 +1,77 @@
+/* V0.13：移动端透明标题、泳池人数位置及统一单层时段边框。 */
+.device .mp-head,
+.device .mall-core .mp-head.v16-order-head {
+  background: transparent !important;
+  background-image: none !important;
+  color: #3c3028 !important;
+  border-bottom-color: #ebe7e3 !important;
+  box-shadow: none !important;
+  backdrop-filter: none;
+}
+.device .mp-head h2,
+.device .mp-head .owner-back,
+.device .mall-core .mp-head.v16-order-head h2,
+.device .mall-core .mp-head.v16-order-head .owner-back {
+  color: #3c3028 !important;
+}
+.device .mp-head .owner-back:focus-visible { outline-color: #856850; }
+.device:has(.mall-core) .device-status { background: #f5f5f5; color: #3c3028; }
+.device .v19-cart-page,
+.device .v19-checkout { background: #f5f5f5; }
+
+.home-today-card .v16-pool-card-count {
+  display: block;
+  margin: 4px 8px 6px;
+  color: #8b7b6b;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* label 只负责点击区域，直接子卡片负责唯一的边框和选中填色。 */
+.owner-time-option,
+.v19-reservation .owner-time-option,
+.v19-reservation .owner-time-option:has(input:checked) {
+  border: 0 !important;
+  outline: 0;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.owner-time-option > input + span,
+.v08-owner-booking .owner-time-option > input + span,
+.v19-reservation .owner-time-option > input + span {
+  box-sizing: border-box;
+  border: 1px solid #ded2c2 !important;
+  background: #fffdf9 !important;
+  border-radius: 7px;
+  box-shadow: none !important;
+}
+.owner-time-option > input:checked + span,
+.v08-owner-booking .owner-time-option.is-selected > input + span,
+.v19-reservation .owner-time-option > input:checked + span {
+  border: 1px solid #856850 !important;
+  background: #efe4d6 !important;
+  box-shadow: none !important;
+}
+.owner-time-option > input:disabled + span {
+  background: #efede8 !important;
+  border-color: #e6e0d7 !important;
+  color: #aaa49b;
+}
+.owner-time-option > input:focus-visible + span {
+  outline: 2px solid #856850 !important;
+  outline-offset: 2px;
+}
+/* 人数、约满说明是文字，不能继承卡片边框和最小高度。 */
+.owner-time-option > input + span span {
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+.v07-slot-grid button.on {
+  border: 1px solid #856850 !important;
+  box-shadow: none !important;
+}

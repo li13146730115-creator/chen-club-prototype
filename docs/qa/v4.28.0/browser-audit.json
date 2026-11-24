@@ -1,0 +1,478 @@
+{
+  "titles": [
+    {
+      "route": "U02",
+      "title": "返回\n身份与会籍\n北京宸园 ›",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U03",
+      "title": "会籍与权益",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U04",
+      "title": "返回\n我的卡包",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U05",
+      "title": "会所服务",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U06",
+      "title": "服务详情",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U08",
+      "title": "返回\n确认预约",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U09",
+      "title": "预约凭证",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U10",
+      "title": "我的预约",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U13",
+      "title": "家庭成员",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U14",
+      "title": "联系会所",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S01",
+      "title": "商家工作台",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S02",
+      "title": "会员查询",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S03",
+      "title": "代客下单",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S04",
+      "title": "订单收款",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S05",
+      "title": "扫码核销",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S06",
+      "title": "会员信息",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S07",
+      "title": "工单处理",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U15",
+      "title": "账户设置",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U16",
+      "title": "我的订单",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U17",
+      "title": "我的权益\n北京宸园",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U18",
+      "title": "会所服务",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S08",
+      "title": "订单详情",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "T01",
+      "title": "商家工作台",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "T02",
+      "title": "会员查询",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "T03",
+      "title": "代客下单",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "T04",
+      "title": "订单收款",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "T05",
+      "title": "扫码核销",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "T06",
+      "title": "会员信息",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "T07",
+      "title": "工单处理",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "T08",
+      "title": "订单详情",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U19",
+      "title": "消息",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U20",
+      "title": "我的卡包",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S09",
+      "title": "我的",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "T09",
+      "title": "我的",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U21",
+      "title": "返回\n会籍权益对比",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U22",
+      "title": "确认订单",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U23",
+      "title": "订单支付",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U24",
+      "title": "我的订单",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S10",
+      "title": "代客下单",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U25",
+      "title": "健身私教推荐",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U26",
+      "title": "健身私教",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U27",
+      "title": "套餐详情",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U28",
+      "title": "会所活动",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U29",
+      "title": "购物车",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U30",
+      "title": "订单详情",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U32",
+      "title": "地址管理",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S11",
+      "title": "服务订单",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S12",
+      "title": "工单详情",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S13",
+      "title": "个人信息",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S14",
+      "title": "核销成功",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U31",
+      "title": "选择卡券",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "S15",
+      "title": "选择卡券",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U33",
+      "title": "商品详情",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U34",
+      "title": "支付结果",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U35",
+      "title": "意见反馈",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U36",
+      "title": "我的关注",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U37",
+      "title": "活动月历",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U38",
+      "title": "邀请函",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    },
+    {
+      "route": "U39",
+      "title": "会员登录",
+      "background": "rgba(0, 0, 0, 0)",
+      "image": "none",
+      "color": "rgb(60, 48, 40)"
+    }
+  ],
+  "selections": [
+    {
+      "id": "BJX01",
+      "coupon": false,
+      "outerBorder": "0px",
+      "outerShadow": "none",
+      "innerBorder": "1px",
+      "innerStyle": "solid",
+      "innerShadow": "none"
+    },
+    {
+      "id": "BJX02",
+      "coupon": true,
+      "outerBorder": "0px",
+      "outerShadow": "none",
+      "innerBorder": "1px",
+      "innerStyle": "solid",
+      "innerShadow": "none"
+    },
+    {
+      "id": "BJX02",
+      "coupon": false,
+      "outerBorder": "0px",
+      "outerShadow": "none",
+      "innerBorder": "1px",
+      "innerStyle": "solid",
+      "innerShadow": "none"
+    }
+  ],
+  "flows": [
+    {
+      "id": "BJX01",
+      "coupon": false,
+      "result": "#/U09?id=CY-MWUV5OBZ-JKM"
+    },
+    {
+      "id": "BJX02",
+      "coupon": true,
+      "result": "#/U09?id=CY-MWUV5OKQ-NQF"
+    },
+    {
+      "result": "服务预约：外部标签页同步后共享数据引用保持一致"
+    },
+    {
+      "id": "BJX02",
+      "coupon": false,
+      "result": "#/U23?id=PAY-MWUV5P0Y-JG5"
+    },
+    {
+      "id": "BJX02",
+      "coupon": false,
+      "result": "返回修改处理逻辑后再次下单通过（调用既有处理函数）"
+    },
+    {
+      "result": "商品下单：外部标签页同步后共享数据引用保持一致"
+    },
+    {
+      "result": "商品确认订单→立即下单→收银台通过"
+    }
+  ],
+  "errors": []
+}
