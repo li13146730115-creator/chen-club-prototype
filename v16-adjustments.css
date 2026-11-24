@@ -1,0 +1,43 @@
+/* V0.12：订单头部、预约容量及首页近期预约空状态。 */
+.mall-core .mp-head.v16-order-head{
+  min-height:56px;background:#856850!important;color:#f6efe4!important;
+  border-bottom:1px solid #b49a7b!important;
+}
+.mall-core .mp-head.v16-order-head h2,
+.mall-core .mp-head.v16-order-head .owner-back{color:#f6efe4!important}
+.mall-core .mp-head.v16-order-head .owner-back:focus-visible{outline-color:#f6efe4}
+.v16-recent-empty{
+  display:grid;grid-template-columns:40px minmax(0,1fr) auto;align-items:center;gap:10px;
+  min-height:70px;padding:12px;background:#fffdf9;border:1px solid #e5dccf;border-radius:9px;
+}
+.v16-recent-empty-icon{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:#f1e9df;color:#856850}
+.v16-recent-empty>div{display:grid;gap:4px;min-width:0}
+.v16-recent-empty>div b{font-size:13px;font-weight:600;color:#3c3028}
+.v16-recent-empty>div small{font-size:10px;line-height:1.5;color:#8b7b6b}
+.v16-recent-cta{white-space:nowrap;color:#856850;font-size:11px}
+.v16-pool-capacity{padding:14px 15px!important;border-color:#e5dccf!important}
+.v16-pool-capacity-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.v16-pool-capacity-head h3{margin:0 0 5px!important;font-size:14px!important}
+.v16-pool-capacity-head small{font-size:10px;color:#8b7b6b}
+.v16-pool-status{padding:4px 9px;border-radius:12px;background:#f1e9df;color:#856850;font-size:10px}
+.v16-pool-capacity-counts{display:flex;align-items:center;gap:7px;margin-top:14px;color:#3c3028}
+.v16-pool-capacity-counts>span:not(.v16-pool-capacity-divider):not(.v16-pool-capacity-total){display:grid;gap:3px}
+.v16-pool-capacity-counts b{font-size:17px;font-weight:650;font-variant-numeric:tabular-nums}
+.v16-pool-capacity-counts small{font-size:10px;color:#8b7b6b}
+.v16-pool-capacity-divider{color:#b8aa98}
+.v16-pool-capacity-total{margin-left:auto;color:#8b7b6b;font-size:10px}
+.v16-pool-capacity meter{display:block;width:100%;height:6px;margin:12px 0 0;accent-color:#856850}
+.home-today-card .v16-pool-card-count{display:grid;gap:3px;margin:1px 9px 0;color:#807362;font-size:9px;line-height:1.35}
+.home-today-card .v16-pool-card-count span{display:block;white-space:nowrap}
+.v16-login-required{padding:20px 16px;background:#fffdf9;border:1px solid #e5dccf;border-radius:9px}
+.v16-login-required h3{margin:0 0 8px;color:#3c3028;font-size:15px}
+.v16-login-required p,.v16-login-intro p{color:#8b7b6b;font-size:12px;line-height:1.6}
+.v16-login-intro{padding:24px 0;text-align:center}
+.v16-login-mark{display:grid;width:52px;height:52px;margin:0 auto 12px;place-items:center;border:1px solid #c6a978;border-radius:50%;color:#856850;font-family:serif;font-size:26px}
+.v16-login-intro h3{margin:0;color:#3c3028;font-family:serif;font-size:20px}
+.v16-login-tip{margin:8px 0;color:#8b7b6b;font-size:11px}
+.v16-login .field input{min-height:48px}
+.v16-login form .btn{margin-top:12px}
+.v16-login-required .btn{margin-top:12px}
+.v07-staff-quick a[href="#/S02"],.v07-staff-quick a[href="#/S06"],
+.v07-staff-metrics a[href="#/S07"]{display:none!important}
