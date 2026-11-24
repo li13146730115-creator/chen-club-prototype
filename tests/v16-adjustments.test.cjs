@@ -21,3 +21,5 @@ test('预约联系信息在订单确认页保留，取消独立的第三步会�
 test('游客预约和点单进入会员登录，成功登录后返回原下单页面',()=>{const{A,go}=load();A.S.guest=true;let h=go('U06?id=BJX01');assert.match(h,/U39/);A.actions['v09-cart-checkout']();assert.equal(A.v07.B.v16LoginReturn.route,'U29');h=go('U39');assert.match(h,/会员登录/);assert.throws(()=>A.forms['v16-member-login']({phone:'13800000001',code:'000000'}),/验证码/);A.forms['v16-member-login']({phone:'13800000001',code:'123456'});assert.equal(A.S.guest,false);assert.equal(A.v07.B.v16LoginReturn,null);});
 
 test('游客不能跳过登录直接提交预约或订单',()=>{const{A,go}=load();A.S.guest=true;go('U07?id=BJX01');A.forms['book-draft']({service:'BJX01',date:'2026-11-28',time:'09:00',times:['09:00'],resource:'BJX01-1',people:'1',user:'访客',phone:'13800000001'});assert.equal(A.v07.B.v16LoginReturn.route,'U07');assert.equal(A.draft,null);});
+
+test('游客登录时填写的手机号进入后续预约联系人',()=>{const{A,go}=load();A.S.guest=true;go('U07?id=BJX01');A.forms['v16-member-login']({phone:'13812345678',code:'123456'});const h=go('U07?id=BJX01');assert.match(h,/name="phone"[^>]*value="13812345678"/);});

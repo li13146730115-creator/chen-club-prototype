@@ -12,6 +12,6 @@
 8. 会员预约自动带出会员姓名和联系方式；非会员联系电话置空并要求手动填写；确认页保留联系人信息。
 9. 新增会员登录页，游客预约、购买和购物车结算时进入登录，演示登录后返回原业务页面。
 
-验证结果：`node --test tests/*.test.cjs` 共 417 项通过，0 失败；三会所 × 四身份 × 1,440 次页面渲染检查通过；移动端容器闭合与底栏检查通过。Chrome 实测移动首页和预约页（375 × 812）、商家后台（1440 × 900）均无脚本错误。截图：![移动首页](mobile-home.png)、![预约页](mobile-booking.png)、![商家后台](desktop-merchant.png)。
+验证结果：`node --test tests/*.test.cjs` 共 418 项通过，0 失败；三会所 × 四身份 × 1,440 次页面渲染检查通过；移动端容器闭合与底栏检查通过。Chrome 实测移动首页和预约页（375 × 812）、商家后台（1440 × 900）均无脚本错误。截图：![移动首页](mobile-home.png)、![预约页](mobile-booking.png)、![商家后台](desktop-merchant.png)。
 
 相关实现：[v16-adjustments.js](../../../../v16-adjustments.js)、[v16-adjustments.css](../../../../v16-adjustments.css)、[v16 回归测试](../../../../tests/v16-adjustments.test.cjs)。
