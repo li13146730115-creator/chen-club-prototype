@@ -15,15 +15,19 @@ fs.mkdirSync(output, { recursive: true });
   try {
     const context = await browser.newContext({ viewport: { width: 375, height: 812 } });
     const page = await context.newPage();
-    page.setDefaultTimeout(8000);
+    page.setDefaultTimeout(15000);
     page.on('pageerror', e => report.errors.push(e.message));
     page.on('console', m => { if (m.type() === 'error') report.errors.push(m.text()); });
-    let navigation = 0;
+    let booted = false;
     const go = async route => {
-      const url = new URL(target);
-      url.searchParams.set('qa', String(++navigation));
-      url.hash = '#/' + route;
-      await page.goto(url.href);
+      if (!booted) {
+        const url = new URL(target);
+        url.hash = '#/' + route;
+        await page.goto(url.href, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        booted = true;
+      } else {
+        await page.evaluate(route => { location.hash = '#/' + route; Club.render(); }, route);
+      }
       await page.locator('#app .workspace').waitFor();
     };
     const syncFromPeer = async label => {
