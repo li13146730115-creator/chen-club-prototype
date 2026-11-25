@@ -42,6 +42,6 @@
   function family(){var rows=V.members.filter(function(m){return m.project===p()&&m.id.startsWith('CUSTOMER-MEMBER-');}).slice(0,5);return head('家庭成员','U12')+pad(notice('以下为家庭成员档案演示，人数上限、关系、共享与额度规则仍待项目确认。')+rows.map(function(m,i){return '<article class="card space"><h3>'+E(m.name)+(i===0?' · 本人':' · 关联成员示例')+'</h3>'+kv('成员类型',E(m.familyType))+kv('绑定日期',E(m.bindDate))+kv('权益到期日',E(m.expiry))+'<p class="small muted">'+E(m.grade)+(m.familyType==='儿童'?' · 需成年人陪同':'')+'</p></article>';}).join('')+notice('北京茶棋赠时不重复相加，家庭共享不自动转移独立课卡。'));}
   var oldDraft=A.forms['book-draft'];A.forms['book-draft']=function(f){var s=A.services.find(function(x){return x.id===f.service&&x.project===p();});if(!s||A.offer(s,A.S.identity,f.variant||'').amount===null)throw Error('该身份价格或权益额度待确认，暂不能直接提交');return oldDraft(f);};
   // 确保复用已有初始数据的旧缓存也能看到新增数量；重置后重载，避免旧脚本保留过期状态引用。
-  A.actions['confirm-reset']=function(){localStorage.setItem('chenclub-prototype-20261111-v1',JSON.stringify(A.C.seed()));location.reload();};
+  A.actions['confirm-reset']=function(){localStorage.setItem(A.storageKey,JSON.stringify(A.C.seed()));location.reload();};
   A.register({A23:scenePage,U11:ownerScan,U09:credential,S02:memberSearch,T02:memberSearch,U04:wallet,U20:wallet,U13:family});
 })();

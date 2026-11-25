@@ -25,3 +25,7 @@
   width: 105px;
   flex: 0 0 105px;
 }
+.v18-payment-dialog { padding: 10px 8px 20px; }
+.v18-payment-dialog h1 { margin: 10px 0; }
+.v18-payment-dialog .v04-qr { margin: 16px auto; }
+.v18-payment-dialog > small { display: block; line-height: 1.6; }

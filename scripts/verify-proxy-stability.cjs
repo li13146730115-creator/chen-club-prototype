@@ -1,0 +1,98 @@
+/* Run with a static server on port 8874; preserves an incompatible old tab during the checks. */
+const { chromium } = require('playwright');
+const { execFileSync } = require('node:child_process');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const target = process.env.CHEN_QA_URL || 'http://127.0.0.1:8874/';
+const output = path.resolve(__dirname, '../docs/qa/v4.28.2');
+const oldApp=execFileSync('git',['show','e5e9ecf:app.js'],{encoding:'utf8'});
+const oldScan=execFileSync('git',['show','502ddba:v13-scan-model.js'],{encoding:'utf8'});
+fs.mkdirSync(output,{recursive:true});
+(async()=>{
+ const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',args:['--no-sandbox']});
+ const context=await browser.newContext({viewport:{width:375,height:812}});
+ const report={target,flows:[],errors:[],cache:{}};
+ await context.addInitScript(()=>{window.qa={renders:0,writes:0,storage:0};const set=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){qa.writes++;return set.call(this,k,v);};document.addEventListener('club:render',()=>qa.renders++);addEventListener('storage',()=>qa.storage++);});
+ const legacy=await context.newPage();
+ await legacy.route('**/app.js?*',r=>r.fulfill({contentType:'application/javascript',body:oldApp}));
+ await legacy.route('**/v13-scan-model.js?*',r=>r.fulfill({contentType:'application/javascript',body:oldScan}));
+ await legacy.goto(target+'#/U01',{waitUntil:'domcontentloaded'});
+ await legacy.evaluate(()=>{Club.S.profile.nickname='升级前的演示会员';Club.save();});
+ const page=await context.newPage();page.setDefaultTimeout(12000);
+ page.on('pageerror',e=>report.errors.push(e.message));
+ page.on('console',m=>{if(m.type()==='error')report.errors.push(m.text());});
+ await page.goto(target+'#/S03',{waitUntil:'domcontentloaded'});
+ assert.equal(await page.evaluate(()=>Club.S.profile.nickname),'升级前的演示会员');
+ assert.equal(await page.evaluate(()=>Club.storageKey),'chenclub-prototype-20261111-v2');
+ const idle=async label=>{
+   const before=await page.evaluate(()=>({...qa}));await page.waitForTimeout(1000);const after=await page.evaluate(()=>({...qa}));
+   assert.equal(after.renders,before.renders,label+' idle rerender');assert.equal(after.writes,before.writes,label+' idle write');return {label,before,after};
+ };
+ report.cache.firstEntry=await idle('首次打开代客入口');
+ const go=async route=>{await page.evaluate(route=>{location.hash='#/'+route;Club.render();},route);await page.locator('#app .workspace').waitFor();};
+ for(const route of ['S03','S10','A27','M17']){
+   await page.setViewportSize({width:/^S/.test(route)?375:1440,height:/^S/.test(route)?812:900});
+   await go(route);
+   await page.locator('[data-action="v10-proxy-add"][data-id="V07-bj-cola"][data-delta="1"]').click();
+   await page.locator('[data-action="v07-proxy-next"]').click();
+   await page.locator('[data-action="v07-proxy-confirm"]').click();
+   await page.waitForFunction(()=>Club.params.get('step')==='3');
+   const input=page.locator('input[name="query"]');await input.fill('林');
+   report.flows.push(await idle(route+'首次会员信息'));
+   if(route==='S03')await page.screenshot({path:output+'/01-member-stable.png'});
+   // An old tab writes its outdated snapshot while the member is still typing.
+   await legacy.evaluate(()=>{Club.S.profile.nickname='旧版后台写入';Club.save();});
+   await page.waitForTimeout(250);
+   assert.equal(await input.inputValue(),'林');
+   assert.notEqual(await page.evaluate(()=>Club.S.profile.nickname),'旧版后台写入');
+   await page.locator('[data-action="v07-member-select"]').first().click();
+   await page.locator('[data-action="v07-member-clear"]').click();
+   const flow=await page.evaluate(()=>Club.route);
+   await page.locator('a[href="#/'+flow+'?step=4"]').click();
+   await page.locator('input[name="name"]').fill('测试会员');
+   await page.locator('input[name="phone"]').fill('13900001234');
+   await page.locator('[data-form="v07-submit"] button[type="submit"]').click();
+   await page.waitForFunction(()=>Club.params.get('step')==='5');
+   report.flows.push(await idle(route+'待收款'));
+   const group=await page.evaluate(()=>Club.params.get('id'));
+   // Hold through a potential background update: the button must survive to click.
+   const online=page.locator('[data-action="v07-method"][data-value="online"]');
+   await online.click({delay:150});
+   const dialog=page.getByRole('dialog',{name:'会员扫码支付'});await dialog.waitFor();
+   const qr=dialog.locator('[data-qr]');assert.equal(await qr.getAttribute('data-qr'),'CHEN-PAY:'+group);
+   assert.ok(await qr.locator('canvas,img').count()>0,'QR pixels rendered');
+   const dialogBox=await dialog.boundingBox();assert.ok(dialogBox.width<=(/^S/.test(route)?375:1440));
+   await page.screenshot({path:output+'/'+route+'-payment-dialog.png'});
+   await dialog.getByRole('button',{name:'关闭',exact:true}).click();
+   await page.locator('[data-action="v08-payment-qr"]').click();await dialog.waitFor();
+   await dialog.locator('[data-action="v07-pay"]').click();
+   await page.waitForFunction(()=>Club.params.get('step')==='6');
+   assert.equal(await page.getByRole('dialog').count(),0);
+   assert.equal(await page.evaluate(id=>Club.v07.B.groups.find(g=>g.id===id).channel,group),'online');
+   report.flows.push({route,memberInputRetained:true,oldTabIgnored:true,qrDialog:true,reopen:true,paid:true});
+ }
+ // A current peer receives business updates without echoing them back.
+ const peer=await context.newPage();await peer.goto(target+'#/A08',{waitUntil:'domcontentloaded'});
+ await page.waitForTimeout(350);const before=await page.evaluate(()=>({...qa}));
+ await peer.evaluate(()=>{Club.S.profile.nickname='新版同步资料';Club.save();});
+ await page.waitForFunction(()=>Club.S.profile.nickname==='新版同步资料');
+ const updated=await page.evaluate(()=>({...qa}));
+ assert.equal(updated.writes,before.writes,'receiving peer update must not write again');
+ report.cache.currentPeer=await idle('新版双标签页同步完成');
+ await go('A27');
+ const changeId=await page.evaluate(()=>{const M=Club.v07;return M.submit({kind:'retail',operator:true,lines:[{item:M.products()[0].id,qty:1}]}).id;});
+ await go('A27?step=5&id='+changeId);
+ await page.locator('[data-action="v07-method"][data-value="online"]').click();
+ await page.getByRole('dialog',{name:'会员扫码支付'}).waitFor();
+ await peer.waitForFunction(id=>Club.v07.B.groups.some(g=>g.id===id),changeId);
+ await peer.evaluate(id=>{Club.v07.B.groups.find(g=>g.id===id).paymentMethod='offline';Club.save();},changeId);
+ await page.waitForFunction(()=>document.querySelector('.v18-payment-dialog')===null);
+ assert.equal(await page.evaluate(id=>Club.v07.B.groups.find(g=>g.id===id).status,changeId),'待支付');
+ report.flows.push({route:'A27',stalePaymentDialogClosed:true,paymentStillPending:true});
+ report.cache.keys=await page.evaluate(()=>Object.keys(localStorage).filter(k=>k.startsWith('chenclub-')));
+ assert.equal(report.errors.length,0);
+ fs.writeFileSync(output+'/browser-audit.json',JSON.stringify(report,null,2));
+ console.log(JSON.stringify({flows:report.flows.length,cache:report.cache,errors:report.errors}));
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1);});

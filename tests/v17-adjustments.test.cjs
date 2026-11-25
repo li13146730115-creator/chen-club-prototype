@@ -51,7 +51,7 @@ for (const kind of ['booking', 'retail']) test('V0.13 跨标签页同步后' + (
   const orders = state.orders, firstOrder = orders[0], next = JSON.parse(JSON.stringify(state));
   next.profile.nickname = '跨标签页会员';
   next.orders.reverse();
-  const event = { key: 'chenclub-prototype-20261111-v1', newValue: JSON.stringify(next) };
+  const event = { key: 'chenclub-prototype-20261111-v2', newValue: JSON.stringify(next) };
   listeners.storage(event);
   assert.equal(reloads, 0, '同步不应重载页面或清除当前填写内容');
   assert.equal(A.S, state, '同步应保留页面共享状态引用');
@@ -77,7 +77,7 @@ test('V0.13 无效及其他业务的缓存事件不破坏当前状态', () => {
   scope.addEventListener = (name, fn) => { listeners[name] = fn; };
   scope.location.reload = () => { reloads++; };
   A.start();
-  const key = 'chenclub-prototype-20261111-v1';
+  const key = 'chenclub-prototype-20261111-v2';
   for (const event of [{ key, newValue: JSON.stringify(A.S) }, { key, newValue: '{' },
     { key, newValue: JSON.stringify({ version: 2 }) }, { key, newValue: JSON.stringify({ version: 1 }) }, { key, newValue: null },
     { key: 'another-app', newValue: JSON.stringify(A.S) }]) assert.doesNotThrow(() => listeners.storage(event));
@@ -93,7 +93,7 @@ test('V0.13 其他标签页重置演示数据时重新初始化各模块', () =>
   scope.addEventListener = (name, fn) => { listeners[name] = fn; };
   scope.location.reload = () => { reloads++; };
   A.start();
-  listeners.storage({ key: 'chenclub-prototype-20261111-v1', newValue: JSON.stringify(A.C.seed()) });
+  listeners.storage({ key: 'chenclub-prototype-20261111-v2', newValue: JSON.stringify(A.C.seed()) });
   assert.equal(reloads, 1);
   assert.ok(A.S.v07, '整页初始化前保留完整业务状态');
 });

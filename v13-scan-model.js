@@ -32,7 +32,7 @@ const context=t=>{const {table,menu}=resolve(t);return {project:table.project,ta
 let active=B.v13ScanContext||null,pricingContext;
 const current=()=>active&&active.project===shop()?active:null;
 function activate(t){if(!current())B.v13NormalScene={table:B.table,scene:B.scene};active=context(t);B.v13ScanContext={...active};B.table=active.table;B.scene=active.scene;A.save();return active;}
-function clear(){if(B.v13NormalScene){B.table=B.v13NormalScene.table;B.scene=B.v13NormalScene.scene;delete B.v13NormalScene;}active=null;B.v13ScanContext=null;A.save();}
+function clear(){if(!active&&!B.v13ScanContext&&!B.v13NormalScene)return;if(B.v13NormalScene){B.table=B.v13NormalScene.table;B.scene=B.v13NormalScene.scene;delete B.v13NormalScene;}active=null;B.v13ScanContext=null;A.save();}
 const url=t=>'https://li13146730115-creator.github.io/chen-club-prototype/#/U11?mode=menu&project='+encodeURIComponent(t.project)+'&table='+encodeURIComponent(t.table)+'&scene='+encodeURIComponent(t.scene);
 function validate(d,ctx){const {menu}=resolve(ctx);if(ctx.menuId&&ctx.menuId!==menu.id)throw Error('售卖菜单已调整，请重新扫码选择');const list=visible(ctx);for(const l of d.lines||[]){const e=list.find(p=>p.id===l.item);if(!e)throw Error('商品已下架或不在当前售卖菜单');if((d.kind==='booking')!==(e.product_type==='booking'))throw Error('预约与实体商品必须分别下单，不能混合结算');}return menu;}
 function effectiveContext(){return pricingContext===undefined?(!/^[ASM]/.test(A.route)?current():null):pricingContext;}

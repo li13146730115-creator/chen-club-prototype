@@ -1,0 +1,179 @@
+{
+  "target": "http://127.0.0.1:8874/",
+  "flows": [
+    {
+      "label": "S03首次会员信息",
+      "before": {
+        "renders": 5,
+        "writes": 6,
+        "storage": 0
+      },
+      "after": {
+        "renders": 5,
+        "writes": 6,
+        "storage": 0
+      }
+    },
+    {
+      "label": "S03待收款",
+      "before": {
+        "renders": 9,
+        "writes": 13,
+        "storage": 1
+      },
+      "after": {
+        "renders": 9,
+        "writes": 13,
+        "storage": 1
+      }
+    },
+    {
+      "route": "S03",
+      "memberInputRetained": true,
+      "oldTabIgnored": true,
+      "qrDialog": true,
+      "reopen": true,
+      "paid": true
+    },
+    {
+      "label": "S10首次会员信息",
+      "before": {
+        "renders": 18,
+        "writes": 19,
+        "storage": 1
+      },
+      "after": {
+        "renders": 18,
+        "writes": 19,
+        "storage": 1
+      }
+    },
+    {
+      "label": "S10待收款",
+      "before": {
+        "renders": 22,
+        "writes": 25,
+        "storage": 1
+      },
+      "after": {
+        "renders": 22,
+        "writes": 25,
+        "storage": 1
+      }
+    },
+    {
+      "route": "S10",
+      "memberInputRetained": true,
+      "oldTabIgnored": true,
+      "qrDialog": true,
+      "reopen": true,
+      "paid": true
+    },
+    {
+      "label": "A27首次会员信息",
+      "before": {
+        "renders": 31,
+        "writes": 31,
+        "storage": 1
+      },
+      "after": {
+        "renders": 31,
+        "writes": 31,
+        "storage": 1
+      }
+    },
+    {
+      "label": "A27待收款",
+      "before": {
+        "renders": 35,
+        "writes": 37,
+        "storage": 1
+      },
+      "after": {
+        "renders": 35,
+        "writes": 37,
+        "storage": 1
+      }
+    },
+    {
+      "route": "A27",
+      "memberInputRetained": true,
+      "oldTabIgnored": true,
+      "qrDialog": true,
+      "reopen": true,
+      "paid": true
+    },
+    {
+      "label": "M17首次会员信息",
+      "before": {
+        "renders": 44,
+        "writes": 43,
+        "storage": 1
+      },
+      "after": {
+        "renders": 44,
+        "writes": 43,
+        "storage": 1
+      }
+    },
+    {
+      "label": "M17待收款",
+      "before": {
+        "renders": 48,
+        "writes": 49,
+        "storage": 1
+      },
+      "after": {
+        "renders": 48,
+        "writes": 49,
+        "storage": 1
+      }
+    },
+    {
+      "route": "M17",
+      "memberInputRetained": true,
+      "oldTabIgnored": true,
+      "qrDialog": true,
+      "reopen": true,
+      "paid": true
+    },
+    {
+      "route": "A27",
+      "stalePaymentDialogClosed": true,
+      "paymentStillPending": true
+    }
+  ],
+  "errors": [],
+  "cache": {
+    "firstEntry": {
+      "label": "首次打开代客入口",
+      "before": {
+        "renders": 1,
+        "writes": 3,
+        "storage": 0
+      },
+      "after": {
+        "renders": 1,
+        "writes": 3,
+        "storage": 0
+      }
+    },
+    "currentPeer": {
+      "label": "新版双标签页同步完成",
+      "before": {
+        "renders": 53,
+        "writes": 52,
+        "storage": 2
+      },
+      "after": {
+        "renders": 53,
+        "writes": 52,
+        "storage": 2
+      }
+    },
+    "keys": [
+      "chenclub-prototype-20261111-v1",
+      "chenclub-prototype-20261111-v2"
+    ]
+  }
+}

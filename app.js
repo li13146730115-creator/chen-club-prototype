@@ -1,8 +1,9 @@
 /* 路由、资料适配和共用交互。只操作本地演示数据。 */
 window.Club=(()=>{
 'use strict';
-const C=ClubCore,R=CLUB_RESEARCH,KEY='chenclub-prototype-20261111-v1';
-let S;try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}if(!S||S.version!==1)S=C.seed();
+// 独立同步协议避免仍打开的旧版本页面回写过期快照；首次升级保留已有业务数据。
+const C=ClubCore,R=CLUB_RESEARCH,KEY='chenclub-prototype-20261111-v2',LEGACY_KEY='chenclub-prototype-20261111-v1';
+let S;try{S=JSON.parse(localStorage.getItem(KEY)||localStorage.getItem(LEGACY_KEY))}catch(e){}if(!S||S.version!==1)S=C.seed();
 const projects={bj:'北京宸园',zx:'紫京宸园',zj:'中建项目会所'};
 const identities={ma:'会籍成人',mc:'会籍儿童',na:'无会籍成人',nc:'无会籍儿童'};
 const pageDefs=[
@@ -46,7 +47,8 @@ function offer(s,identity=S.identity,variant=''){
  if(o.amount===null&&o.text.length>36)o.text=o.text.slice(0,34)+'…';return o;
 }
 let route='U01',params=new URLSearchParams(),renderers={},actions={},forms={},draft=null,filters={},lastFocus,headerObserver;
-const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){toast('浏览器未允许本地保存，本次会话仍可演示')}};
+let receivingState=false;
+const save=()=>{if(receivingState)return;try{const value=JSON.stringify(S);if(localStorage.getItem(KEY)!==value)localStorage.setItem(KEY,value)}catch(e){toast('浏览器未允许本地保存，本次会话仍可演示')}};
 const go=(id,args={})=>{const h=href(id,args);if(location.hash===h)render();else location.hash=h;};
 const toast=text=>{const el=document.getElementById('toast');el.textContent=text;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),3600)};
 function close(){document.querySelectorAll('#overlay,#phone-overlay').forEach(el=>el.innerHTML='');if(lastFocus&&lastFocus.isConnected)lastFocus.focus();}
@@ -129,8 +131,8 @@ function start(){
    const next=JSON.parse(e.newValue);
    if(!next||next.version!==1||!Array.isArray(next.orders)||!next.profile||JSON.stringify(next)===JSON.stringify(S))return;
    if(!next.v02?.v03||!next.v07){location.reload();return;}
-   syncState(S,next);render();
-  }catch(err){/* 忽略无效的外部演示缓存。 */}
+   receivingState=true;syncState(S,next);render();
+  }catch(err){/* 忽略无效的外部演示缓存。 */}finally{receivingState=false;}
  });
  if(!location.hash)history.replaceState(null,'','#/U01');render();
 }
@@ -150,5 +152,5 @@ function syncState(current,next){
  }
  return next;
 }
-return {get views(){return renderers},C,R,E,money,tag,href,link,btn,input,select,notice,empty,kv,form,table,projects,identities,pages,services,service,offer,currentOrders,assets,save,go,toast,modal,close,register,actions,forms,start,render,showOrder,get S(){return S},get route(){return route},get params(){return params},get draft(){return draft},set draft(v){draft=v},get filters(){return filters}};
+return {storageKey:KEY,get views(){return renderers},C,R,E,money,tag,href,link,btn,input,select,notice,empty,kv,form,table,projects,identities,pages,services,service,offer,currentOrders,assets,save,go,toast,modal,close,register,actions,forms,start,render,showOrder,get S(){return S},get route(){return route},get params(){return params},get draft(){return draft},set draft(v){draft=v},get filters(){return filters}};
 })();
