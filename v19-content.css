@@ -1,0 +1,26 @@
+/* V0.14 局部样式：沿用暖棕配色及当前手机、后台布局。 */
+.mobile-screen .v19-content-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:12px}
+.mobile-screen .v19-content-categories button{min-height:44px;padding:10px 3px;border:0;border-radius:7px;background:#eee9e0;color:#918471;font-size:13px;line-height:1.45;white-space:nowrap}
+.mobile-screen .v19-content-categories button.on{background:#856850;color:#fff;font-weight:500}
+.mobile-screen .v19-content-statuses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:4px 0 10px;padding:0;border:0;background:transparent}
+.mobile-screen .v19-content-statuses button{position:relative;min-height:42px;padding:9px 3px;border:0;border-radius:0;background:transparent;color:#978b7d;font-size:12px;white-space:nowrap}
+.mobile-screen .v19-content-statuses button.on{border:0;background:transparent;color:#856850;font-weight:600}
+.mobile-screen .v19-content-statuses button.on:after{content:"";position:absolute;bottom:2px;left:calc(50% - 9px);width:18px;height:2px;border-radius:2px;background:#856850}
+.v19-content-image-field{margin-bottom:20px}
+.v19-content-image-field>span{display:block;margin-bottom:9px;font-size:12px;color:#786655}
+.v19-content-image-box{display:flex;align-items:center;gap:20px;padding:16px;border:1px solid #e2d9cd;border-radius:7px;background:#fcfaf7}
+.v19-content-image-box>img{display:block;flex:0 0 auto;width:176px;height:108px;object-fit:cover;border:1px solid #e4dacf;border-radius:5px;background:#f2ece3}
+.v19-content-image-picker{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:7px 15px;border:1px solid #c8b39f;border-radius:5px;background:#fff;color:#78583f;font-size:12px;cursor:pointer;overflow:hidden}
+.v19-content-image-picker>span{display:flex;align-items:center;gap:6px}
+.v19-content-image-picker input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.v19-content-image-picker:focus-within{outline:2px solid #856850;outline-offset:3px}
+.v19-content-image-box p{margin:8px 0 4px;font-size:12px;color:#8e8174}
+.v19-content-image-box small{display:block;font-size:11px;color:#8e8174;overflow-wrap:anywhere}
+.v19-content-invitation .v14-invitation-mark{margin-bottom:28px}
+.v19-content-invitation .v14-invitation-to{margin:16px 0 15px;line-height:2}
+.v19-content-invitation .v14-invitation-to b{font-weight:500;color:#785b44;font-size:14px}
+.v19-content-invitation .v14-invitation-date{margin-top:24px}
+.v19-content-invitation .v14-invitation-facts{padding-top:19px}
+.v19-content-invitation .v14-invitation-facts .kv{border-bottom:0}
+@media(max-width:600px){.v19-content-image-box{gap:14px;align-items:flex-start;flex-wrap:wrap}.v19-content-image-box>img{width:100%;height:150px}}
+.v19-invitation-invalid{margin:12px 0!important;text-align:center;color:#98714b;font-size:12px!important;background:#f3e7d6;padding:6px;border-radius:3px}
