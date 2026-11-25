@@ -1,0 +1,17 @@
+/* 品牌轮廓来自客户 AI；自适应 currentColor，避免依赖本机字体。 */
+.v20-brand-wordmark{display:inline-block;flex:0 0 auto;width:105px;height:auto;aspect-ratio:258/51;vertical-align:middle;overflow:visible;letter-spacing:normal}
+.home-head .wordmark{display:inline-flex;align-items:center}
+.home-head .wordmark>.v20-brand-wordmark{width:120px;max-width:100%;height:auto}
+.device-status>span{display:flex;align-items:center;justify-content:flex-end}
+.device-status .v20-brand-status{width:70px;height:14px}
+.topbar .brand>.v20-brand-shell{width:136px;height:auto}
+.mall-brand .v20-brand-rail{width:62px;height:auto}
+.v14-invitation-mark>.v20-brand-wordmark{width:108px;height:auto;color:#856850}
+.v16-login .v16-login-mark{display:flex;align-items:center;justify-content:center;width:auto;height:44px;max-width:100%;margin:0 auto 18px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.v16-login-mark>.v20-brand-wordmark{width:150px;height:auto}
+.owner-profile-brand>.v20-brand-wordmark{width:105px;height:auto}
+.studio-phone-status{display:flex;align-items:center;justify-content:space-between}
+.studio-phone-status>.v20-brand-wordmark{width:70px;height:14px}
+.v20-content-invitation{background-image:linear-gradient(145deg,#fffcf7c9,#f6f0e380),url('assets/brand-reference/chen-paper.jpg');background-size:cover,340px 340px}
+.v19-merchant .v19-store-icon:has(.v20-brand-wordmark){width:72px;height:30px;flex:0 0 72px;border:0;border-radius:0;background:transparent;color:#856850}
+.v19-store-icon>.v20-brand-wordmark{width:72px;height:auto}

@@ -1,0 +1,35 @@
+/* V0.15 局部覆盖：保持我的服务入口样式与暖棕米白邀请函。 */
+.owner-device .owner-personal-grid.v20-personal-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+.v20-personal-grid>a{min-width:0}
+.v20-personal-grid>a:focus-visible{outline:2px solid #856850;outline-offset:3px}
+
+.v20-content-invitation{
+ padding:30px 24px 28px;
+ background-color:#fffdf8;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.76' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.045' filter='url(%23paper)'/%3E%3C/svg%3E"),linear-gradient(135deg,#fffdf9,#f8f2e8);
+ border-color:#dfd3c4;
+ box-shadow:0 6px 22px #654e3d09;
+}
+.v20-content-invitation:before{inset:9px;border-color:#d9c9b6;opacity:.7}
+.v20-content-invitation .v14-invitation-mark{
+ position:relative;
+ display:flex;
+ align-items:center;
+ width:max-content;
+ max-width:100%;
+ margin:0 0 36px;
+ text-align:left;
+}
+.v20-content-invitation .v14-invitation-eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;color:#967e67;font-size:8px;letter-spacing:1.7px}
+.v20-content-invitation .v14-invitation-eyebrow:before,.v20-content-invitation .v14-invitation-eyebrow:after{content:"";display:block;flex:0 0 23px;height:1px;background:#c9b69e99}
+.v20-content-invitation .v14-invitation-to{margin:23px 0 17px;color:#8b7b6b;line-height:1.9}
+.v20-content-invitation h1{font-size:26px;line-height:1.6;overflow-wrap:anywhere}
+.v20-content-invitation .v14-invitation-date{margin-top:29px;padding:22px 0 23px;gap:9px;border-color:#d7c6b1}
+.v20-content-invitation .v14-invitation-date>b{font-size:28px;font-weight:400}
+.v20-content-invitation .v14-invitation-date>span{font-size:18px}
+.v20-content-invitation .v14-invitation-facts{padding:21px 0 1px}
+.v20-content-invitation .v14-invitation-facts .kv{padding:10px 0 4px;gap:12px}
+.v20-content-invitation .v14-address{overflow-wrap:anywhere}
+.v20-content-invitation .v14-address small{margin-top:6px}
+.v20-content-invitation .v19-invitation-invalid{background:#eee2d1;color:#856850;border-radius:0}
+@media(max-width:360px){.v20-content-invitation{padding:27px 20px 24px}.v20-content-invitation .v14-invitation-eyebrow{gap:7px;letter-spacing:1.4px}.v20-content-invitation .v14-invitation-eyebrow:before,.v20-content-invitation .v14-invitation-eyebrow:after{flex-basis:16px}}

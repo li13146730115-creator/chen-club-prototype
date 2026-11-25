@@ -1,0 +1,355 @@
+{
+  "target": "http://127.0.0.1:8874/",
+  "alignment": [
+    {
+      "label": "bj phone",
+      "rows": [
+        {
+          "name": "恒温泳池",
+          "top": 825.375,
+          "buttonTop": 987.375,
+          "buttonBottom": 1019.375,
+          "height": 32,
+          "cardBottom": 1029.375
+        },
+        {
+          "name": "恒温泳池 · 私教课",
+          "top": 825.375,
+          "buttonTop": 987.375,
+          "buttonBottom": 1019.375,
+          "height": 32,
+          "cardBottom": 1029.375
+        }
+      ]
+    },
+    {
+      "label": "zx phone",
+      "rows": [
+        {
+          "name": "恒温泳池",
+          "top": 265.375,
+          "buttonTop": 427.375,
+          "buttonBottom": 459.375,
+          "height": 32,
+          "cardBottom": 469.375
+        },
+        {
+          "name": "恒温泳池 · 私教课",
+          "top": 265.375,
+          "buttonTop": 427.375,
+          "buttonBottom": 459.375,
+          "height": 32,
+          "cardBottom": 469.375
+        }
+      ]
+    },
+    {
+      "label": "zj phone",
+      "rows": [
+        {
+          "name": "普拉提／私教 · 私教课",
+          "top": 265.375,
+          "buttonTop": 427.375,
+          "buttonBottom": 459.375,
+          "height": 32,
+          "cardBottom": 469.375
+        },
+        {
+          "name": "恒温泳池",
+          "top": 265.375,
+          "buttonTop": 427.375,
+          "buttonBottom": 459.375,
+          "height": 32,
+          "cardBottom": 469.375
+        }
+      ]
+    },
+    {
+      "label": "A10 editor",
+      "rows": [
+        {
+          "name": "恒温泳池",
+          "top": 1067.34375,
+          "buttonTop": 1229.34375,
+          "buttonBottom": 1261.34375,
+          "height": 32,
+          "cardBottom": 1271.34375
+        },
+        {
+          "name": "恒温泳池 · 私教课",
+          "top": 1067.34375,
+          "buttonTop": 1229.34375,
+          "buttonBottom": 1261.34375,
+          "height": 32,
+          "cardBottom": 1271.34375
+        }
+      ]
+    },
+    {
+      "label": "横向清单保留左图右文",
+      "row": {
+        "imageWidth": 105,
+        "imageRight": 747.5,
+        "textLeft": 747.5,
+        "height": 118.1875
+      }
+    }
+  ],
+  "payment": [
+    {
+      "route": "S03",
+      "kind": "retail",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "S03",
+      "kind": "booking",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "S04",
+      "kind": "retail",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "S04",
+      "kind": "booking",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "S10",
+      "kind": "retail",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "S10",
+      "kind": "booking",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "T03",
+      "kind": "retail",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "T03",
+      "kind": "booking",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "T04",
+      "kind": "retail",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "T04",
+      "kind": "booking",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "A27",
+      "kind": "retail",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "A27",
+      "kind": "booking",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "A28",
+      "kind": "retail",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "A28",
+      "kind": "booking",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "M17",
+      "kind": "retail",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "M17",
+      "kind": "booking",
+      "qr": true,
+      "switched": true,
+      "status": "已支付",
+      "channel": "offline",
+      "orders": [
+        {
+          "paid": true,
+          "channel": "线下收款"
+        }
+      ]
+    },
+    {
+      "route": "S03",
+      "kind": "retail",
+      "onlineConfirmed": true
+    },
+    {
+      "route": "A27",
+      "kind": "retail",
+      "onlineConfirmed": true
+    },
+    {
+      "route": "M17",
+      "kind": "retail",
+      "onlineConfirmed": true
+    },
+    {
+      "route": "S04",
+      "legacyOrder": true,
+      "backToEdit": true
+    },
+    {
+      "route": "A27",
+      "legacyOrder": true,
+      "backToEdit": true
+    },
+    {
+      "route": "M17",
+      "legacyOrder": true,
+      "backToEdit": true
+    }
+  ],
+  "errors": []
+}

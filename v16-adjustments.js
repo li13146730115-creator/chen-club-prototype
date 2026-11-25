@@ -70,7 +70,7 @@ function composeQrCard(qr,project,table,scene,menuName,merchantCategory,doc=docu
  const c=canvas.getContext('2d');if(!c)throw Error('无法生成桌码图片');
  c.fillStyle='#fffdf9';c.fillRect(0,0,canvas.width,canvas.height);
  c.fillStyle='#3c3028';c.textAlign='center';c.textBaseline='middle';
- c.font='600 30px Arial, sans-serif';c.fillText('CHEN CLUB',360,52);
+ c.font='600 30px Arial, sans-serif';if(!A.v20Brand?.drawWordmark?.(c,270,34,180))c.fillText(A.v20Brand?.name||'CHEN CLUB',360,52);
  c.drawImage(qr,100,105,520,520);
  c.font='500 30px "PingFang SC", "Microsoft YaHei", sans-serif';c.fillText(project,360,685);
  c.font='700 38px "PingFang SC", "Microsoft YaHei", sans-serif';c.fillText('桌号  '+table,360,745);
