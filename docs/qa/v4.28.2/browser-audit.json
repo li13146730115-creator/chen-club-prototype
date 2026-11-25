@@ -1,5 +1,5 @@
 {
-  "target": "http://127.0.0.1:8874/",
+  "target": "https://li13146730115-creator.github.io/chen-club-prototype/?v=4.28.2",
   "flows": [
     {
       "label": "S03首次会员信息",
