@@ -1,0 +1,27 @@
+/* 今日可约：同排卡片共用高度，按钮始终贴合内容区底部。 */
+.home-today-grid .home-today-card {
+  display: flex !important;
+  flex-direction: column;
+  min-width: 0;
+}
+.home-today-grid .home-today-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+.home-today-grid .home-today-action {
+  margin-top: auto;
+}
+.home-today-grid .home-today-info > :last-child:not(.home-today-action),
+.home-today-grid .home-today-info > :has(+ .home-today-action) {
+  margin-bottom: 8px;
+}
+/* 装修中的横向图文样式保留左图右文结构。 */
+.home-today-grid.v08-today-rows .home-today-card {
+  flex-direction: row;
+}
+.home-today-grid.v08-today-rows .home-today-card > img {
+  width: 105px;
+  flex: 0 0 105px;
+}
