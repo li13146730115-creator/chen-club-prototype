@@ -1,0 +1,10 @@
+{
+  "command": "node --test tests/*.test.cjs",
+  "baseline": "fecb940",
+  "version": "4.31.0",
+  "tests": 547,
+  "pass": 547,
+  "fail": 0,
+  "cancelled": 0,
+  "skipped": 0
+}

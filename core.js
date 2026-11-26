@@ -2,7 +2,9 @@
 'use strict';
 const clone=x=>JSON.parse(JSON.stringify(x));
 const now=()=>new Date().toLocaleString('zh-CN',{hour12:false});
-const uid=prefix=>prefix+'-'+Date.now().toString(36).toUpperCase()+'-'+Math.random().toString(36).slice(2,5).toUpperCase();
+// 会话内序号保证同毫秒批量创建不碰撞；随机后缀区分跨标签页的新对象。
+let uidSequence=0;
+const uid=prefix=>prefix+'-'+Date.now().toString(36).toUpperCase()+'-'+((++uidSequence).toString(36)+Math.random().toString(36).slice(2,8).padEnd(6,'0')).toUpperCase();
 function log(s,action,detail,role='演示操作员'){s.logs.unshift({id:uid('LOG'),time:now(),action,detail,role,project:s.project});}
 function seed(){return {version:1,project:'bj',identity:'ma',guest:false,seq:101,
  orders:[

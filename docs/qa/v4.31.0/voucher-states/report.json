@@ -1,0 +1,16 @@
+{
+  "dimensions": {
+    "width": 329,
+    "height": 481,
+    "qr": 166,
+    "overflow": false,
+    "bodyOverflow": false
+  },
+  "qr": "CYD0000",
+  "states": [
+    "已完成",
+    "已取消",
+    "待支付"
+  ],
+  "errors": []
+}

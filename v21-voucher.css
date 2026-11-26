@@ -1,0 +1,57 @@
+/* 仅预约凭证使用纸面与暖铜配色，提货凭证继续沿用原样式。 */
+.v05-ticket-page.v21-voucher-page{--v21-ink:#493b30;--v21-muted:#8d7d6e;--v21-bronze:#856850;background:#f3efe8;min-height:calc(100% - 62px);padding:0 0 18px;color:var(--v21-ink)}
+.v21-voucher-page>.v05-pad{padding:15px 18px 0}
+.v21-voucher-page .v05-ticket{border:1px solid #d6c7b5;border-radius:10px;padding:0 22px 0;overflow:hidden;background:linear-gradient(#fffdf8ed,#fffdf8ed),url('assets/brand-reference/chen-paper.jpg') center/cover;box-shadow:0 10px 28px #59402b0d;color:var(--v21-ink)}
+.v21-voucher-page .v05-ticket-top{min-height:47px;margin:0 -22px;padding:10px 20px;box-sizing:border-box;background:linear-gradient(105deg,#72573fee,#9b7c5ee8),url('assets/brand-reference/material.jpg') center/cover;border-bottom:1px solid #b79a77;color:#fff9ed}
+.v21-voucher-page .v05-ticket-top>span{display:flex;align-items:center;color:#fff8e9;line-height:1}
+.v21-voucher-page .v05-ticket-top .v20-brand-wordmark{width:100px;height:auto;color:inherit}
+.v21-voucher-page .v21-voucher-brand{font:19px 'Songti SC',serif;color:inherit;letter-spacing:.8px}
+.v21-voucher-page .v05-ticket .v05-ticket-top>b{background:transparent;border:1px solid #e9d8bd70;color:#fff8e9;border-radius:3px;font-size:10px;font-weight:400;letter-spacing:1px;padding:3px 7px}
+.v21-voucher-page .v21-voucher-heading{padding-top:16px}
+.v21-voucher-page .v05-ticket h2{font:500 23px/1.4 'Songti SC','STSong',serif;color:#4f3e30;margin:0 auto;max-width:100%;overflow-wrap:anywhere}
+.v21-voucher-page .v21-voucher-location{display:flex;justify-content:center;align-items:center;gap:0;margin:8px 0 0;font-size:11px;line-height:1.5;color:#907c68}
+.v21-voucher-page .v21-voucher-location>span{min-width:0;overflow-wrap:anywhere}
+.v21-voucher-page .v21-voucher-location>span+span{border-left:1px solid #d9cabb;padding-left:10px;margin-left:10px;flex-shrink:0}
+.v21-voucher-page .v21-voucher-schedule{display:flex;align-items:center;justify-content:center;gap:23px;padding:12px 0 10px;margin-top:10px;border-top:1px solid #e8dfd3;border-bottom:1px solid #e8dfd3}
+.v21-voucher-page .v21-voucher-schedule time{display:flex;flex-direction:column;text-align:left;gap:3px;font-family:Georgia,'Songti SC',serif;font-variant-numeric:tabular-nums}
+.v21-voucher-page .v21-voucher-schedule time>span{font-size:27px;line-height:1.15;letter-spacing:.2px;color:#5a4430}
+.v21-voucher-page .v21-voucher-schedule small{font:9px/1.5 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;color:#9c8a76;letter-spacing:.7px}
+.v21-voucher-page .v21-voucher-time{display:flex;flex-direction:column;gap:4px;text-align:left;padding-left:23px;border-left:1px solid #dfd2c1}
+.v21-voucher-page .v21-voucher-time strong{font:400 24px/1.15 Georgia,serif;letter-spacing:.3px;font-variant-numeric:tabular-nums;color:#5a4430}
+.v21-voucher-page .v05-qr-frame{width:184px;height:184px;padding:8px;border:1px solid #e4d9c9;border-radius:5px;margin:14px auto 10px;background:#fff;box-shadow:none}
+.v21-voucher-page .v05-qr-frame .v04-qr{display:grid;place-items:center;width:166px;height:166px;min-height:0;padding:0;margin:0;border:0;border-radius:0;background:#fff}
+.v21-voucher-page .v05-qr-frame .v04-qr img,.v21-voucher-page .v05-qr-frame .v04-qr canvas{width:166px!important;height:166px!important;max-width:100%;image-rendering:pixelated}
+.v21-voucher-page .v05-ticket-tip{font-size:10px;line-height:1.5;letter-spacing:.3px;margin:0 0 14px;color:#988671}
+.v21-voucher-page .v21-voucher-code{border-top:1px solid #e8dfd3;margin:0 -22px;padding:0 17px;background:#f5f0e875}
+.v21-voucher-page .v21-voucher-code .kv{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:5px 0;border:0;font-size:10px;color:#a08b75}
+.v21-voucher-page .v21-voucher-code .kv>strong{font:400 12px Georgia,serif;color:#6d5843;min-width:0;overflow-wrap:anywhere}
+.v21-voucher-page .v05-copy-code{gap:5px}
+.v21-voucher-page .v05-copy-code>button{display:grid;place-items:center;width:30px;height:30px;color:#856850;font-size:16px;border-radius:4px}
+.v21-voucher-page .v05-copy-code>button:focus-visible,.v21-voucher-page summary:focus-visible,.v21-voucher-page button:focus-visible,.v21-voucher-page a:focus-visible{outline:2px solid #856850;outline-offset:3px}
+.v21-voucher-page .v21-voucher-details,.v21-voucher-page .v05-rules{margin:0;padding:0 1px;background:transparent;border:0;border-bottom:1px solid #e2d8cb;border-radius:0}
+.v21-voucher-page .v21-voucher-details{margin-top:13px}
+.v21-voucher-page .v21-voucher-details>summary,.v21-voucher-page .v05-rules>summary{display:flex;align-items:center;justify-content:space-between;min-height:43px;font-size:11px;color:#806c57;list-style:none;cursor:pointer}
+.v21-voucher-page summary::-webkit-details-marker{display:none}
+.v21-voucher-page .v21-voucher-details>summary i,.v21-voucher-page .v05-rules>summary i{font-size:11px;color:#a6937d}
+.v21-voucher-page .v21-voucher-details[open]>summary i{transform:rotate(180deg)}
+.v21-voucher-page .v05-ticket-facts{margin-top:0;padding:0 0 9px;text-align:left}
+.v21-voucher-page .v05-ticket-facts .kv{font-size:10px;padding:7px 0;border-color:#e8dfd3}
+.v21-voucher-page .v05-ticket-facts .kv>strong{color:#6f5d4c;font-size:11px;max-width:72%;line-height:1.6}
+.v21-voucher-page .v05-rules p{font-size:11px;line-height:1.9;margin:0;padding-bottom:13px;color:#8c7964}
+.v21-voucher-page .v05-ticket-actions{display:flex;flex-direction:row;gap:10px;margin-top:16px}
+.v21-voucher-page .v05-ticket-actions>.btn,.v21-voucher-page>.v05-pad>.btn{font-size:12px;line-height:1.5;padding:11px 14px;border-radius:4px;background:#856850;border:1px solid #856850;box-shadow:none;color:#fffaf3}
+.v21-voucher-page .v05-ticket-actions>.btn{flex:1;min-width:0;width:auto}
+.v21-voucher-page .v05-cancel{font-size:11px;color:#8a7663;flex:0 0 auto;padding:12px 9px}
+.v21-voucher-page>.v05-pad>.btn{margin-top:16px}
+.v21-voucher-page .v14-voucher-share{padding:0;margin-top:11px}
+.v21-voucher-page .v14-voucher-share .btn{border:1px solid #cbb9a4;background:transparent;color:#856850;border-radius:4px;box-shadow:none;font-size:12px;padding:10px 14px;line-height:1.5}
+.v21-voucher-page .v14-voucher-share p{font-size:9px;margin:7px 0 0;color:#a08e7b}
+.v21-voucher-page .v05-ticket.completed,.v21-voucher-page .v05-ticket.expired,.v21-voucher-page .v05-ticket.unpaid{border-color:#d6c7b5;background:linear-gradient(#fffdf8ed,#fffdf8ed),url('assets/brand-reference/chen-paper.jpg') center/cover}
+.v21-voucher-page .v05-qr-frame.completed{background:#f9f8f2;border-color:#d9d4c5}
+.v21-voucher-page .v05-qr-art{opacity:.12;filter:grayscale(1)}
+.v21-voucher-page .v05-qr-stamp{inset:42px 17px;color:#867653;border-color:#b3a27d;background:#f9f8f2f5;outline-color:#f9f8f2;font-size:23px;letter-spacing:3px}
+.v21-voucher-page .v05-expired-art{min-height:212px;box-sizing:border-box;justify-content:center;padding:24px 0 23px;gap:10px}
+.v21-voucher-page .v05-expired-art>i{font-size:33px;color:#a88d6e}
+.v21-voucher-page .v05-expired-art>b{font-size:18px;color:#8c7357}
+.v21-voucher-page .v05-expired-art p{font-size:10px;line-height:1.8;max-width:240px;color:#a18d77}
+@media(max-width:350px){.v21-voucher-page>.v05-pad{padding-left:13px;padding-right:13px}.v21-voucher-page .v05-ticket{padding-left:17px;padding-right:17px}.v21-voucher-page .v05-ticket-top,.v21-voucher-page .v21-voucher-code{margin-left:-17px;margin-right:-17px}.v21-voucher-page .v21-voucher-schedule{gap:15px}.v21-voucher-page .v21-voucher-time{padding-left:15px}.v21-voucher-page .v21-voucher-schedule time>span{font-size:24px}.v21-voucher-page .v21-voucher-time strong{font-size:22px}}

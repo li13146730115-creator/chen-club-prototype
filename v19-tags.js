@@ -11,7 +11,7 @@ const cfg=s=>A.S.v02.v03.merchantServices[s.id]||{};
 function recordTags(source,row){
  const extra=source==='service'?cfg(row):{};
  const fields=source==='service'?[row.category,row.kind,extra.category,extra.tags,row.tags]:source==='product'?[row.menuCategory,row.category,row.displayCategory,row.tags]:[row.grade,row.familyType,row.relation,row.tags];
- return unique(fields.flatMap(split));
+ const labels=unique(fields.flatMap(split));return source==='product'&&A.v21Tags?.productLabels?A.v21Tags.productLabels(row,labels):labels;
 }
 function catalog(){
  const result=[];
@@ -19,6 +19,8 @@ function catalog(){
   const tags=new Map();for(const row of rows)for(const label of recordTags(source,row)){if(!tags.has(label))tags.set(label,[]);tags.get(label).push(row.id);}
   for(const [label,ids]of tags)result.push({source,label,ids});
  }
+ // 标签管理可补充尚未关联商品的标签，已有分类及标签仍沿用原目录。
+ for(const row of A.v19Tags?.managedCatalog?.()||[]){const existing=result.find(x=>x.source===row.source&&x.label===row.label);if(existing)existing.ids=unique([...existing.ids,...row.ids]);else result.push(row);}
  return result;
 }
 const refKey=r=>r.source+'\n'+r.label;

@@ -1,0 +1,26 @@
+{
+  "target": "http://127.0.0.1:8874/",
+  "checks": [
+    {
+      "name": "商家分类新增、私教图文上传、课程价格与80天日期时段保存",
+      "id": "COACH-MWXECP08-3HRLIAOP",
+      "service": "PT-SVC-COACH-MWXECP08-3HRLIAOP",
+      "category": "PTCAT-MWXECONT-3G3243AW"
+    },
+    {
+      "name": "私教组件添加、分类数量、两种样式、指定多位教练、更多隐藏、复制删除、上移与原生拖动、发布",
+      "component": "COMP-MWXECS79-3IEVC01B"
+    },
+    {
+      "name": "首页私教更多、详情、翻月日期时段、500元下单及模拟支付、新凭证二维码与折叠详情闭环"
+    },
+    {
+      "name": "标签新增→商品多选保存→推荐组件选择商品标签→发布首页与更多页"
+    },
+    {
+      "name": "重载后配置保持、私教与标签按店铺隔离"
+    }
+  ],
+  "errors": [],
+  "ok": true
+}

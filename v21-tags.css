@@ -1,0 +1,20 @@
+/* 商家标签管理沿用商城后台结构与会所暖棕配色。 */
+.v21-tags-admin{max-width:1400px;background:#fff;border:1px solid #e7ebf0;border-radius:6px;padding:24px;color:#303b4a}
+.v21-tags-admin .v07-pc-toolbar{margin-bottom:22px;align-items:flex-start}
+.v21-tags-admin .v07-pc-toolbar h3{margin:0 0 7px;font-size:17px}
+.v21-tags-admin .v07-pc-toolbar p{margin:0;line-height:1.7}
+.v21-tag-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:24px}
+.v21-tag-stats>div{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#faf7f2;border:1px solid #ebe2d7;border-radius:6px;padding:18px 20px}
+.v21-tag-stats span{color:#687587;font-size:13px}.v21-tag-stats b{color:var(--primary,#856850);font-size:26px;font-weight:600}
+.v21-tags-admin>form{display:flex;align-items:flex-end;gap:14px;margin-bottom:20px}.v21-tags-admin>form .error:empty{display:none}
+.v21-tag-search{width:280px;max-width:100%}.v21-tag-search .field{margin:0}.v21-tags-admin>form>.btn{width:auto;min-width:80px;margin:0}
+.v21-admin-tag{display:inline-flex;align-items:center;padding:5px 10px;border:1px solid #dfd1be;background:#f5eee4;border-radius:4px;color:var(--primary,#856850);font-size:12px}
+.v21-tags-admin td>.link{padding:4px 8px}.v21-tag-delete{color:#d25757!important}
+.v21-tag-note{margin-top:20px;border-top:1px solid #edf0f4;padding-top:18px;font-size:12px;line-height:1.8;color:#7b8695}.v21-tag-note .link{color:var(--primary,#856850);padding:0 3px}
+.v21-tags-context{display:flex;justify-content:flex-end;margin-bottom:12px}
+.v21-product-tags{min-width:0;border:1px solid #e2e8f1;border-radius:5px;padding:13px 14px;margin:16px 0;color:#4c5a6c}
+.v21-product-tags legend{padding:0 5px;font-size:13px;font-weight:600;color:#35465d}.v21-product-tag-options{display:flex;flex-wrap:wrap;gap:8px 10px;max-height:190px;overflow:auto}
+.v21-product-tag-options>label{display:flex;align-items:center;gap:7px;background:#faf7f2;border:1px solid #e3e9f2;border-radius:4px;min-height:34px;padding:6px 10px;cursor:pointer;font-size:12px}
+.v21-product-tag-options>label:has(input:checked){background:#f1e6d6;border-color:#b69873;color:var(--primary,#856850)}.v21-product-tag-options input[type=checkbox]{appearance:auto;accent-color:var(--primary,#856850);width:14px;height:14px;min-height:0;min-width:14px;margin:0;padding:0}
+.v21-product-tag-options>label:focus-within{outline:2px solid var(--primary,#856850);outline-offset:2px}.v21-product-tags>p,.v21-tag-form-help{margin:12px 0 0;color:#8390a2;font-size:12px;line-height:1.8}.v21-product-tags .link{color:var(--primary,#856850)}
+@media(max-width:900px){.v21-tags-admin{padding:18px}.v21-tag-stats{gap:8px}.v21-tag-stats>div{padding:12px;gap:8px}.v21-tag-stats span{font-size:11px}.v21-tag-stats b{font-size:22px}}
