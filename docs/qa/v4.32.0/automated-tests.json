@@ -1,0 +1,11 @@
+{
+  "tests": 555,
+  "pass": 555,
+  "fail": 0,
+  "command": "node --test tests/*.test.cjs",
+  "baseline": 547,
+  "newTests": 8,
+  "syntaxCheck": "node --check v22-product-editor.js",
+  "diffCheck": "git diff --check",
+  "result": "passed"
+}

@@ -1,0 +1,38 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "documentWidth": 1425,
+  "consoleErrors": [],
+  "consoleWarnings": [],
+  "checks": {
+    "fourTabs": true,
+    "uploadedMainImage": true,
+    "uploadedTwoGalleryImages": true,
+    "addedSecondSku": true,
+    "retainedMemberPrice": true,
+    "missingDetailLocated": true,
+    "linkedPassService": true,
+    "savedReturnedToList": true,
+    "reopenedAfterReload": true
+  },
+  "savedValues": {
+    "name": "恒温泳池体验次卡 · 表单核验",
+    "unitName": "张",
+    "prices": [
+      "500.00",
+      "560.00"
+    ],
+    "stocks": [
+      "99",
+      "12"
+    ],
+    "memberPrice": "400",
+    "passService": "恒温泳池",
+    "passCount": "5",
+    "passDays": "90",
+    "galleryImages": 2
+  },
+  "environment": "本地测试浏览器；不写入默认演示数据"
+}
