@@ -11,6 +11,14 @@ function decorateWallet(html){
 function pressed(html){return html.replace(/<button\b([^>]*)>/g,(_all,attributes)=>'<button'+attributes.replace(/\saria-pressed="[^"]*"/g,'')+' aria-pressed="'+(/\bclass="[^"]*\bon\b/.test(attributes)?'true':'false')+'">');}
 for(const id of ['U03','U20']){const view=A.views[id];A.register({[id]:()=>decorateWallet(view())});}
 const wallet=U.walletBody;U.walletBody=()=>decorateWallet(wallet());
+// 分类栏横向滚动后筛选只更新权益，保留当前位置，避免末尾分类跳回开头。
+const filter=A.actions['v07-filter'];A.actions['v07-filter']=(data,...args)=>{
+ const bar=['v09Category','v07Wallet'].includes(data.key)?document.querySelector('.v19-content-categories'):null;
+ if(!bar)return filter(data,...args);
+ const left=bar.scrollLeft,top=document.querySelector('#screen')?.scrollTop||0;
+ const result=filter(data,...args),next=document.querySelector('.v19-content-categories'),screen=document.querySelector('#screen');
+ if(next)next.scrollLeft=left;if(screen)screen.scrollTop=top;return result;
+};
 
 const staffHome=A.views.S01;
 A.register({S01:()=>staffHome().replace(/<div class="v07-staff-quick">([\s\S]*?)<\/div>/,(_all,tiles)=>'<div class="v07-staff-quick">'+tiles+'<a href="'+A.href('S07')+'">'+A.icon('chat-dot-round')+'<b>工单处理</b></a></div>')});

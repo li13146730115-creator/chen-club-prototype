@@ -1,6 +1,7 @@
 /* V0.14 局部样式：沿用暖棕配色及当前手机、后台布局。 */
-.mobile-screen .v19-content-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:12px}
-.mobile-screen .v19-content-categories button{min-height:44px;padding:10px 3px;border:0;border-radius:7px;background:#eee9e0;color:#918471;font-size:13px;line-height:1.45;white-space:nowrap}
+.mobile-screen .v19-content-categories{display:flex;flex-wrap:nowrap;gap:6px;margin-top:12px;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:none}
+.mobile-screen .v19-content-categories::-webkit-scrollbar{display:none}
+.mobile-screen .v19-content-categories button{flex:0 0 100px;scroll-snap-align:start;min-height:44px;padding:10px 3px;border:0;border-radius:7px;background:#eee9e0;color:#918471;font-size:13px;line-height:1.45;white-space:nowrap}
 .mobile-screen .v19-content-categories button.on{background:#856850;color:#fff;font-weight:500}
 .mobile-screen .v19-content-statuses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:4px 0 10px;padding:0;border:0;background:transparent}
 .mobile-screen .v19-content-statuses button{position:relative;min-height:42px;padding:9px 3px;border:0;border-radius:0;background:transparent;color:#978b7d;font-size:12px;white-space:nowrap}
