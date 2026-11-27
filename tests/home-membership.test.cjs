@@ -5,6 +5,7 @@ test('首页会籍卡提供独立会员码按钮，卡面继续进入权益或�
  for(const project of Object.keys(A.projects))for(const role of ['owner','family','visitor']){
   A.S.project=project;A.S.memberRole=role;A.S.identity=role==='visitor'?'na':'ma';
   const html=A.v05.membership(role),expected=role==='visitor'?'U20':'U03';
+  if(project==='zj'&&role==='visitor'){assert.match(html,/v24-no-membership/);assert.doesNotMatch(html,/会员码|datetime=/);assert.match(go('U01'),/暂无会籍/);continue;}
   assert.match(html,new RegExp('<a[^>]+href="#/'+expected+'"[^>]*class="v09-wallet-card"'));
   assert.match(html,/<button[^>]+data-action="member-code"[^>]*aria-label="出示会员码"/);
   for(const link of html.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/g))assert.doesNotMatch(link[0],/<button\b/,'会员码不能嵌套在卡面链接中');

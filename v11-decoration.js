@@ -28,6 +28,7 @@ function banner(c,p='home'){
 function membership(c){
  if(Number(c.style)===1)return A.v05.membership();
  const m=A.v05.membershipInfo();
+ if(m.noMembership)return A.v05.noMembership(true);
  return '<div class="v11-membership-compact"><a class="v12-member-copy" href="'+A.href(m.role==='visitor'?'U20':'U03')+'" title="'+E(m.title)+'"><b>'+E(m.title)+'</b><time'+(m.expiry?' datetime="'+E(m.expiry)+'"':'')+'>'+E(m.validity)+'</time></a><button type="button" class="v12-member-code" data-action="member-code" aria-label="出示会员码"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM14 14h3v3h-3zM20 14v3M14 20h3M20 20h1"/></svg><span>会员码</span></button></div>';
 }
 function people(c){const rows=A.v05.coaches().slice(0,Math.max(1,Number(c.count)||2));return '<div class="v11-coach-list '+(Number(c.style)===1?'layout-grid':'layout-row')+'">'+rows.map(coach=>'<a class="v11-coach-card" href="'+A.href('U26',{id:coach.id})+'"><img class="v11-coach-photo" src="'+E(coach.photo||'assets/home-coach.jpg')+'" alt="'+E(coach.name)+'"><div class="v11-coach-copy"><small>PERSONAL TRAINING</small><h3>'+E(coach.name.replace(/[（(].*?[）)]/g,''))+'</h3><p>'+E(coach.specialties||'力量基础 · 体态训练')+'</p><span>了解课程详情 ›</span></div></a>').join('')+(rows.length?'':empty('暂无已上架健身教练'))+'</div>';}

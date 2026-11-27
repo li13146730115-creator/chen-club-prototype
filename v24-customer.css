@@ -1,0 +1,29 @@
+/* 无会籍卡：保留云形卡套，浅砂色区别有效会籍，不显示虚假有效期。 */
+.v24-no-membership{position:relative;box-sizing:border-box;color:#755f49}
+.v24-no-membership-wallet{margin:10px 0 0;padding:0 12px 11px}
+.v24-nonmember-surface{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;box-sizing:border-box;min-height:108px;padding:18px 20px 23px;border:1px solid #d9cab5;border-radius:10px 10px 5px 5px;background:radial-gradient(ellipse at 100% 0%,#fff8eb80,transparent 65%),linear-gradient(112deg,#e9e0d0,#d9cdbb);box-shadow:0 4px 10px #66503c0b}
+.v24-nonmember-surface>div{display:flex;flex-direction:column;gap:5px;min-width:0}
+.v24-nonmember-surface small{font:8px/1.4 var(--sans);letter-spacing:2px;color:#917d63}
+.v24-nonmember-surface b{font:24px/1.4 var(--brand-display,var(--serif));font-weight:400;letter-spacing:2px}
+.v24-nonmember-surface>div>span{font:10px/1.5 var(--sans);color:#806c55}
+.v24-nonmember-surface>button{display:flex;flex:0 0 52px;flex-direction:column;align-items:center;gap:6px;border:0;background:transparent;color:#755f49;padding:8px 0;cursor:pointer}
+.v24-nonmember-surface>button i{font-size:22px}
+.v24-nonmember-surface>button>span{font:10px/1.4 var(--sans);white-space:nowrap}
+.v24-nonmember-pocket{position:absolute;bottom:0;left:0;right:0;height:22px;color:#f6efe4;pointer-events:none}
+.v24-nonmember-pocket svg{display:block;width:100%;height:100%}
+.v24-no-membership-compact .v24-nonmember-surface{min-height:82px;padding:14px 16px;border-radius:9px}
+.v24-no-membership-compact .v24-nonmember-surface b{font-size:19px}
+.v24-no-membership-compact .v24-nonmember-surface small{display:none}
+.v24-shop-entry{display:flex;align-items:center;gap:11px;margin:12px 16px 16px;padding:13px 15px;border:1px solid #e5dacb;border-radius:9px;background:#fffdf9;text-decoration:none;color:#6e5741}
+.v24-shop-entry>span{display:grid;place-items:center;width:34px;height:34px;background:#f1e9dc;border-radius:50%;font-size:19px}
+.v24-shop-entry>div{flex:1}.v24-shop-entry b{font:500 13px/1.6 var(--sans)}.v24-shop-entry small{display:block;font:10px/1.6 var(--sans);color:#96836b}
+.v24-store-intro{padding:8px 0 20px}.v24-store-intro>small{font-size:10px;color:#a08a71}.v24-store-intro h3{margin:10px 0;font:23px/1.5 var(--serif);font-weight:400}.v24-store-intro p{font-size:11px;color:#8a7b68}
+.v24-shop-products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.v24-shop-product{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #eadfce;border-radius:8px;background:#fffdf9;color:#554736;text-decoration:none}
+.v24-shop-product>img{display:block;width:100%;aspect-ratio:1;object-fit:cover}.v24-shop-product>div{padding:10px}.v24-shop-product h3{margin:0 0 5px;font:500 13px/1.6 var(--sans)}.v24-shop-product small{display:block;font-size:10px;color:#a18b70}.v24-shop-product b{display:block;margin-top:9px;font:500 15px/1.5 var(--brand-number,var(--sans));color:#966e46}
+.v24-customer-login .owner-back{border:0;background:transparent;color:inherit;padding:6px}
+.v24-customer-login .v16-login-intro{padding-top:22px;padding-bottom:20px}.v24-customer-login .v16-login-intro h3{font-size:24px}.v24-customer-login .v16-login-intro small{display:block;margin-top:10px;font-size:10px;color:#a28e76}
+.v24-login-selection{padding:12px;margin-bottom:22px;border:1px solid #e7dac8;border-radius:8px;background:#fffdf9}
+.v24-login-product{display:flex;align-items:center;gap:10px;padding:5px 0}.v24-login-product>img{width:48px;height:48px;object-fit:cover;border-radius:5px}.v24-login-product>div{flex:1;min-width:0}.v24-login-product b{font:500 12px/1.6 var(--sans)}.v24-login-product small{display:block;margin-top:4px;font-size:10px;color:#968168}.v24-login-product>span{font:13px var(--brand-number,var(--sans));white-space:nowrap}
+.v24-login-cancel{display:block;width:100%;padding:14px 0;border:0;background:transparent;font:12px var(--sans);color:#91785b;text-align:center;cursor:pointer}.v24-login-note{margin:16px 0 0;font:10px/1.7 var(--sans);text-align:center;color:#a69682}
+.v24-no-membership button:focus-visible,.v24-shop-entry:focus-visible,.v24-shop-product:focus-visible,.v24-login-cancel:focus-visible{outline:2px solid #856850;outline-offset:3px}

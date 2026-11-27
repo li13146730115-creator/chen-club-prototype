@@ -39,6 +39,7 @@ button,input,select,textarea{font-family:var(--brand-ui)}
   font-family:var(--brand-number);font-variant-numeric:tabular-nums;
 }
 .v21-voucher-page :is(.v21-voucher-schedule time,.v21-voucher-time strong,.v21-voucher-code .kv>strong){font-family:var(--brand-number);font-variant-numeric:tabular-nums}
+.owner-device .v19-benefit-side>.v11-benefit-count,.studio-phone .v19-benefit-side>.v11-benefit-count{font-family:var(--brand-number);font-weight:400;font-style:normal;letter-spacing:normal;font-variant-numeric:tabular-nums}
 :is(.v09-wallet-card>time,.v12-member-copy>time,.v21-voucher-page .v21-voucher-schedule small){font-family:var(--brand-ui);font-variant-numeric:tabular-nums}
 /* 后台保持原商城的表单与表格阅读方式；画布里的会员标题不被后台字体覆盖。 */
 body[data-desktop="true"] :is(.mall-pagehead h1,.mall-workspace>h1,.mall-workspace>h2,.modal-head h2,.v22-editor-header h2,.v22-section-title h3,.v21-coach-admin h3,.v21-coach-editor h4){font-family:var(--brand-ui);letter-spacing:normal}
