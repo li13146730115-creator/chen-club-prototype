@@ -9,6 +9,7 @@ function clearIntent(){B.v24LoginIntent=null;B.v16LoginReturn=null;}
 function enterProject(){const m=session();if(m&&!B.v24CustomerSession.loggedOut)restoreCustomer(m);else{A.S.guest=true;A.S.identity='na';A.S.memberRole='visitor';Object.assign(A.S.profile,{nickname:'游客',phone:'',avatar:''});}}
 const projectSelect=A.actions['project-select'];
 A.actions['project-select']=d=>{if(!A.projects[d.id])return projectSelect(d);B.v24Profiles??={};if(!inProject())B.v24Profiles[shop()]=copy(A.S.profile);clearIntent();B.checkout=null;B.specDraft=null;B.walletUse=null;projectSelect(d);if(inProject())enterProject();else{const cached=B.v24Profiles[shop()],m=M.members()[0];if(cached)Object.assign(A.S.profile,cached);else if(m)Object.assign(A.S.profile,{nickname:m.name,phone:m.phone,avatar:m.avatar||''});}A.save();A.render();};
+A.switchOwnerProject=id=>A.actions['project-select']({id});
 if(inProject()&&!B.v24Initialized)enterProject();B.v24Initialized=true;
 const me=A.v08.me;A.v08.me=()=>guest()?null:inProject()&&session()&&!B.v24CustomerSession.loggedOut?session():me();
 const ownerScope=()=>inProject()&&A.route.startsWith('U')&&(guest()||A.v08.me()?.v24Customer);

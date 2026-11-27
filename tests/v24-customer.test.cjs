@@ -12,6 +12,15 @@ test('中建首次切入为游客，展示无会籍卡及商城入口，无虚�
  for(const style of [0,1])assert.match(A.decor.component({id:'member-test',type:'membership',visible:true,style,v11Style:true},true,true),/v24-no-membership/);
 });
 
+test('顶部会所切换器与手机项目清单共用游客及会籍状态切换',()=>{
+ const{A,go,nodes}=load();go('U01');
+ nodes.project.onchange({target:{value:'zj'}});
+ assert.equal(A.S.project,'zj');assert.equal(A.S.guest,true);assert.equal(A.v05.membershipInfo().title,'暂无会籍');
+ assert.match(go('U01'),/v24-no-membership/);
+ nodes.project.onchange({target:{value:'bj'}});
+ assert.equal(A.S.project,'bj');assert.equal(A.S.guest,false);assert.match(A.v05.membership(),/会员码/);
+});
+
 test('北京和紫京原会籍卡、权益入口及会员码保持不变',()=>{
  const{A}=load();for(const id of ['bj','zx']){A.actions['project-select']({id});assert.equal(A.S.guest,false);const h=A.v05.membership();assert.match(h,/会员码/);assert.match(h,/datetime=/);assert.doesNotMatch(h,/v24-no-membership/);}
 });

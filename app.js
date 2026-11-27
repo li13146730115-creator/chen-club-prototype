@@ -71,7 +71,7 @@ function render(){
  if(typeof ResizeObserver!=='undefined'){headerObserver?.disconnect();headerObserver=new ResizeObserver(syncViewport);headerObserver.observe(document.querySelector('.topbar'));headerObserver.observe(document.querySelector('.workspace'));}
  document.dispatchEvent(new Event("club:render"));
  document.title=p.title+' · 宸CLUB交互原型';
- document.getElementById('project').onchange=e=>{S.project=e.target.value;draft=null;filters={};save();if(['U06','U07','U08','U09','U04'].includes(route))go('U05');else render();};
+ document.getElementById('project').onchange=e=>{if(route.startsWith('U')&&Club.switchOwnerProject)return Club.switchOwnerProject(e.target.value);S.project=e.target.value;draft=null;filters={};save();if(['U06','U07','U08','U09','U04'].includes(route))go('U05');else render();};
  const ident=document.getElementById('identity');if(ident)ident.onchange=e=>{S.guest=e.target.value==='guest';if(!S.guest)S.identity=e.target.value;draft=null;save();if(['U07','U08'].includes(route))go('U05');else render();};
 }
 // The mall uses an 80px module rail, 206px submenu, 50px header and 34px tabs.
