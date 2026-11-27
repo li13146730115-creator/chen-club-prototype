@@ -1,0 +1,11 @@
+{
+  "command": "node --test tests/*.test.cjs",
+  "baseline": 555,
+  "newTests": 3,
+  "tests": 558,
+  "pass": 558,
+  "fail": 0,
+  "diffCheck": "git diff --check",
+  "scope": "字体接入、文件SHA256、许可证、互斥字集、纯字体CSS属性及全部既有业务测试",
+  "result": "passed"
+}

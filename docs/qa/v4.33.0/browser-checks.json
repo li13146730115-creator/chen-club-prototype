@@ -1,0 +1,37 @@
+{
+  "environment": "本地HTTP原型，浏览器真实渲染核验",
+  "mobileViewport": {"width": 375, "height": 812},
+  "desktopViewport": {"width": 1440, "height": 900},
+  "mobileRoutes": ["U01", "U03", "U05", "U07?id=BJX01", "U09?id=CUSTOMER-BJX01-4", "U12", "U06?id=BJX17", "U29", "S01"],
+  "desktopRoutes": ["M11", "A10", "M12"],
+  "documentHorizontalOverflowAtTargetViewports": false,
+  "actualFontProbe": {
+    "selector": ".v09-profile h2",
+    "text": "林女士",
+    "familyName": "霞鶩文楷",
+    "postScriptName": "LXGWWenKai-Regular",
+    "isCustomFont": true,
+    "glyphCount": 3
+  },
+  "merchantServicePreview": {
+    "selectors": [".studio-phone .mp-head h2", ".studio-phone .v11-service-placeholder h3"],
+    "family": "Chen WenKai",
+    "weight": "400",
+    "documentClientWidth": 1425,
+    "documentScrollWidth": 1425
+  },
+  "transactionTitles": {
+    "routes": ["U06?id=BJX17", "U29"],
+    "family": "Helvetica Neue / system sans-serif",
+    "weight": "500"
+  },
+  "observations": [
+    "首页标题、会籍卡、权益和个人页标题应用文楷，原组件布局和底部导航保留",
+    "商家工作台独立图标字体仍为element-icons",
+    "预约表单及商品、购物车核心信息维持无衬线",
+    "预约凭证服务标题、日期时间及二维码无溢出",
+    "后台商品表单保持原商城无衬线；运营及商家装修画布与移动端标题字体一致"
+  ],
+  "limitations": "代表页面视觉核验，并非所有路由逐页截图；PPT为整页位图，文楷为风格近似。",
+  "viewportOverrideReset": true
+}
