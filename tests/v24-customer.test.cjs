@@ -3,6 +3,15 @@ const select=A=>A.actions['project-select']({id:'zj'});
 const phone='13812340099',login=A=>A.forms['v16-member-login']({phone,code:'123456'});
 function startBuy(A,p,qty=2){A.actions['v19-spec-open']({id:p.id,mode:'buy'});for(let i=1;i<qty;i++)A.actions['v19-spec-qty']({delta:1});A.actions['v19-spec-confirm']();}
 
+for(const signedIn of [false,true])test((signedIn?'已登录非会员':'游客')+'的无会籍卡统一引导开通会员，不以登录替代会籍',()=>{
+ const {A,go,scope}=load();select(A);if(signedIn){go('U39');login(A);}go('U01');
+ const assertCard=h=>{assert.match(h,/暂无会籍/);assert.match(h,/开通会员，悦享会所礼遇/);assert.match(h,/data-action="v24-membership-contact"/);assert.match(h,/>开通会员</);assert.doesNotMatch(h,/去登录|登录后|了解会籍|v24-login-open|会员码|datetime=/);};
+ assertCard(A.v05.membership());for(const compact of [false,true])assertCard(A.v05.noMembership(compact));
+ for(const style of [0,1])assertCard(A.decor.component({id:'nonmember-test',type:'membership',visible:true,style,v11Style:true},true,true));
+ const guest=A.S.guest,member=A.v08.me(),plans=JSON.stringify(member?.planIds);
+ A.actions['v24-membership-contact']();assert.equal(scope.location.hash,'#/U14');const contact=go('U14');assert.match(contact,/会籍办理/);assert.equal(A.S.guest,guest);assert.equal(JSON.stringify(A.v08.me()?.planIds),plans);
+});
+
 test('中建首次切入为游客，展示无会籍卡及商城入口，无虚假日期和会员码',()=>{
  const{A,go}=load();select(A);assert.equal(A.S.guest,true);
  const card=A.v05.membershipInfo();assert.equal(card.title,'暂无会籍');assert.equal(card.expiry,'');
